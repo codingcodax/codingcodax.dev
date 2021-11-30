@@ -1,13 +1,13 @@
 import { styled } from '@/theme/theme.config';
-import { ComponentProps, FC } from 'react';
 
-const StyledButton = styled('button', {
+const Button = styled('button', {
   appearance: 'none',
   border: '0px solid transparent',
   borderRadius: '$xs',
   backgroundColor: 'transparent',
   fontWeight: 'bold',
   textTransform: 'uppercase',
+  transition: '$normal',
   cursor: 'pointer',
 
   variants: {
@@ -93,10 +93,6 @@ const StyledButton = styled('button', {
   ],
 });
 
-type ButtonProps = ComponentProps<typeof StyledButton>;
-
-const Button: FC<ButtonProps> = ({ children, ...rest }) => {
-  return <StyledButton {...rest}>{children}</StyledButton>;
-};
+Button.displayName = 'Button';
 
 export default Button;
