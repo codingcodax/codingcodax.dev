@@ -3,13 +3,13 @@ import { createStitches, PropertyValue, ScaleValue } from '@stitches/react';
 const spaceTokens = {
   0: '0px',
   px: '1px',
-  // 0.5: "0.125rem",
+  0.5: '0.125rem',
   1: '0.25rem',
-  // 1.5: "0.375rem",
+  1.5: '0.375rem',
   2: '0.5rem',
-  // 2.5: "0.625rem",
+  2.5: '0.625rem',
   3: '0.75rem',
-  // 3.5: "0.875rem",
+  3.5: '0.875rem',
   4: '1rem',
   5: '1.25rem',
   6: '1.5rem',
@@ -65,8 +65,8 @@ export const {
       primary: '#805ad5',
       primaryDark: '#744ec8',
 
-      textColor: '$defaultDark',
-      backgroundColor: '$defaultLight',
+      textColor: '$defaultLight',
+      backgroundColor: '$defaultDark',
     },
     space: { ...spaceTokens },
     fontSizes: {
@@ -83,6 +83,8 @@ export const {
       '7xl': '4.5rem',
       '8xl': '6rem',
       '9xl': '8rem',
+
+      base: '$md',
     },
     fonts: {
       heading:
@@ -90,9 +92,16 @@ export const {
       body: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
       mono: "'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
     },
-    fontsWeights: {
-      regular: 400,
+    fontWeights: {
+      hairline: 100,
+      thin: 200,
+      light: 300,
+      normal: 400,
+      medium: 500,
+      semibold: 600,
       bold: 700,
+      extrabold: 800,
+      black: 900,
     },
     lineHeights: {},
     sizes: {
@@ -119,19 +128,22 @@ export const {
       lg: '24px',
       full: '9999px',
     },
-    shadows: {},
+    shadows: {
+      focus: '0 0 0 3px rgba(66, 153, 225, 0.6)',
+    },
     zIndices: {},
     transitions: {
-      normal: '3s',
+      normal: '0.2s',
     },
   },
   media: {
     dark: '(prefers-color-scheme: dark)',
-    bp1: '(min-width: 280px)',
-    bp2: '(min-width: 768px)',
-    bp3: '(min-width: 992px)',
-    bp4: '(min-width: 1280px)',
-    bp5: '(min-width: 1440px)',
+    bp1: '(max-width: 479px)',
+    // bp1: '(min-width: 280px)',
+    // bp2: '(min-width: 768px)',
+    // bp3: '(min-width: 992px)',
+    // bp4: '(min-width: 1280px)',
+    // bp5: '(min-width: 1440px)',
   },
   utils: {
     p: (value: ScaleValue<'space'>) => ({
