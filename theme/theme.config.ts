@@ -59,14 +59,18 @@ export const {
       neutral800: '#303030',
       neutral900: '#202020',
 
+      violet500: '#805ad5',
+      violet600: '#744ec8',
+
       defaultLight: '#fcfcfc',
       defaultDark: '#232323',
 
-      primary: '#805ad5',
-      primaryDark: '#744ec8',
+      primary: '$violet500',
+      primaryDark: '$violet600',
 
       textColor: '$defaultLight',
       backgroundColor: '$defaultDark',
+      dividerColor: '$neutral700',
     },
     space: { ...spaceTokens },
     fontSizes: {
@@ -139,11 +143,6 @@ export const {
   media: {
     dark: '(prefers-color-scheme: dark)',
     bp1: '(max-width: 479px)',
-    // bp1: '(min-width: 280px)',
-    // bp2: '(min-width: 768px)',
-    // bp3: '(min-width: 992px)',
-    // bp4: '(min-width: 1280px)',
-    // bp5: '(min-width: 1440px)',
   },
   utils: {
     p: (value: ScaleValue<'space'>) => ({
