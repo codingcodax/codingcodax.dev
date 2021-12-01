@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-type ToggleMenu = () => { isMenuOpen: boolean; toggleMenu: () => void };
+import { ToggleMenu } from 'types';
 
 const useToggleMenu: ToggleMenu = () => {
   const [isMenuOpen, setMenuIsOpen] = useState(false);
