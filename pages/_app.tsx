@@ -1,6 +1,7 @@
 import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'next-themes';
 
+import { darkTheme } from '@/theme/theme.config';
 import globalStyles from '@/theme/globalStyles';
 
 import Layout from '@/components/layout';
@@ -9,7 +10,12 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   globalStyles();
 
   return (
-    <ThemeProvider defaultTheme='system'>
+    <ThemeProvider
+      disableTransitionOnChange
+      attribute='class'
+      defaultTheme='system'
+      value={{ light: 'light-theme', dark: darkTheme.toString() }}
+    >
       <Layout>
         <Component {...pageProps} />
       </Layout>
