@@ -9,7 +9,7 @@ const globalStyles = globalCss({
     outline: 'none',
   },
 
-  'button:focus': {
+  'a:focus, button:focus': {
     boxShadow: '$focus',
   },
 
@@ -33,7 +33,7 @@ const globalStyles = globalCss({
     },
   },
 
-  'h1, h2, h3, h4, h5, h6': { fontWeight: '$bold' },
+  'h1, h2, h3, h4, h5, h6': { fontFamily: '$heading', fontWeight: '$bold' },
 
   h1: { fontSize: '$5xl' },
   h2: { fontSize: '$4xl' },
