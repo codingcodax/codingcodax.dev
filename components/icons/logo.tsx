@@ -1,15 +1,8 @@
-import * as React from 'react';
-import { css } from '@/theme/theme.config';
-
-const svg = css({
-  width: '$8',
-  height: '$8',
-});
+import { Svg } from '../ui';
 
 const Logo = ({ ...props }) => {
   return (
-    <svg
-      className={svg()}
+    <Svg
       xmlns='http://www.w3.org/2000/svg'
       fill='none'
       viewBox='0 0 100 100'
@@ -27,7 +20,7 @@ const Logo = ({ ...props }) => {
           <path fill='currentColor' d='M0 0h100v100H0z' />
         </clipPath>
       </defs>
-    </svg>
+    </Svg>
   );
 };
 
