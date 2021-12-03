@@ -68,9 +68,12 @@ export const {
       primary: '$violet500',
       primaryDark: '$violet600',
 
-      textColor: '$defaultLight',
-      backgroundColor: '$defaultDark',
-      dividerColor: '$neutral700',
+      textColor: '$defaultDark',
+      grayTextColor: '$neutral600',
+      backgroundColor: '$defaultLight',
+      dividerColor: '$neutral300',
+      grayLight: '$neutral200',
+      grayDark: '$neutral100',
     },
     space: { ...spaceTokens },
     fontSizes: {
@@ -92,8 +95,8 @@ export const {
     },
     fonts: {
       heading:
-        '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
-      body: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
+        '    -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";',
+      body: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
       mono: "'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
     },
     fontWeights: {
@@ -107,7 +110,21 @@ export const {
       extrabold: 800,
       black: 900,
     },
-    lineHeights: {},
+    lineHeights: {
+      xs: '1rem',
+      sm: '1.25rem',
+      md: '1.5rem',
+      lg: '1.75rem',
+      xl: '1.75rem',
+      '2xl': '2rem',
+      '3xl': '2.25rem',
+      '4xl': '2.5rem',
+      '5xl': '3rem',
+      '6xl': '3.75rem',
+      '7xl': '4.5rem',
+      '8xl': '6rem',
+      '9xl': '8rem',
+    },
     sizes: {
       ...spaceTokens,
       max: 'max-content',
@@ -215,7 +232,14 @@ export const {
 });
 
 const darkModeConfig = {
-  colors: {},
+  colors: {
+    textColor: '$defaultLight',
+    grayTextColor: '$neutral300',
+    backgroundColor: '$defaultDark',
+    dividerColor: '$neutral700',
+    grayLight: '$neutral600',
+    grayDark: '$neutral700',
+  },
 };
 
 export const darkTheme = createTheme('darkTheme', darkModeConfig);
