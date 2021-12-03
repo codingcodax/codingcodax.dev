@@ -1,6 +1,7 @@
 import { styled } from '@/theme/theme.config';
 
 const Button = styled('button', {
+  w: '$max',
   appearance: 'none',
   border: '0px solid transparent',
   borderRadius: '$xs',
@@ -26,7 +27,7 @@ const Button = styled('button', {
 
     variant: {
       primary: {
-        color: '$textColor',
+        color: '$backgroundColor',
         bg: '$primary',
         borderColor: '$primary',
 
@@ -45,6 +46,7 @@ const Button = styled('button', {
           borderColor: '$neutral300',
         },
       },
+      unstyled: {},
     },
 
     outlined: {
