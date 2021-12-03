@@ -14,13 +14,17 @@ const A = styled('a');
 
 const NavItem: FC<NavItemProps> = ({ href, children, onClick }) => {
   return (
-    <Li css={{ listStyleType: 'none' }} onClick={onClick}>
-      <NextLink href={href}>
+    <Li
+      css={{ listStyleType: 'none', color: '$grayTextColor' }}
+      onClick={onClick}
+    >
+      <NextLink href={href} passHref>
         <A
           css={{
             textDecoration: 'none',
             position: 'relative',
             cursor: 'pointer',
+            color: 'CurrentColor',
 
             '&::before': {
               content: '',
