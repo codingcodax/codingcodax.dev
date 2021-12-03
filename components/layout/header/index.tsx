@@ -6,6 +6,7 @@ import { Logo } from '@/components/icons';
 import MenuButton from './menu-button';
 import useMediaQuery from '@/hooks/useMediaQuery';
 import Nav from './nav/Nav';
+import ToggleTheme from './ToggleTheme';
 
 interface HeaderProps {
   isMenuOpen: boolean;
@@ -23,7 +24,8 @@ const Header: FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
 
   return (
     <StyledHeader>
-      <Logo />
+      {isMobileSize && <ToggleTheme />}
+      <Logo css={{ h: '$8' }} />
       {!isMobileSize ? (
         <Nav />
       ) : (
