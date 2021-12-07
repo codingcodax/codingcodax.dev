@@ -3,12 +3,8 @@ import { useTheme } from 'next-themes';
 import { MoonIcon, SunIcon } from '@/components/icons';
 import { Button } from '@/components/ui';
 
-// const Button = styled('button');
-
 const ToggleTheme = () => {
   const { theme, resolvedTheme, setTheme } = useTheme();
-
-  console.log(theme, resolvedTheme);
 
   const toggleTheme = () =>
     theme === 'dark' || resolvedTheme === 'dark '
