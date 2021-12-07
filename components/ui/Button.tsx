@@ -3,11 +3,12 @@ import { styled } from '@/theme/theme.config';
 const Button = styled('button', {
   w: '$max',
   appearance: 'none',
-  border: '0px solid transparent',
-  borderRadius: '$xs',
-  backgroundColor: 'transparent',
+  display: 'inline-block',
   fontWeight: 'bold',
   textTransform: 'uppercase',
+  backgroundColor: 'transparent',
+  border: '0px solid transparent',
+  borderRadius: '$xs',
   transition: '$normal',
   cursor: 'pointer',
 
@@ -16,7 +17,7 @@ const Button = styled('button', {
       medium: {
         padding: '$2 $4',
         fontSize: '$md',
-        borderWidth: '2px',
+        borderWidth: '1px',
       },
       large: {
         padding: '$3 $6',
@@ -37,13 +38,14 @@ const Button = styled('button', {
         },
       },
       secondary: {
-        color: '$defaultDark',
-        bg: '$defaultLight',
-        borderColor: '$defaultLight',
+        color: '$backgroundColor',
+        bg: '$textColor',
+        borderColor: '$textColor',
 
         '&:hover': {
-          bg: '$neutral300',
-          borderColor: '$neutral300',
+          color: '$textColor',
+          bg: '$backgroundColor',
+          borderColor: '$textColor',
         },
       },
       unstyled: {},
@@ -82,13 +84,12 @@ const Button = styled('button', {
       outlined: true,
 
       css: {
-        color: '$backgroundColor',
+        color: '$textColor',
         bg: 'transparent',
 
         '&:hover': {
-          color: '$textColor',
-          bg: '$backgroundColor',
-          borderColor: '$backgroundColor',
+          color: '$backgroundColor',
+          bg: '$textColor',
         },
       },
     },
