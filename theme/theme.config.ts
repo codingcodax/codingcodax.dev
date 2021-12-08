@@ -159,7 +159,8 @@ export const {
   },
   media: {
     dark: '(prefers-color-scheme: dark)',
-    bp1: '(max-width: 479px)',
+    bp1: '(min-width: 479px)',
+    bp2: '(min-width: 760px)',
   },
   utils: {
     p: (value: ScaleValue<'space'>) => ({
