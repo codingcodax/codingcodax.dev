@@ -48,7 +48,7 @@ const projects: Project[] = [
     featured: false,
   },
   {
-    logo: ReexJSIcon,
+    logo: <ReexJSIcon css={{ h: '$12', color: '$backgroundColor' }} />,
     title: 'ReexJs CLI',
     description:
       'An interactive CLI automation tool 🛠️ for creating react.js and next.js projects most fast and efficiently. ⚛️',
@@ -58,7 +58,7 @@ const projects: Project[] = [
     featured: true,
   },
   {
-    logo: Logo,
+    logo: <Logo css={{ h: '$12', color: '$backgroundColor' }} />,
     title: 'Portfolio V1',
     description:
       'Personal website 🌐 built with Next JS and Chakra UI with my own blog 🖊️ and newsletter 📰.',
