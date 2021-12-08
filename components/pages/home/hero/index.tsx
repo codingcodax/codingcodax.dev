@@ -24,15 +24,19 @@ const Hero = () => {
           alignContent: 'center',
         }}
       >
-        <Heading as='h1' css={{ mb: '$2', fontSize: '$4xl' }}>
+        <Heading
+          as='h1'
+          size={{ '@initial': '4xl', '@bp1': '5xl' }}
+          css={{ mb: '$2' }}
+        >
           Hi, I’m Alexis Guzman.
         </Heading>
         <Heading
           as='h2'
+          size='2xl'
+          fontWeight='normal'
           css={{
             mb: '$16',
-            fontSize: '$2xl',
-            fontWeight: '$normal',
             lineHeight: '$3xl',
             fontFamily: '$body',
           }}
@@ -41,7 +45,11 @@ const Hero = () => {
           thoughts, favorite coffee and other random things.
         </Heading>
 
-        <Heading as='h3' css={{ mb: '$2', fontSize: '$2xl' }}>
+        <Heading
+          as='h3'
+          size={{ '@initial': '2xl', '@bp1': '3xl' }}
+          css={{ mb: '$2' }}
+        >
           Ok, but who are you?
         </Heading>
         <Text
