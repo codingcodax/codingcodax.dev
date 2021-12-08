@@ -33,8 +33,6 @@ const globalStyles = globalCss({
     },
   },
 
-  'h1, h2, h3, h4, h5, h6': { fontFamily: '$heading', fontWeight: '$bold' },
-
   h1: { fontSize: '$5xl' },
   h2: { fontSize: '$4xl' },
   h3: { fontSize: '$3xl' },
