@@ -78,7 +78,7 @@ const Hero = () => {
         <GetInTouch />
       </Box>
 
-      {isLargeSize && <Icons css={{ w: '$md' }} />}
+      {isLargeSize && <Icons css={{ w: '$md', color: '$headingColor' }} />}
     </Box>
   );
 };
