@@ -1,6 +1,7 @@
 import { styled } from '@/theme/theme.config';
 
 const Heading = styled('h2', {
+  color: '$headingColor',
   fontFamily: '$heading',
   fontWeight: '$bold',
 
