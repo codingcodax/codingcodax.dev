@@ -68,7 +68,8 @@ export const {
       primary: '$violet500',
       primaryDark: '$violet600',
 
-      textColor: '$defaultDark',
+      headingColor: '$defaultDark',
+      textColor: '$neutral700',
       grayTextColor: '$neutral600',
       backgroundColor: '$defaultLight',
       dividerColor: '$neutral300',
@@ -234,7 +235,8 @@ export const {
 
 const darkModeConfig = {
   colors: {
-    textColor: '$defaultLight',
+    headingColor: '$defaultLight',
+    textColor: '$neutral200',
     grayTextColor: '$neutral300',
     backgroundColor: '$defaultDark',
     dividerColor: '$neutral700',
