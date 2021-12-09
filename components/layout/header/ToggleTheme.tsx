@@ -32,7 +32,7 @@ const ToggleTheme = () => {
       {theme === 'light' || resolvedTheme === 'light' ? (
         <MoonIcon css={{ h: '$4' }} />
       ) : (
-        <SunIcon css={{ h: '$4' }} stroke='var(--colors-textColor)' />
+        <SunIcon css={{ h: '$4' }} stroke='var(--colors-headingColor)' />
       )}
     </Button>
   );

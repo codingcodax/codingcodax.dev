@@ -39,13 +39,13 @@ const Button = styled('button', {
       },
       secondary: {
         color: '$backgroundColor',
-        bg: '$textColor',
-        borderColor: '$textColor',
+        bg: '$headingColor',
+        borderColor: '$headingColor',
 
         '&:hover': {
-          color: '$textColor',
+          color: '$headingColor',
           bg: '$backgroundColor',
-          borderColor: '$textColor',
+          borderColor: '$headingColor',
         },
       },
       unstyled: {},
@@ -73,7 +73,7 @@ const Button = styled('button', {
         bg: 'transparent',
 
         '&:hover': {
-          color: '$textColor',
+          color: '$headingColor',
           bg: '$primary',
           borderColor: '$primary',
         },
@@ -84,12 +84,12 @@ const Button = styled('button', {
       outlined: true,
 
       css: {
-        color: '$textColor',
+        color: '$headingColor',
         bg: 'transparent',
 
         '&:hover': {
           color: '$backgroundColor',
-          bg: '$textColor',
+          bg: '$headingColor',
         },
       },
     },

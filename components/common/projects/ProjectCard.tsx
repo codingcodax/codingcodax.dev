@@ -27,7 +27,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
         borderRadius: '$xs',
       }}
     >
-      <Center css={{ h: '$32', bg: '$textColor' }}>{logo}</Center>
+      <Center css={{ h: '$32', bg: '$headingColor' }}>{logo}</Center>
 
       <Box
         css={{
