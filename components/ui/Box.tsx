@@ -1,6 +1,14 @@
 import { styled } from '@/theme/theme.config';
 
-const Box = styled('div', {});
+const Box = styled('div', {
+  variants: {
+    align: {
+      center: {
+        mx: '$auto',
+      },
+    },
+  },
+});
 
 Box.displayName = 'Box';
 
