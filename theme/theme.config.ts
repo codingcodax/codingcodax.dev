@@ -1,6 +1,7 @@
 import { createStitches, PropertyValue, ScaleValue } from '@stitches/react';
 
 const spaceTokens = {
+  auto: 'auto',
   0: '0px',
   px: '1px',
   0.5: '0.125rem',
@@ -49,39 +50,43 @@ export const {
 } = createStitches({
   theme: {
     colors: {
-      neutral100: '#f4f4f4',
-      neutral200: '#eaeaea',
-      neutral300: '#d9d9d9',
-      neutral400: '#a6a6a6',
-      neutral500: '#8c8c8c',
-      neutral600: '#595959',
-      neutral700: '#404040',
-      neutral800: '#303030',
-      neutral900: '#202020',
+      mauve100: '#111114',
+      mauve200: '#19191D',
+      mauve300: '#27262C',
+      mauve400: '#323138',
+      mauve500: '#44434B',
+      mauve600: '#52515A',
+      mauve700: '#5F5E68',
+      mauve800: '#72717D',
+      mauve900: '#868593',
+      mauve1000: '#9A98A7',
+      mauve1100: '#AEADB8',
+      mauve1200: '#C0BFC9',
+      mauve1300: '#D5D4DD',
+      mauve1400: '#E6E6F3',
+      mauve1500: '#F8F8FF',
 
-      violet500: '#805ad5',
-      violet600: '#744ec8',
-
-      defaultLight: '#fcfcfc',
-      defaultDark: '#232323',
+      violet500: '#8e43ed',
+      violet600: '#7b38d0',
 
       primary: '$violet500',
       primaryDark: '$violet600',
 
-      headingColor: '$defaultDark',
-      textColor: '$neutral700',
-      grayTextColor: '$neutral600',
-      backgroundColor: '$defaultLight',
-      dividerColor: '$neutral300',
-      grayLight: '$neutral200',
-      grayDark: '$neutral100',
+      headingColor: '$mauve100',
+      textColor: '$mauve400',
+      grayTextColor: '$mauve500',
+      backgroundColor: '$mauve1500',
+      dividerColor: '$mauve800',
+      grayLightColor: '$mauve1200',
+      grayDarkColor: '$mauve1300',
+      shadowColor: '$mauve1400',
     },
     space: { ...spaceTokens },
     fontSizes: {
       xs: '0.75rem',
-      sm: '0.875rem',
-      md: '1rem',
-      lg: '1.125rem',
+      sm: '0.925rem',
+      md: '1.025rem',
+      lg: '1.1rem',
       xl: '1.25rem',
       '2xl': '1.5rem',
       '3xl': '1.875rem',
@@ -92,7 +97,7 @@ export const {
       '8xl': '6rem',
       '9xl': '8rem',
 
-      base: '$md',
+      base: '$lg',
     },
     fonts: {
       heading:
@@ -112,19 +117,7 @@ export const {
       black: 900,
     },
     lineHeights: {
-      xs: '1rem',
-      sm: '1.25rem',
-      md: '1.5rem',
-      lg: '1.75rem',
-      xl: '1.75rem',
-      '2xl': '2rem',
-      '3xl': '2.25rem',
-      '4xl': '2.5rem',
-      '5xl': '3rem',
-      '6xl': '3.75rem',
-      '7xl': '4.5rem',
-      '8xl': '6rem',
-      '9xl': '8rem',
+      normal: '1.25',
     },
     sizes: {
       ...spaceTokens,
@@ -230,18 +223,18 @@ export const {
       backgroundColor: value,
     }),
   },
-  // prefix: 'radix',
 });
 
 const darkModeConfig = {
   colors: {
-    headingColor: '$defaultLight',
-    textColor: '$neutral200',
-    grayTextColor: '$neutral300',
-    backgroundColor: '$defaultDark',
-    dividerColor: '$neutral700',
-    grayLight: '$neutral600',
-    grayDark: '$neutral700',
+    headingColor: '$mauve1500',
+    textColor: '$mauve1300',
+    grayTextColor: '$mauve1200',
+    backgroundColor: '$mauve100',
+    dividerColor: '$mauve700',
+    grayLightColor: '$mauve400',
+    grayDarkColor: '$mauve300',
+    shadowColor: '$mauve200',
   },
 };
 
