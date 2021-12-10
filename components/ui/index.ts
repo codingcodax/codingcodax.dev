@@ -2,6 +2,8 @@ export { default as Heading } from './Heading';
 export { default as Text } from './Text';
 export { default as Box } from './Box';
 export { default as Center } from './Center';
+export { default as Grid } from './Grid';
+export { default as Input } from './Input';
 export { default as Button } from './Button';
 export { default as Svg } from './Svg';
 export { default as Divider } from './Divider';
