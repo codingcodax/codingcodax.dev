@@ -4,6 +4,7 @@ const Heading = styled('h2', {
   color: '$headingColor',
   fontFamily: '$heading',
   fontWeight: '$bold',
+  lineHeight: '$normal',
 
   variants: {
     size: {
