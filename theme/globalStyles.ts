@@ -7,6 +7,7 @@ const globalStyles = globalCss({
   '*, *:before, *:after': {
     boxSizing: 'border-box',
     outline: 'none',
+    scrollBehavior: 'smooth',
   },
 
   'a:focus, button:focus': {
