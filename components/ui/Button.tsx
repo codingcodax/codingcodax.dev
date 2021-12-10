@@ -16,12 +16,12 @@ const Button = styled('button', {
     size: {
       medium: {
         padding: '$2 $4',
-        fontSize: '$md',
+        fontSize: '$lg',
         borderWidth: '1px',
       },
       large: {
         padding: '$3 $6',
-        fontSize: '$lg',
+        fontSize: '$xl',
         borderWidth: '3px',
       },
     },
