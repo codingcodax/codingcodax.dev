@@ -1,7 +1,7 @@
 import useMediaQuery from '@/hooks/useMediaQuery';
 
 import { Box, Divider, Text } from '@/components/ui';
-import MobileLinks from './MobileLinks';
+import MobileLinks from './mobile-links';
 import Links from './links';
 
 const Footer = () => {
