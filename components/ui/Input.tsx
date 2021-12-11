@@ -9,6 +9,7 @@ const Input = styled('input', {
   bg: 'transparent',
   border: '2px solid $dividerColor',
   borderRadius: '$sm',
+  transition: 'border $normal ease-in-out',
 
   '&::placeholder': {
     color: '$grayTextColor',
