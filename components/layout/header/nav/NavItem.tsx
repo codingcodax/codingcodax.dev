@@ -1,7 +1,8 @@
 import { FC, ReactNode } from 'react';
-import NextLink from 'next/link';
 
 import { styled } from '@/theme/theme.config';
+
+import Link from '@/components/common/Link';
 
 interface NavItemProps {
   href: string;
@@ -18,7 +19,7 @@ const NavItem: FC<NavItemProps> = ({ href, children, onClick }) => {
       css={{ listStyleType: 'none', color: '$grayTextColor' }}
       onClick={onClick}
     >
-      <NextLink href={href} passHref>
+      <Link href={href}>
         <A
           css={{
             textDecoration: 'none',
@@ -62,7 +63,7 @@ const NavItem: FC<NavItemProps> = ({ href, children, onClick }) => {
         >
           <span>{children}</span>
         </A>
-      </NextLink>
+      </Link>
     </Li>
   );
 };

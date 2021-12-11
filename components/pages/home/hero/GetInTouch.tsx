@@ -1,10 +1,10 @@
-import NextLink from 'next/link';
-
 import { Button } from '@/components/ui';
+
+import Link from '@/components/common/Link';
 
 const GetInTouch = () => {
   return (
-    <NextLink href='/about#contact' passHref>
+    <Link href='/about#contact'>
       <Button
         as='a'
         variant='primary'
@@ -13,7 +13,7 @@ const GetInTouch = () => {
       >
         Get In Touch
       </Button>
-    </NextLink>
+    </Link>
   );
 };
 

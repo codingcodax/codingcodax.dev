@@ -1,7 +1,7 @@
-import NextLink from 'next/link';
-
 import { Box, Button, Heading } from '@/components/ui';
+
 import Projects from '@/components/common/projects';
+import Link from '@/components/common/Link';
 
 const FeaturedProjects = () => {
   return (
@@ -24,11 +24,11 @@ const FeaturedProjects = () => {
 
       <Projects featured />
 
-      <NextLink href='/projects' passHref>
+      <Link href='/projects'>
         <Button as='a' variant='primary' css={{ textDecoration: 'none' }}>
           See All Projects
         </Button>
-      </NextLink>
+      </Link>
     </Box>
   );
 };
