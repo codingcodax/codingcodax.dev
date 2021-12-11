@@ -1,8 +1,19 @@
+import { Grid } from '@/components/ui';
+
+import MainRoutes from './MainRoutes';
+import SubRoutes from './SubRoutes';
+import Socials from './Socials';
+
 const index = () => {
   return (
-    <div>
-      <p>Links Component</p>
-    </div>
+    <Grid
+      direction='column'
+      css={{ mx: '$auto', w: '$full', maxWidth: '800px' }}
+    >
+      <MainRoutes />
+      <SubRoutes />
+      <Socials />
+    </Grid>
   );
 };
 
