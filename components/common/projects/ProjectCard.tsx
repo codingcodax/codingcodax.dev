@@ -16,8 +16,6 @@ const ProjectCard: FC<ProjectCardProps> = ({
   site,
   repo,
 }) => {
-  console.log(logo);
-
   return (
     <Box
       as='li'
