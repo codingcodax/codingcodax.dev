@@ -7,7 +7,12 @@ const FeaturedProjects = () => {
   return (
     <Box
       as='section'
-      css={{ display: 'grid', placeItems: 'center', gridRowGap: '$16' }}
+      css={{
+        display: 'grid',
+        placeItems: 'center',
+        gridRowGap: '$8',
+        '@bp1': { gridRowGap: '$16' },
+      }}
     >
       <Heading
         as='h2'
