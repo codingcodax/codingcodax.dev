@@ -2,7 +2,7 @@ import { Grid } from '@/components/ui';
 
 import SocialLinks from '@/data/socials';
 
-import LinkItem from '../LinkItem';
+import LinkItem from './LinkItem';
 
 const Socials = () => {
   return (

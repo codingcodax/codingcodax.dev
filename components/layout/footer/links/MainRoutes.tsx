@@ -1,6 +1,6 @@
 import { Grid } from '@/components/ui';
 
-import LinkItem from '../LinkItem';
+import LinkItem from './LinkItem';
 
 const MainRoutes = () => {
   return (
