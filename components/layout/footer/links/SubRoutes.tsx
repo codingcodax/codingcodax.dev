@@ -1,8 +1,17 @@
+import { Grid } from '@/components/ui';
+
+import LinkItem from '../LinkItem';
+
 const SubRoutes = () => {
   return (
-    <div>
-      <p>Sub Routes Component</p>
-    </div>
+    <Grid
+      as='ul'
+      css={{ textAlign: 'center', gridAutoRows: '21px', gridRowGap: '$2' }}
+    >
+      <LinkItem href='/snippets'>Snippets</LinkItem>
+      <LinkItem href='/community'>Community</LinkItem>
+      <LinkItem href='/uses'>Uses</LinkItem>
+    </Grid>
   );
 };
 
