@@ -53,9 +53,8 @@ const Hero = () => {
         </Heading>
         <Text
           css={{
-            mb: '$8',
+            mb: '$4',
             fontSize: '$xl',
-            // lineHeight: '$xl',
           }}
         >
           I’m a curiosity-driven, design-focused developer, building rich,
@@ -63,9 +62,8 @@ const Hero = () => {
         </Text>
         <Text
           css={{
-            mb: '$4',
+            mb: '$8',
             fontSize: '$xl',
-            // lineHeight: '$xl',
           }}
         >
           Feel free to have a look around, and learn more about myself and what
