@@ -5,7 +5,13 @@ import Subscribe from '@/components/common/Subscribe';
 const Newsletter = () => {
   return (
     <Box as='section' align='center' css={{ my: '$32', maxWidth: '720px' }}>
-      <Heading as='h1'>Newsletter</Heading>
+      <Heading
+        as='h2'
+        size={{ '@initial': '3xl', '@bp1': '4xl' }}
+        css={{ mb: '$8' }}
+      >
+        Newsletter
+      </Heading>
       <Text css={{ mb: '$2' }}>
         Subscribe to my digest. I{"'"}ll let you know when I publish new
         content, and I{"'"}ll even share exclusive newsletter-only content now
