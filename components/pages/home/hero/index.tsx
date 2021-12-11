@@ -27,7 +27,7 @@ const Hero = () => {
         <Heading
           as='h1'
           size={{ '@initial': '4xl', '@bp1': '5xl' }}
-          css={{ mb: '$2' }}
+          css={{ mb: '$2', lineHeight: 'initial' }}
         >
           Hi, I’m Alexis Guzman.
         </Heading>
@@ -37,7 +37,6 @@ const Hero = () => {
           fontWeight='normal'
           css={{
             mb: '$16',
-            lineHeight: '$3xl',
             fontFamily: '$body',
           }}
         >
@@ -55,9 +54,8 @@ const Hero = () => {
         <Text
           css={{
             mb: '$8',
-            color: '$grayTextColor',
             fontSize: '$xl',
-            lineHeight: '$xl',
+            // lineHeight: '$xl',
           }}
         >
           I’m a curiosity-driven, design-focused developer, building rich,
@@ -66,9 +64,8 @@ const Hero = () => {
         <Text
           css={{
             mb: '$4',
-            color: '$grayTextColor',
             fontSize: '$xl',
-            lineHeight: '$xl',
+            // lineHeight: '$xl',
           }}
         >
           Feel free to have a look around, and learn more about myself and what
