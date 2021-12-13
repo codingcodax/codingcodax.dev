@@ -13,7 +13,9 @@ const Footer = () => {
 
       {isMobileSize ? <MobileLinks /> : <Links />}
 
-      <Text css={{ textAlign: 'center' }}>Copyright © 2021 Alexis Guzman</Text>
+      <Text css={{ textAlign: 'center' }}>
+        © 2021 — Handcrafted with 💜 by Codax ^_^
+      </Text>
     </Box>
   );
 };
