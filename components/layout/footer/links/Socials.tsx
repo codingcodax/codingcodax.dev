@@ -8,7 +8,7 @@ const Socials = () => {
   return (
     <Grid as='ul' css={{ textAlign: 'right', gridRowGap: '$2' }}>
       {SocialLinks.map(({ name, href }) => (
-        <LinkItem key={name} href={href}>
+        <LinkItem key={name} href={href} isExternal>
           {name}
         </LinkItem>
       ))}
