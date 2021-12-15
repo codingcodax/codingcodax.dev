@@ -13,7 +13,7 @@ const Socials = [
   },
   {
     name: 'LinkedIn',
-    href: 'https://github.com/codingcodax/',
+    href: 'https://www.linkedin.com/in/codax/',
     icon: <LinkedInIcon css={{ h: '$6' }} />,
   },
   {
