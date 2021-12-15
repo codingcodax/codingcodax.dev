@@ -18,6 +18,7 @@ const Hero = () => {
       }}
     >
       <Box
+        as='main'
         css={{
           height: 'calc(100vh - 3.5rem)',
           display: 'grid',
@@ -73,7 +74,7 @@ const Hero = () => {
         <GetInTouch />
       </Box>
 
-      {isLargeSize && <Icons css={{ w: '$md', color: '$headingColor' }} />}
+      {isLargeSize && <Icons css={{ w: '$104', color: '$headingColor' }} />}
     </Box>
   );
 };
