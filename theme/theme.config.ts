@@ -35,7 +35,9 @@ const spaceTokens = {
   64: '16rem',
   72: '18rem',
   80: '20rem',
+  88: '22rem',
   96: '24rem',
+  104: '26rem',
 };
 
 export const {
@@ -107,15 +109,8 @@ export const {
       mono: "'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
     },
     fontWeights: {
-      hairline: 100,
-      thin: 200,
-      light: 300,
       normal: 400,
-      medium: 500,
-      semibold: 600,
       bold: 700,
-      extrabold: 800,
-      black: 900,
     },
     lineHeights: {
       normal: '1.25',
@@ -125,15 +120,7 @@ export const {
       max: 'max-content',
       min: 'min-content',
       full: '100%',
-      xs: '20rem',
-      sm: '24rem',
-      md: '28rem',
-      lg: '32rem',
-      xl: '36rem',
-      '2xl': '42rem',
-      '3xl': '48rem',
-      '4xl': '50rem',
-      '5xl': '56rem',
+      'container-sm': '640px',
     },
     borderWidths: {},
     borderStyles: {},
