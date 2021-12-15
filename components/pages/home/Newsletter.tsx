@@ -4,7 +4,11 @@ import Subscribe from '@/components/common/Subscribe';
 
 const Newsletter = () => {
   return (
-    <Box as='section' align='center' css={{ my: '$32', maxWidth: '720px' }}>
+    <Box
+      as='section'
+      align='center'
+      css={{ my: '$32', maxWidth: '$container-sm' }}
+    >
       <Heading
         as='h2'
         size={{ '@initial': '3xl', '@bp1': '4xl' }}
