@@ -1,10 +1,8 @@
 import { FC, ReactNode } from 'react';
 
-import { styled } from '@/theme/theme.config';
+import { A } from '@/components/ui/';
 
 import Link from '@/components/common/Link';
-
-const A = styled('a');
 
 interface LinkItemProps {
   href: string;
@@ -18,14 +16,8 @@ const LinkItem: FC<LinkItemProps> = ({ href, children }) => {
         <A
           target='_blank'
           rel='noopener noreferrer'
-          css={{
-            h: '$6',
-            display: 'inline-block',
-            textDecoration: 'none',
-            color: '$grayTextColor',
-            transition: 'color $normal ease-in-out',
-            '&:hover': { color: '$grayDarkTextColor' },
-          }}
+          textDecoration='none'
+          type='mobile-link'
         >
           {children}
         </A>
