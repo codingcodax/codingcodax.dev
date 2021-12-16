@@ -1,10 +1,14 @@
 import type { NextPage } from 'next';
 
+import { Center } from '@/components/ui/';
+
+import Intro from '@/components/pages/about/Intro';
+
 const About: NextPage = () => {
   return (
-    <div>
-      <p>About Page Component</p>
-    </div>
+    <Center>
+      <Intro />
+    </Center>
   );
 };
 
