@@ -114,6 +114,7 @@ export const {
     },
     lineHeights: {
       normal: '1.25',
+      relaxed: '1.650',
     },
     sizes: {
       ...spaceTokens,
