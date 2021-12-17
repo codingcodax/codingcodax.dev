@@ -1,8 +1,25 @@
-const SectionHeading = () => {
+import { FC } from 'react';
+
+import { Grid, Box, Heading } from '@/components/ui';
+
+interface SectionHeadingProps {
+  children: string;
+}
+
+const SectionHeading: FC<SectionHeadingProps> = ({ children }) => {
   return (
-    <div>
-      <p>Section Heading Component</p>
-    </div>
+    <Grid
+      direction='column'
+      css={{
+        alignItems: 'center',
+        gridTemplateColumns: '1fr auto 1fr',
+        gridColumnGap: '$6',
+      }}
+    >
+      <Box css={{ w: '$full', height: '1px', bg: '$dividerColor' }} />
+      <Heading as='h2'>{children}</Heading>
+      <Box css={{ w: '$full', height: '1px', bg: '$dividerColor' }} />
+    </Grid>
   );
 };
 
