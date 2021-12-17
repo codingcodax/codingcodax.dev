@@ -11,6 +11,7 @@ const SectionHeading: FC<SectionHeadingProps> = ({ children }) => {
     <Grid
       direction='column'
       css={{
+        mb: '$8',
         alignItems: 'center',
         gridTemplateColumns: '1fr auto 1fr',
         gridColumnGap: '$6',
