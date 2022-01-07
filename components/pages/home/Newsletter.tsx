@@ -7,7 +7,7 @@ const Newsletter = () => {
     <Box
       as='section'
       align='center'
-      css={{ my: '$32', maxWidth: '$container-sm' }}
+      css={{ mt: '$32', maxWidth: '$container-sm' }}
     >
       <Heading
         as='h2'
