@@ -1,0 +1,25 @@
+import { Grid } from '@/components/ui';
+import SectionHeading from '../common/SectionHeading';
+import Form from './Form';
+import LetsChat from './LetsChat';
+
+const GetInTouch = () => {
+  return (
+    <>
+      <SectionHeading>Get In Touch</SectionHeading>
+      <Grid
+        css={{
+          mx: '$auto',
+          maxWidth: '$container-sm',
+          gridTemplateColumns: 'repeat(2, minmax(300px, 1fr))',
+          gridColumnGap: '$10',
+        }}
+      >
+        <LetsChat />
+        <Form />
+      </Grid>
+    </>
+  );
+};
+
+export default GetInTouch;
