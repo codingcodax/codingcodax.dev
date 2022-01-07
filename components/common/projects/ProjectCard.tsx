@@ -51,7 +51,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
           }}
         >
           {tools.map((tool) => (
-            <Box as='li' key={tool.name}>
+            <Box as='li' key={tool.name} css={{ h: '$6' }}>
               {tool.icon}
             </Box>
           ))}
