@@ -8,7 +8,7 @@ const Footer = () => {
   const isMobileSize = useMediaQuery('(max-width: 479px)');
 
   return (
-    <Box css={{ display: 'grid', gridRowGap: '$8' }}>
+    <Box css={{ mt: '$32', display: 'grid', gridRowGap: '$8' }}>
       <Divider />
 
       {isMobileSize ? <MobileLinks /> : <Links />}
