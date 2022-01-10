@@ -1,8 +1,15 @@
+import CurrentlyBuilding from '@/components/common/CurrentlyBuilding';
+import { Heading, Text } from '@/components/ui';
+
 const Snippets = () => {
   return (
-    <div>
-      <p>Snippets Page</p>
-    </div>
+    <CurrentlyBuilding>
+      <Heading>Snippets 🤖</Heading>
+      <Text>
+        This page will contain code snippets I&apos;ve used in the past and
+        saved.
+      </Text>
+    </CurrentlyBuilding>
   );
 };
 
