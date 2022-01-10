@@ -74,7 +74,7 @@ export const storybook: Tool = {
 
 export const mdx: Tool = {
   name: 'MDX',
-  icon: <MDXIcon css={{ color: '$headingColor' }} />,
+  icon: <MDXIcon css={{ h: '$full', color: '$headingColor' }} />,
 };
 
 export const alanai: Tool = {
