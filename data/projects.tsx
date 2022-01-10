@@ -1,7 +1,6 @@
 import { Project } from 'types';
 
 import {
-  alanai,
   chakraui,
   css,
   firebase,
@@ -15,14 +14,12 @@ import {
   storybook,
 } from './tools';
 import {
-  AlanAIIcon,
   FirebaseIcon,
   HtmlIcon,
   JavaScriptIcon,
   LitreekIcon,
   Logo,
   MDXIcon,
-  ReactJSIcon,
   ReexJSIcon,
 } from '@/components/icons';
 
@@ -39,7 +36,7 @@ const projects: Project[] = [
   },
   {
     logo: MDXIcon,
-    title: 'NextJS MDX Blog Kit',
+    title: 'MDX Blog Kit',
     description:
       'Blog kit for developers 👨‍💻 built with Next JS, SEO optimized, light 🪶, and easy to customize 👌.',
     tools: [nextjs, chakraui, mdx],
@@ -68,16 +65,6 @@ const projects: Project[] = [
     featured: true,
   },
   {
-    logo: AlanAIIcon,
-    title: 'Voice Control News',
-    description:
-      'News website 🌐 with voice control 🎙️ built with react js ⚛️.',
-    tools: [reactjs, alanai, sass],
-    live: 'https://voice-control-react-news-app.vercel.app/',
-    repo: 'https://github.com/codingcodax/voice-control-react-news-app/',
-    featured: false,
-  },
-  {
     logo: FirebaseIcon,
     title: 'Superchat',
     description:
@@ -88,37 +75,8 @@ const projects: Project[] = [
     featured: false,
   },
   {
-    logo: ReactJSIcon,
-    title: 'Weather PWA',
-    description: 'Weather Progressive Web App built with React JS ⚛️ and SASS.',
-    tools: [reactjs, sass],
-    live: 'https://weather-react-pwa-jsmastery.vercel.app/',
-    repo: 'https://github.com/codingcodax/weather-react-pwa-jsmastery/',
-    featured: false,
-  },
-  {
-    logo: ReactJSIcon,
-    title: 'Wildfire Tracker',
-    description:
-      'Wildfire Tracker 🔥 app built with React JS ⚛️ and Google Maps 🗺️.',
-    tools: [reactjs, sass],
-    live: 'https://wildfire-tracker-six.vercel.app/',
-    repo: 'https://github.com/codingcodax/wildfire-tracker/',
-    featured: false,
-  },
-  {
-    logo: ReactJSIcon,
-    title: 'Coronavirus 19 Tracker',
-    description:
-      'Coronavirus 19 tracker app built with React JS ⚛️ and Firebase 🔥.',
-    tools: [reactjs, firebase, sass],
-    live: 'https://ax-covid-19-tracker.web.app/',
-    repo: 'https://github.com/codingcodax/covid-19-tracker/',
-    featured: false,
-  },
-  {
     logo: JavaScriptIcon,
-    title: 'Neumorphism Calculator',
+    title: 'Calculator',
     description:
       'Simple calculator neumorphism design with pure JavaScript add SASS.',
     tools: [html, sass, javascript],
