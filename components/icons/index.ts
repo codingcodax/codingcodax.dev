@@ -16,6 +16,7 @@ export { default as NodeJSIcon } from './nodejs';
 export { default as ReactJSIcon } from './reactjs';
 export { default as ReexJSIcon } from './reexjs';
 export { default as SASSIcon } from './sass';
+export { default as SearchIcon } from './search';
 export { default as StorybookIcon } from './storybook';
 export { default as SunIcon } from './sun';
 export { default as TwitterIcon } from './twitter';
