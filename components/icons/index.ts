@@ -1,5 +1,7 @@
 export { default as AlanAIIcon } from './alanai';
+export { default as CalendarIcon } from './calendar';
 export { default as ChakraUIIcon } from './chakraui';
+export { default as ClockIcon } from './clock';
 export { default as CSSIcon } from './css';
 export { default as FigmaIcon } from './figma';
 export { default as FirebaseIcon } from './firebase';
