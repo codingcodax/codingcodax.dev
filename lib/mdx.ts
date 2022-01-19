@@ -8,6 +8,7 @@ import slugPlugin from 'remark-slug';
 import { bundleMDX } from 'mdx-bundler';
 
 import type { PostMeta } from 'types';
+import readingTime from 'reading-time';
 
 const ROOT_PATH = process.cwd();
 export const POSTS_PATH = path.join(ROOT_PATH, 'posts');
@@ -20,27 +21,35 @@ export const getAllPostsMeta = (
   // Get all file paths in the posts folder (that end with .mdx)
   const paths = glob.sync(`${PATH}/**/*.mdx`);
 
+  const posts: PostMeta[] = paths.map((filePath) => {
+    // Get the content of the file
+    const source = readFileSync(path.join(filePath), 'utf8');
+
+    // Get the file name without .mdx
+    const slug = path.basename(filePath).replace(/\.mdx$/, '');
+    // Use gray-matter to extract the post meta from post content
+    const { data, content } = matter(source) as unknown as {
+      data: PostMeta;
+      content: any;
+    };
+
+    const publishedAtFormatted = format(
+      parseISO(data.publishedAt),
+      'dd MMMM, yyyy'
+    );
+
+    return {
+      ...data,
+      slug,
+      publishedAtFormatted,
+      readingTime: readingTime(content),
+    };
+  });
+
   return (
-    paths
-      .map((filePath) => {
-        // Get the content of the file
-        const source = readFileSync(path.join(filePath), 'utf8');
-
-        // Get the file name without .mdx
-        const slug = path.basename(filePath).replace('.mdx', '');
-        // Use gray-matter to extract the post meta from post content
-        const data = matter(source).data as PostMeta;
-
-        const publishedAtFormatted = format(
-          parseISO(data.publishedAt),
-          'dd MMMM, yyyy'
-        );
-
-        return { ...data, slug, publishedAtFormatted };
-      })
-
+    posts
       // filter post by category if specified
-      .filter((post) => {
+      .filter((post: PostMeta) => {
         // default to all posts
         if (!category) return true;
 
