@@ -113,6 +113,7 @@ export const {
       bold: 700,
     },
     lineHeights: {
+      none: '1',
       normal: '1.25',
       relaxed: '1.650',
     },
