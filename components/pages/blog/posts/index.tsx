@@ -11,8 +11,6 @@ interface PostsProps {
 }
 
 const Posts: FC<PostsProps> = ({ posts }) => {
-  console.log(posts);
-
   return (
     <Grid css={{ mt: '$8', gridRowGap: '$8' }}>
       {posts.map((post) => (
