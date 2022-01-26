@@ -5,6 +5,7 @@ import { format, parseISO } from 'date-fns';
 import matter from 'gray-matter';
 import gfmPlugin from 'remark-gfm';
 import slugPlugin from 'remark-slug';
+import mdxPrism from 'mdx-prism';
 import { bundleMDX } from 'mdx-bundler';
 
 import type { PostMeta } from 'types';
@@ -78,6 +79,8 @@ export const getPostBySlug = async (slug: string) => {
         gfmPlugin,
       ];
 
+      options.rehypePlugins = [mdxPrism];
+
       return options;
     },
     esbuildOptions(options) {
@@ -96,6 +99,7 @@ export const getPostBySlug = async (slug: string) => {
     ...frontmatter,
     publishedAtFormatted,
     slug,
+    readingTime: readingTime(code),
   } as PostMeta;
 
   return { meta, code };
