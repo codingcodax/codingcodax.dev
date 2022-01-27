@@ -11,7 +11,7 @@ import { Box, Heading, Text } from '@/components/ui';
 import Details from '@/components/pages/blog/Details';
 
 export const getStaticPaths = () => {
-  const posts = getAllPostsMeta();
+  const posts = getAllPostsMeta('post');
   const paths = posts.map(({ slug }) => ({ params: { slug } }));
 
   return {
