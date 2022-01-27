@@ -5,6 +5,7 @@ import { format, parseISO } from 'date-fns';
 import matter from 'gray-matter';
 import gfmPlugin from 'remark-gfm';
 import slugPlugin from 'remark-slug';
+// @ts-ignore
 import mdxPrism from 'mdx-prism';
 import { bundleMDX } from 'mdx-bundler';
 
