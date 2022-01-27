@@ -12,7 +12,7 @@ import type { PostMeta } from 'types';
 import readingTime from 'reading-time';
 
 const ROOT_PATH = process.cwd();
-export const POSTS_PATH = path.join(ROOT_PATH, 'posts');
+export const POSTS_PATH = path.join(ROOT_PATH, 'data/posts');
 
 export const getAllPostsMeta = (
   category?: PostMeta['category']
