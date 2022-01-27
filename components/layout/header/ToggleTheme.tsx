@@ -21,18 +21,18 @@ const ToggleTheme = () => {
         w: '$10',
         display: 'grid',
         placeItems: 'center',
-        bg: '$grayDarkColor',
+        bg: '$uiElement',
         borderRadius: '$sm',
 
         '&:hover': {
-          bg: '$grayLightColor',
+          bg: '$hoverElement',
         },
       }}
     >
       {theme === 'light' || resolvedTheme === 'light' ? (
-        <MoonIcon css={{ h: '$4', color: '$headingColor' }} />
+        <MoonIcon css={{ h: '$4', color: '$highTextColor' }} />
       ) : (
-        <SunIcon css={{ h: '$4', color: '$headingColor' }} />
+        <SunIcon css={{ h: '$4', color: '$highTextColor' }} />
       )}
     </Button>
   );

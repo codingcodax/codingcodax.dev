@@ -17,7 +17,7 @@ const globalStyles = globalCss({
   body: {
     fontFamily: '$body',
     fontSize: '$base',
-    color: '$textColor',
+    color: '$highTextColor',
     backgroundColor: '$backgroundColor',
   },
 

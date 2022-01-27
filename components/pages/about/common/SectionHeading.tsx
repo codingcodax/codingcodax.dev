@@ -17,9 +17,9 @@ const SectionHeading: FC<SectionHeadingProps> = ({ children }) => {
         gridColumnGap: '$6',
       }}
     >
-      <Box css={{ w: '$full', height: '1px', bg: '$dividerColor' }} />
+      <Box css={{ w: '$full', height: '1px', bg: '$normalBorder' }} />
       <Heading as='h2'>{children}</Heading>
-      <Box css={{ w: '$full', height: '1px', bg: '$dividerColor' }} />
+      <Box css={{ w: '$full', height: '1px', bg: '$normalBorder' }} />
     </Grid>
   );
 };

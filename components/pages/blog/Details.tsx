@@ -18,19 +18,19 @@ const Details: FC<DetailsProps> = ({ readingTime, publishedAtFormatted }) => {
         alignSelf: 'end',
         justifyContent: 'start',
         gridColumnGap: '$4',
-        color: '$grayTextColor',
+        color: '$lowTextColor',
       }}
     >
       <Center>
         <CalendarIcon css={{ width: '$5', mr: '$1' }} />
-        <Text as='span' size='sm' css={{ color: '$grayTextColor' }}>
+        <Text as='span' size='sm' css={{ color: '$lowTextColor' }}>
           {publishedAtFormatted}
         </Text>
       </Center>
 
       <Center>
         <ClockIcon css={{ w: '$5', mr: '$1' }} />
-        <Text as='span' size='sm' css={{ color: '$grayTextColor' }}>
+        <Text as='span' size='sm' css={{ color: '$lowTextColor' }}>
           {readingTime?.text}
         </Text>
       </Center>

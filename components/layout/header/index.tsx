@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { styled } from '@/theme/theme.config';
+import { styled } from '@/theme/config/';
 
 import { Logo } from '@/components/icons';
 import MenuButton from './menu-button';

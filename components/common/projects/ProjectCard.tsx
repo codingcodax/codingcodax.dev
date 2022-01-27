@@ -21,11 +21,12 @@ const ProjectCard: FC<ProjectCardProps> = ({
       as='li'
       css={{
         maxWidth: '500px',
-        border: '1px solid $dividerColor',
-        borderRadius: '$xs',
+        bg: '$subtleBackground',
+        border: '1px solid $normalBorder',
+        borderRadius: '$sm',
       }}
     >
-      <Center css={{ h: '$32', bg: '$headingColor' }}>{logo}</Center>
+      <Center css={{ h: '$32', bg: '$highTextColor' }}>{logo}</Center>
 
       <Box
         css={{

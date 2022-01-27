@@ -12,15 +12,15 @@ const Subscribe: FC<SubscribeProps> = ({ children }) => {
       as='form'
       css={{
         p: '$8',
-        bg: '$shadowColor',
-        border: '2px dashed $dividerColor',
+        bg: '$subtleBackground',
+        border: '2px dashed $normalBorder',
         borderRadius: '$sm',
       }}
     >
       <Text
         as='label'
         htmlFor='email-label'
-        css={{ mb: '$2', color: '$grayTextColor', display: 'inline-block' }}
+        css={{ mb: '$2', color: '$lowTextColor', display: 'inline-block' }}
       >
         Your Email Address
       </Text>

@@ -15,7 +15,7 @@ const CurrentlyBuilding: FC<CurrentlyBuildingProps> = ({ children }) => {
           h: '$min',
           maxWidth: '550px',
           gridRowGap: '$8',
-          border: '2px solid $dividerColor',
+          border: '2px solid $normalBorder',
           borderRadius: '$sm',
         }}
       >

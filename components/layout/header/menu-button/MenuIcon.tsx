@@ -10,7 +10,7 @@ const MenuIcon: FC<{ isOpen: boolean }> = ({ isOpen }) => {
           height: '4px',
           width: isOpen ? '32px' : '40px',
           position: 'absolute',
-          bg: '$headingColor',
+          bg: '$highTextColor',
           borderRadius: '1px',
           transition: 'all 0.3s ease-in-out',
 
@@ -26,7 +26,7 @@ const MenuIcon: FC<{ isOpen: boolean }> = ({ isOpen }) => {
           height: '4px',
           width: isOpen ? '32px' : '16px',
           position: 'absolute',
-          bg: '$headingColor',
+          bg: '$highTextColor',
           borderRadius: '1px',
           transition: 'all 0.3s ease-in-out',
 

@@ -20,13 +20,13 @@ const Post = ({
         css={{
           p: '$8',
           textDecoration: 'none',
-          bg: '$mauve200',
-          border: '1px solid $dividerColor',
+          bg: '$subtleBackground',
+          border: '1px solid $normalBorder',
           borderRadius: '$sm',
           transition: 'background ease-in-out $normal',
 
           '&:hover': {
-            bg: '$mauve300',
+            borderColor: '$hoverBorder',
 
             h2: {
               color: '$primary',
