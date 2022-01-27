@@ -1,4 +1,4 @@
-import { styled } from '@/theme/theme.config';
+import { styled } from '@/theme/config/';
 
 const Button = styled('button', {
   w: '$max',
@@ -8,7 +8,7 @@ const Button = styled('button', {
   textTransform: 'uppercase',
   backgroundColor: 'transparent',
   border: '0px solid transparent',
-  borderRadius: '$xs',
+  borderRadius: '$sm',
   transition: '$normal',
   cursor: 'pointer',
 
@@ -39,13 +39,13 @@ const Button = styled('button', {
       },
       secondary: {
         color: '$backgroundColor',
-        bg: '$headingColor',
-        borderColor: '$headingColor',
+        bg: '$highTextColor',
+        borderColor: '$highTextColor',
 
         '&:hover': {
-          color: '$headingColor',
+          color: '$highTextColor',
           bg: '$backgroundColor',
-          borderColor: '$headingColor',
+          borderColor: '$highTextColor',
         },
       },
       unstyled: {},
@@ -73,7 +73,7 @@ const Button = styled('button', {
         bg: 'transparent',
 
         '&:hover': {
-          color: '$headingColor',
+          color: '$backgroundColor',
           bg: '$primary',
           borderColor: '$primary',
         },
@@ -84,12 +84,12 @@ const Button = styled('button', {
       outlined: true,
 
       css: {
-        color: '$headingColor',
+        color: '$highTextColor',
         bg: 'transparent',
 
         '&:hover': {
           color: '$backgroundColor',
-          bg: '$headingColor',
+          bg: '$highTextColor',
         },
       },
     },

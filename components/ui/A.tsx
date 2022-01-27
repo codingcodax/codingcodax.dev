@@ -1,4 +1,4 @@
-import { styled } from '@/theme/theme.config';
+import { styled } from '@/theme/config/';
 
 const A = styled('a', {
   variants: {
@@ -42,16 +42,16 @@ const A = styled('a', {
         },
       },
       'footer-link': {
-        color: '$grayTextColor',
+        color: '$lowTextColor',
         transition: 'color $normal ease-in-out',
-        '&:hover': { color: '$grayDarkTextColor' },
+        '&:hover': { color: '$highTextColor' },
       },
       'mobile-link': {
         h: '$6',
         display: 'inline-block',
-        color: '$grayTextColor',
+        color: '$lowTextColor',
         transition: 'color $normal ease-in-out',
-        '&:hover': { color: '$grayDarkTextColor' },
+        '&:hover': { color: '$highTextColor' },
       },
     },
     textDecoration: {

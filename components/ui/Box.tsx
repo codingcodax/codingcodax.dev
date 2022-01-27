@@ -1,4 +1,4 @@
-import { styled } from '@/theme/theme.config';
+import { styled } from '@/theme/config/';
 
 const Box = styled('div', {
   variants: {

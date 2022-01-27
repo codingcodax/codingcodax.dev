@@ -1,7 +1,7 @@
-import { styled } from '@/theme/theme.config';
+import { styled } from '@/theme/config/';
 
 const Text = styled('p', {
-  color: '$textColor',
+  color: '$highTextColor',
   fontSize: '$base',
   lineHeight: '$normal',
 
