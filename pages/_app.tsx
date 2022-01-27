@@ -1,7 +1,7 @@
 import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'next-themes';
 
-import { darkTheme } from '@/theme/theme.config';
+import { darkTheme } from '@/theme/config/';
 import globalStyles from '@/theme/globalStyles';
 
 import Layout from '@/components/layout';
