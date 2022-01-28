@@ -22,7 +22,24 @@ export const components = {
         mb: '$4',
         mx: '$auto',
         maxWidth: '$container-sm',
+        position: 'relative',
         '& code': { fontSize: '$4xl' },
+        '&>a.anchor': {
+          h: '$full',
+          w: '$full',
+          color: '$lowTextColor',
+          position: 'absolute',
+          cursor: 'pointer',
+        },
+        '&>a.anchor::after': {
+          content: '#',
+          opacity: '0',
+          position: 'absolute',
+          left: '-2rem',
+        },
+        '&>a.anchor:hover::after': {
+          opacity: '0.2',
+        },
       }}
       {...props}
     />
@@ -31,10 +48,28 @@ export const components = {
     <Heading
       as='h2'
       css={{
-        my: '$4',
+        mt: '$8',
+        mb: '$4',
         mx: '$auto',
         maxWidth: '$container-sm',
+        position: 'relative',
         '& code': { fontSize: '$3xl' },
+        '&>a.anchor': {
+          h: '$full',
+          w: '$full',
+          color: '$lowTextColor',
+          position: 'absolute',
+          cursor: 'pointer',
+        },
+        '&>a.anchor::after': {
+          content: '#',
+          opacity: '0',
+          position: 'absolute',
+          left: '-2rem',
+        },
+        '&>a.anchor:hover::after': {
+          opacity: '0.2',
+        },
       }}
       {...props}
     />
@@ -46,7 +81,24 @@ export const components = {
         my: '$4',
         mx: '$auto',
         maxWidth: '$container-sm',
+        position: 'relative',
         '& code': { fontSize: '$2xl' },
+        '&>a.anchor': {
+          h: '$full',
+          w: '$full',
+          color: '$lowTextColor',
+          position: 'absolute',
+          cursor: 'pointer',
+        },
+        '&>a.anchor::after': {
+          content: '#',
+          opacity: '0',
+          position: 'absolute',
+          left: '-2rem',
+        },
+        '&>a.anchor:hover::after': {
+          opacity: '0.2',
+        },
       }}
       {...props}
     />
@@ -58,7 +110,24 @@ export const components = {
         my: '$2',
         mx: '$auto',
         maxWidth: '$container-sm',
+        position: 'relative',
         '& code': { fontSize: '$xl' },
+        '&>a.anchor': {
+          h: '$full',
+          w: '$full',
+          color: '$lowTextColor',
+          position: 'absolute',
+          cursor: 'pointer',
+        },
+        '&>a.anchor::after': {
+          content: '#',
+          opacity: '0',
+          position: 'absolute',
+          left: '-2rem',
+        },
+        '&>a.anchor:hover::after': {
+          opacity: '0.2',
+        },
       }}
       {...props}
     />
@@ -70,7 +139,24 @@ export const components = {
         my: '$2',
         mx: '$auto',
         maxWidth: '$container-sm',
+        position: 'relative',
         '& code': { fontSize: '$lg' },
+        '&>a.anchor': {
+          h: '$full',
+          w: '$full',
+          color: '$lowTextColor',
+          position: 'absolute',
+          cursor: 'pointer',
+        },
+        '&>a.anchor::after': {
+          content: '#',
+          opacity: '0',
+          position: 'absolute',
+          left: '-2rem',
+        },
+        '&>a.anchor:hover::after': {
+          opacity: '0.2',
+        },
       }}
       {...props}
     />
@@ -82,7 +168,24 @@ export const components = {
         my: '$1',
         mx: '$auto',
         maxWidth: '$container-sm',
+        position: 'relative',
         '& code': { fontSize: '$lg' },
+        '&>a.anchor': {
+          h: '$full',
+          w: '$full',
+          color: '$lowTextColor',
+          position: 'absolute',
+          cursor: 'pointer',
+        },
+        '&>a.anchor::after': {
+          content: '#',
+          opacity: '0',
+          position: 'absolute',
+          left: '-2rem',
+        },
+        '&>a.anchor:hover::after': {
+          opacity: '0.2',
+        },
       }}
       {...props}
     />
@@ -208,7 +311,7 @@ export const components = {
   img: (props: any) => <NextImage {...(props as any)} />,
   Img: ({ children, ...props }: { children: ReactNode }) => (
     <Box as='figure' css={{ my: '$8' }}>
-      <Box css={{ borderRadius: '$sm', overflow: 'hidden' }}>
+      <Box css={{ '& img': { borderRadius: '$sm', overflow: 'hidden' } }}>
         <NextImage {...(props as any)} />
       </Box>
       {children && (
@@ -257,13 +360,37 @@ export const components = {
     <Box
       as='pre'
       css={{
-        p: '$1',
+        p: '$4',
+        my: '$4',
         mx: '$auto',
-        maxWidth: '$container-sm',
+        maxWidth: 'min(calc(100vw - 2rem), $container-sm)',
+        '@bp1': { maxWidth: 'calc(100vw - 4rem)' },
+        overflowX: 'auto',
         fontSize: '$sm',
         fontFamily: 'mono',
         bg: '$subtleBackground',
-        '&>code': { border: 'none' },
+        border: '1px solid $subtleBorder',
+        borderRadius: '$sm',
+        '&::-webkit-scrollbar': { display: 'none' },
+
+        "&[class*='language-']": { color: '$highTextColor' },
+        '& .token.comment, & .token.important, & .token.parameter, & .token.interpolation, & .token.punctuation':
+          { color: '$lowTextColor' },
+        '& .token.keyword, &.token.console, & .token.class-name, & .token.tag, & .token.operator, & .token.selector, & .token.attr-equals':
+          {
+            color: '$primary',
+          },
+        '& .token.function, & .token.property, & .token.attr-name': {
+          color: '#3e63dd', // blue
+        },
+        '& .token.string, & .token.attr-value': { color: '#05a2c2' }, // green
+        '& .token.number, & .token.unit, & .token.hexcode': {
+          color: '#e54d2e', // orange
+        },
+
+        '& .token.function': { fontWeight: '$bold' },
+
+        '&>code': { p: '$0', border: 'none' },
       }}
       {...props}
     />
