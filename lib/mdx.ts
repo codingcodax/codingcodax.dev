@@ -4,11 +4,12 @@ import glob from 'glob';
 import { format, parseISO } from 'date-fns';
 import matter from 'gray-matter';
 import gfmPlugin from 'remark-gfm';
-import slugPlugin from 'remark-slug';
-// @ts-ignore
-import mdxPrism from 'mdx-prism';
+import rehypeSlug from 'rehype-slug';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypeToc from '@jsdevtools/rehype-toc';
+import rehypeCodeTitles from 'rehype-code-titles';
+import rehypePrism from 'rehype-prism-plus';
 import { bundleMDX } from 'mdx-bundler';
-
 import type { PostMeta } from 'types';
 import readingTime from 'reading-time';
 
@@ -66,6 +67,36 @@ export const getAllPostsMeta = (
   );
 };
 
+const customizeTOC = (toc: { children: any }) => {
+  try {
+    const { children } = toc;
+    const childrenOfChildren = children?.[0]?.children;
+    if (!children?.length || !childrenOfChildren?.length) return null;
+  } catch (e) {
+    console.error(e);
+  }
+
+  return {
+    type: 'element',
+    tagName: 'div',
+    properties: { className: 'toc' },
+    children: [
+      {
+        type: 'element',
+        tagName: 'p',
+        properties: { className: 'title' },
+        children: [
+          {
+            type: 'text',
+            value: 'Table of Contents',
+          },
+        ],
+      },
+      ...(toc.children || []),
+    ],
+  };
+};
+
 // Get content of specific post
 export const getPostBySlug = async (slug: string) => {
   // Get the content of the file
@@ -74,13 +105,28 @@ export const getPostBySlug = async (slug: string) => {
   const { code, frontmatter } = await bundleMDX({
     source,
     xdmOptions(options) {
-      options.remarkPlugins = [
-        ...(options?.remarkPlugins ?? []),
-        slugPlugin,
-        gfmPlugin,
-      ];
+      options.remarkPlugins = [...(options?.remarkPlugins ?? []), gfmPlugin];
 
-      options.rehypePlugins = [mdxPrism];
+      options.rehypePlugins = [
+        ...(options.rehypePlugins ?? []),
+        rehypeSlug,
+        rehypeCodeTitles,
+        rehypePrism,
+        [
+          rehypeAutolinkHeadings,
+          {
+            properties: {
+              className: ['anchor'],
+            },
+          },
+        ],
+        [
+          rehypeToc,
+          {
+            customizeTOC,
+          },
+        ],
+      ];
 
       return options;
     },
