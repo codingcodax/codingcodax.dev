@@ -368,6 +368,7 @@ export const components = {
         overflowX: 'auto',
         fontSize: '$sm',
         fontFamily: 'mono',
+        lineHeight: '$relaxed',
         bg: '$subtleBackground',
         border: '1px solid $subtleBorder',
         borderRadius: '$sm',
