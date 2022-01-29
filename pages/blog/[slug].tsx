@@ -45,9 +45,14 @@ const Post = ({ meta, code }: PostType) => {
       align='center'
       css={{
         maxWidth: '800px',
+        position: 'relative',
+
         '.rehype-code-title': {
-          p: '$4',
+          pt: '$2',
+          pb: '$1',
+          px: '$4',
           mt: '$4',
+          ml: '$3',
           width: 'fit-content',
           fontSize: '$sm',
           fontWeight: '$bold',
@@ -60,13 +65,35 @@ const Post = ({ meta, code }: PostType) => {
 
           '&::after': {
             content: '',
+            height: '1px',
+            width: '100%',
+            bg: '$subtleBackground',
             position: 'absolute',
+            left: '0',
+            bottom: '-1px',
           },
         },
         '.rehype-code-title + pre': {
           mt: '$0',
-          borderTopLeftRadius: '0',
         },
+
+        '.toc': {
+          p: '$4',
+          my: '$8',
+          mx: '$auto',
+          maxWidth: '$container-sm',
+          bg: '$subtleBackground',
+          borderRadius: '$sm',
+        },
+        '.toc>p.title': {
+          fontSize: '$md',
+          fontWeight: '$bold',
+          textTransform: 'uppercase',
+          letterSpacing: '2px',
+        },
+        '.toc>ol': { p: '$0' },
+        '.toc>ol>li a': { p: '$0', textDecoration: 'none' },
+        '.toc>ol>li::before': { color: '$lowTextColor' },
       }}
     >
       <Heading
