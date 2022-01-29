@@ -52,7 +52,7 @@ const Post = ({ meta, code }: PostType) => {
           pb: '$1',
           px: '$4',
           mt: '$4',
-          ml: '$3',
+          ml: '$10',
           width: 'fit-content',
           fontSize: '$sm',
           fontWeight: '$bold',
