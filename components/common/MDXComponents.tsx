@@ -310,7 +310,7 @@ export const components = {
   ),
   img: (props: any) => <NextImage {...(props as any)} />,
   Img: ({ children, ...props }: { children: ReactNode }) => (
-    <Box as='figure' css={{ my: '$8' }}>
+    <Box as='figure' css={{ my: '$8', maxWidth: '$container-md' }}>
       <Box css={{ '& img': { borderRadius: '$sm', overflow: 'hidden' } }}>
         <NextImage {...(props as any)} />
       </Box>
@@ -364,7 +364,7 @@ export const components = {
         my: '$4',
         mx: '$auto',
         maxWidth: 'min(calc(100vw - 2rem), $container-sm)',
-        '@bp1': { maxWidth: 'calc(100vw - 4rem)' },
+        // '@bp1': { maxWidth: 'calc(100vw - 4rem)' },
         overflowX: 'auto',
         fontSize: '$sm',
         fontFamily: 'mono',
