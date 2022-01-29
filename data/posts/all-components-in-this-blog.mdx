@@ -87,9 +87,44 @@ And this is a **_bold and empasized_** text.
 
 ## Codeblocks
 
-```javascript
+```javascript:test.js
+function foo(bar) {
+  var a = 42,
+      b = 'Prism';
+  return a + bar(b);
+}
+
+// this is a comment
 const name = 'codax';
 console.log(name);
+const regex = \n/\;
+const numbers = [1, 2, 3, 4, 5];
+const booleans = [true, false];
+
+const greeting = (name) => {
+  return `Hi ${name}`;
+}
+```
+
+```html
+<div>
+  <img src="https:www.github.com/" />
+  <p class="paragraph">This is a paragraph</p>
+</div>
+```
+
+```css
+div: {
+  color: #161616 !important;
+  height: 12px;
+  margin-right: var(--space-auto);
+}
+
+.box, #input, input.message[input='text']: {
+  border: 1px solid #161616;
+  padding: 1rem 2rem;
+  font-weight: bold;
+}
 ```
 
 ## Horizontal Rule

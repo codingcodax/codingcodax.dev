@@ -41,7 +41,34 @@ const Post = ({ meta, code }: PostType) => {
   const Component = useMemo(() => getMDXComponent(code), [code]);
 
   return (
-    <Box align='center' css={{ maxWidth: '800px' }}>
+    <Box
+      align='center'
+      css={{
+        maxWidth: '800px',
+        '.rehype-code-title': {
+          p: '$4',
+          mt: '$4',
+          width: 'fit-content',
+          fontSize: '$sm',
+          fontWeight: '$bold',
+          bg: '$subtleBackground',
+          border: '1px solid $subtleBorder',
+          borderBottom: 'none',
+          borderTopLeftRadius: '$sm',
+          borderTopRightRadius: '$sm',
+          position: 'relative',
+
+          '&::after': {
+            content: '',
+            position: 'absolute',
+          },
+        },
+        '.rehype-code-title + pre': {
+          mt: '$0',
+          borderTopLeftRadius: '0',
+        },
+      }}
+    >
       <Heading
         as='h1'
         css={{
