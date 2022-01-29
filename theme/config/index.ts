@@ -37,6 +37,7 @@ export const {
       min: 'min-content',
       full: '100%',
       'container-sm': '640px',
+      'container-md': '760px',
     },
     borderWidths: {},
     borderStyles: {},
