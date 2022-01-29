@@ -363,8 +363,9 @@ export const components = {
         p: '$4',
         my: '$4',
         mx: '$auto',
-        maxWidth: 'min(calc(100vw - 2rem), $container-sm)',
-        // '@bp1': { maxWidth: 'calc(100vw - 4rem)' },
+        w: '$full',
+        maxWidth: 'calc(100vw - 2rem)',
+        '@bp1': { width: 'calc(100vw - 4rem)', maxWidth: '$container-sm' },
         overflowX: 'auto',
         fontSize: '$sm',
         fontFamily: 'mono',
@@ -390,6 +391,25 @@ export const components = {
         },
 
         '& .token.function': { fontWeight: '$bold' },
+
+        '.line-number::before': {
+          display: 'inline-block',
+          width: '$4',
+          textAlign: 'right',
+          mr: '$4',
+          ml: '-8px',
+          color: '$lowTextColor',
+          opacity: '0.5',
+          content: 'attr(line)',
+        },
+
+        '.highlight-line': {
+          ml: '-1rem',
+          pl: '13px',
+          w: '$full',
+          display: 'block',
+          borderLeft: '4px solid $primary',
+        },
 
         '&>code': { p: '$0', border: 'none' },
       }}
