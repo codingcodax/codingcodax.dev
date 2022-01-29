@@ -78,7 +78,7 @@ const customizeTOC = (toc: { children: any }) => {
 
   return {
     type: 'element',
-    tagName: 'div',
+    tagName: 'nav',
     properties: { className: 'toc' },
     children: [
       {
