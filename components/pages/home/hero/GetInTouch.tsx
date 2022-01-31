@@ -7,8 +7,9 @@ const GetInTouch = () => {
     <Link href='/about#contact'>
       <Button
         as='a'
-        variant='primary'
+        variant='secondary'
         size='large'
+        outlined
         css={{ textDecoration: 'none' }}
       >
         Get In Touch
