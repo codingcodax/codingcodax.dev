@@ -13,6 +13,7 @@ const FeaturedProjects = () => {
         placeItems: 'center',
         gridRowGap: '$8',
         '@bp1': { gridRowGap: '$16' },
+        scrollMarginTop: '$10',
       }}
     >
       <Heading
