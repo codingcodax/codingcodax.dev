@@ -2,7 +2,7 @@ import { Box, Heading, Text } from '@/components/ui';
 
 const Intro = () => {
   return (
-    <Box align='center' css={{ maxWidth: '$container-sm' }}>
+    <Box as='main' align='center' css={{ maxWidth: '$container-sm' }}>
       <Heading as='h1' css={{ mt: '$12', mb: '$20' }}>
         About 👨‍💻
       </Heading>
