@@ -7,6 +7,7 @@ const FeaturedProjects = () => {
   return (
     <Box
       as='section'
+      id='projects'
       css={{
         display: 'grid',
         placeItems: 'center',
