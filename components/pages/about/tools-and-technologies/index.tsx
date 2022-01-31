@@ -5,9 +5,13 @@ import Skills from './skills';
 
 const ToolsAndTechnologies = () => {
   return (
-    <>
+    <Box
+      as='section'
+      align='center'
+      css={{ mb: '$20', maxWidth: '$container-sm' }}
+    >
       <SectionHeading>Tools & Technologies</SectionHeading>
-      <Box align='center' css={{ mb: '$20', maxWidth: '$container-sm' }}>
+      <div>
         <Text lineHeight='relaxed' css={{ mb: '$20' }}>
           One of my favorite things since I starting to learn to code has been
           to see all of the amazing tools other humans have created to make
@@ -15,8 +19,8 @@ const ToolsAndTechnologies = () => {
           most regularly.
         </Text>
         <Skills />
-      </Box>
-    </>
+      </div>
+    </Box>
   );
 };
 
