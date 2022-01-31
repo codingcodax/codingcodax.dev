@@ -24,6 +24,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
         bg: '$subtleBackground',
         border: '1px solid $normalBorder',
         borderRadius: '$sm',
+        overflow: 'hidden',
       }}
     >
       <Center css={{ h: '$32', bg: '$highTextColor' }}>{logo}</Center>
