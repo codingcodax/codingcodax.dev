@@ -5,7 +5,7 @@ import LetsChat from './LetsChat';
 
 const GetInTouch = () => {
   return (
-    <>
+    <section id='contact'>
       <SectionHeading>Get In Touch</SectionHeading>
       <Grid
         css={{
@@ -18,7 +18,7 @@ const GetInTouch = () => {
         <LetsChat />
         <Form />
       </Grid>
-    </>
+    </section>
   );
 };
 
