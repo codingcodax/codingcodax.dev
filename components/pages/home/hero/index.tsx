@@ -1,9 +1,10 @@
-import { Box, Heading, Text } from '@/components/ui';
+import { Box, Grid, Heading, Text } from '@/components/ui';
 
 import useMediaQuery from '@/hooks/useMediaQuery';
 
 import GetInTouch from './GetInTouch';
 import Icons from './Icons';
+import SeeMyWork from './SeeMyWork';
 
 const Hero = () => {
   const isLargeSize = useMediaQuery('(min-width: 1000px)');
@@ -71,7 +72,13 @@ const Hero = () => {
           I like to work on.
         </Text>
 
-        <GetInTouch />
+        <Grid
+          direction='column'
+          css={{ justifyContent: 'start', gridColumnGap: '$4' }}
+        >
+          <SeeMyWork />
+          <GetInTouch />
+        </Grid>
       </Box>
 
       {isLargeSize && <Icons css={{ w: '$104', color: '$highTextColor' }} />}
