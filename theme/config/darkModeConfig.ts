@@ -1,25 +1,30 @@
-import { mauveDark, violetDark } from '@radix-ui/colors';
+import { mauveDark, violetDark, redDark, greenDark } from '@radix-ui/colors';
 
 const darkModeConfig = {
   colors: {
     ...mauveDark,
     ...violetDark,
+    ...redDark,
+    ...greenDark,
 
-    primary: violetDark.violet9,
-    primaryDark: violetDark.violet10,
+    error: '$red11',
+    success: '$green11',
 
-    backgroundColor: mauveDark.mauve1,
-    subtleBackground: mauveDark.mauve2,
-    uiElement: mauveDark.mauve3,
-    hoverElement: mauveDark.mauve4,
-    activeElement: mauveDark.mauve5,
-    subtleBorder: mauveDark.mauve6,
-    normalBorder: mauveDark.mauve7,
-    hoverBorder: mauveDark.mauve8,
-    solidBackground: mauveDark.mauve9,
-    hoverBackground: mauveDark.mauve10,
-    lowTextColor: mauveDark.mauve11,
-    highTextColor: mauveDark.mauve12,
+    primary: '$violet9',
+    primaryDark: '$violet10',
+
+    backgroundColor: '$mauve1',
+    subtleBackground: '$mauve2',
+    uiElement: '$mauve3',
+    hoverElement: '$mauve4',
+    activeElement: '$mauve5',
+    subtleBorder: '$mauve6',
+    normalBorder: '$mauve7',
+    hoverBorder: '$mauve8',
+    solidBackground: '$mauve9',
+    hoverBackground: '$mauve10',
+    lowTextColor: '$mauve11',
+    highTextColor: '$mauve12',
   },
 };
 

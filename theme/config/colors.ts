@@ -1,11 +1,13 @@
-import { mauve, violet } from '@radix-ui/colors';
+import { mauve, violet, red, green } from '@radix-ui/colors';
 
 const colors = {
   ...mauve,
   ...violet,
+  ...red,
+  ...green,
 
-  // violet500: '#8e43ed',
-  // violet600: '#7b38d0',
+  error: '$red12',
+  success: '$green12',
 
   primary: '$violet9',
   primaryDark: '$violet10',
