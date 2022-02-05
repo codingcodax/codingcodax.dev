@@ -6,7 +6,7 @@ import { format, parseISO } from 'date-fns';
 import type { Post as PostType } from 'types';
 
 import { getAllPostsMeta, getPostBySlug } from '@/lib/mdx';
-import { components } from '@/components/common/MDXComponents';
+import { components } from '@/components/pages/blog/mdx-components';
 import { Box, Heading, Text } from '@/components/ui';
 import Details from '@/components/pages/blog/Details';
 
@@ -72,9 +72,10 @@ const Post = ({ meta, code }: PostType) => {
             position: 'absolute',
             left: '0',
             bottom: '-1px',
+            zIndex: '1',
           },
         },
-        '.rehype-code-title + pre': {
+        '.rehype-code-title + div.pre-container': {
           mt: '$0',
         },
 
