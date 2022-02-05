@@ -48,6 +48,16 @@ const Button = styled('button', {
           borderColor: '$highTextColor',
         },
       },
+      extra: {
+        bg: '$uiElement',
+        border: 'none',
+        borderRadius: '$sm',
+        cursor: 'pointer',
+
+        '&:hover': {
+          bg: '$hoverElement',
+        },
+      },
       unstyled: {},
     },
 
