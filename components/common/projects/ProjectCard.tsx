@@ -72,8 +72,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
               <Button
                 as='a'
                 css={{ textDecoration: 'none' }}
-                variant='primary'
-                outlined
+                variant='secondary'
                 target='_blank'
                 rel='noopener noreferrer'
               >
@@ -87,8 +86,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
               <Button
                 as='a'
                 css={{ textDecoration: 'none' }}
-                variant='primary'
-                outlined
+                variant='secondary'
                 target='_blank'
                 rel='noopener noreferrer'
               >
