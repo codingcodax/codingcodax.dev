@@ -1,5 +1,6 @@
 import { Box, Heading, Text } from '@/components/ui';
 
+import Seo from '@/components/common/Seo';
 import AllProjects from '@/components/common/projects';
 
 const Projects = () => {
@@ -8,6 +9,8 @@ const Projects = () => {
       align='center'
       css={{ w: '$full', maxWidth: '800px', flexDirection: 'column' }}
     >
+      <Seo name='Projects 🎲' path='/projects' />
+
       <Box align='center' css={{ mb: '$20', maxWidth: '$container-sm' }}>
         <Heading as='h1' css={{ mt: '$12', mb: '$20' }}>
           Projects 🎲

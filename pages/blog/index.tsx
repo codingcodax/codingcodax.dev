@@ -6,6 +6,7 @@ import { A, Box, Heading, Text } from '@/components/ui';
 
 import { getAllPostsMeta } from '@/lib/mdx';
 
+import Seo from '@/components/common/Seo';
 import Link from '@/components/common/Link';
 import SearchBar from '@/components/pages/blog/SearchBar';
 import Posts from '@/components/pages/blog/posts';
@@ -36,6 +37,8 @@ const Blog: FC<BlogProps> = ({ posts }) => {
       align='center'
       css={{ w: '$full', maxWidth: '$container-sm', flexDirection: 'column' }}
     >
+      <Seo name='Blog 🖊️' path='/blog' />
+
       <Heading as='h1' css={{ mt: '$12', mb: '$20' }}>
         Blog 🖊️
       </Heading>

@@ -1,5 +1,8 @@
 import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'next-themes';
+import { DefaultSeo } from 'next-seo';
+
+import SEO from '../next-seo.config';
 
 import { darkTheme } from '@/theme/config/';
 import globalStyles from '@/theme/globalStyles';
@@ -17,6 +20,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       value={{ light: 'light-theme', dark: darkTheme.toString() }}
     >
       <Layout>
+        <DefaultSeo {...SEO} />
         <Component {...pageProps} />
       </Layout>
     </ThemeProvider>
