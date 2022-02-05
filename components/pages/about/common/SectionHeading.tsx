@@ -13,13 +13,13 @@ const SectionHeading: FC<SectionHeadingProps> = ({ children }) => {
       css={{
         mb: '$8',
         alignItems: 'center',
-        gridTemplateColumns: '1fr auto 1fr',
+        gridTemplateColumns: '1fr auto  1fr',
         gridColumnGap: '$6',
       }}
     >
-      <Box css={{ w: '$full', height: '1px', bg: '$normalBorder' }} />
+      <Box css={{ w: '$full', height: '1px', bg: '$subtleBorder' }} />
       <Heading as='h2'>{children}</Heading>
-      <Box css={{ w: '$full', height: '1px', bg: '$normalBorder' }} />
+      <Box css={{ w: '$full', height: '1px', bg: '$subtleBorder' }} />
     </Grid>
   );
 };
