@@ -11,8 +11,9 @@ const GetInTouch = () => {
         css={{
           mx: '$auto',
           maxWidth: '$container-sm',
-          gridTemplateColumns: 'repeat(2, minmax(300px, 1fr))',
-          gridColumnGap: '$10',
+          gridTemplateColumns: '1fr',
+          gridGap: '$10',
+          '@bp1': { gridTemplateColumns: '1fr 1fr' },
         }}
       >
         <LetsChat />
