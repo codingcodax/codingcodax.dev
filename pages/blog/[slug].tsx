@@ -9,6 +9,7 @@ import { getAllPostsMeta, getPostBySlug } from '@/lib/mdx';
 import { components } from '@/components/pages/blog/mdx-components';
 import { Box, Heading, Text } from '@/components/ui';
 import Details from '@/components/pages/blog/Details';
+import ProgressBar from '@/components/pages/blog/ProgressBar';
 
 export const getStaticPaths = () => {
   const posts = getAllPostsMeta('post');
@@ -129,6 +130,7 @@ const Post = ({ meta, code }: PostType) => {
       >
         {meta.summary}
       </Text>
+      <ProgressBar />
       <Component components={components} />
     </Box>
   );
