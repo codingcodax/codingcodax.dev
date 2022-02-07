@@ -30,7 +30,7 @@ const Blockcode = ({ props }: { props: any }) => {
       <Button
         variant='extra'
         onClick={() => copyFunction()}
-        css={{ position: 'absolute', right: '0' }}
+        css={{ position: 'absolute', right: '0', fontSize: ' $sm' }}
       >
         {!copy ? 'Copy' : 'Copied'}
       </Button>
