@@ -42,7 +42,7 @@ const Blockcode = ({ props }: { props: any }) => {
           p: '$4',
           overflowX: 'auto',
           fontSize: '$sm',
-          fontFamily: 'mono',
+          fontFamily: '$mono',
           lineHeight: '$relaxed',
           bg: '$subtleBackground',
           border: '1px solid $subtleBorder',

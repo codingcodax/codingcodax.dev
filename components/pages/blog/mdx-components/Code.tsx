@@ -6,7 +6,7 @@ const Code = ({ props }: { props: any }) => (
     css={{
       py: '$1',
       px: '$2',
-      fontFamily: 'mono',
+      fontFamily: '$mono',
       fontSize: '$sm',
       bg: '$subtleBackground',
       border: '1px solid $subtleBorder',
