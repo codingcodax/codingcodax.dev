@@ -73,7 +73,7 @@ const Post = ({ meta, code }: PostType) => {
             position: 'absolute',
             left: '0',
             bottom: '-1px',
-            zIndex: '1',
+            zIndex: '$docked',
           },
         },
         '.rehype-code-title + div.pre-container': {
