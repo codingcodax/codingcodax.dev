@@ -44,8 +44,7 @@ const Button = styled('button', {
         borderColor: '$highTextColor',
 
         '&:hover': {
-          color: '$highTextColor',
-          bg: '$backgroundColor',
+          opacity: '0.9',
           borderColor: '$highTextColor',
         },
       },
