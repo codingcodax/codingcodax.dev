@@ -53,6 +53,11 @@ const A = styled('a', {
         transition: 'color $normal ease-in-out',
         '&:hover': { color: '$highTextColor' },
       },
+      default: {
+        color: '$primary',
+        fontWeight: '$bold',
+        '&:hover': { color: '$primaryDark' },
+      },
     },
     textDecoration: {
       none: { textDecoration: 'none' },
