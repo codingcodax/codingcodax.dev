@@ -11,25 +11,9 @@ interface LinkProps {
 const Link: FC<LinkProps> = ({ href, props }) => (
   <CommonLink href={href}>
     {href.startsWith('http') ? (
-      <A
-        css={{
-          color: '$primary',
-          fontWeight: '$bold',
-          '&:hover': { color: '$primaryDark' },
-        }}
-        {...props}
-        target='_blank'
-        rel='noopener noreferrer'
-      />
+      <A type='default' {...props} target='_blank' rel='noopener noreferrer' />
     ) : (
-      <A
-        css={{
-          color: '$primary',
-          fontWeight: '$bold',
-          '&:hover': { color: '$primaryDark' },
-        }}
-        {...props}
-      />
+      <A type='default' {...props} />
     )}
   </CommonLink>
 );
