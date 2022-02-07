@@ -4,6 +4,7 @@ const Button = styled('button', {
   w: '$max',
   appearance: 'none',
   display: 'inline-block',
+  fontFamily: '$body',
   fontWeight: 'bold',
   textTransform: 'uppercase',
   backgroundColor: 'transparent',
