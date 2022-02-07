@@ -25,7 +25,7 @@ import {
 
 const projects: Project[] = [
   {
-    logo: LitreekIcon,
+    logo: <LitreekIcon css={{ h: '$12', color: '$backgroundColor' }} />,
     title: 'Litreek',
     description:
       'Tree links app free 🤯, fast 😎, open-source 💪 and easy to customize 👌.',
@@ -35,7 +35,7 @@ const projects: Project[] = [
     featured: false,
   },
   {
-    logo: MDXIcon,
+    logo: <MDXIcon css={{ h: '$12', color: '$backgroundColor' }} />,
     title: 'MDX Blog Kit',
     description:
       'Blog kit for developers 👨‍💻 built with Next JS, SEO optimized, light 🪶, and easy to customize 👌.',
@@ -65,7 +65,7 @@ const projects: Project[] = [
     featured: true,
   },
   {
-    logo: FirebaseIcon,
+    logo: <FirebaseIcon css={{ h: '$12', color: '$backgroundColor' }} />,
     title: 'Superchat',
     description:
       'Simple real-time chat app built with React JS ⚛️ and Firebase 🔥.',
@@ -75,7 +75,7 @@ const projects: Project[] = [
     featured: false,
   },
   {
-    logo: JavaScriptIcon,
+    logo: <JavaScriptIcon css={{ h: '$12', color: '$backgroundColor' }} />,
     title: 'Calculator',
     description:
       'Simple calculator neumorphism design with pure JavaScript add SASS.',
@@ -85,7 +85,7 @@ const projects: Project[] = [
     featured: false,
   },
   {
-    logo: HtmlIcon,
+    logo: <HtmlIcon css={{ h: '$12', color: '$backgroundColor' }} />,
     title: 'Fries Page',
     description:
       'Simple responsive website 🌐 for an imaginary fries restaurant 🍟 with only HTML and CSS.',
