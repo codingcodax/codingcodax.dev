@@ -8,14 +8,23 @@ const ProgressBar = () => {
   const { scrollYProgress } = useViewportScroll();
 
   return (
-    <Box css={{ h: '5px', w: '$full', position: 'fixed', top: '0', left: '0' }}>
+    <Box
+      css={{
+        h: '$1',
+        w: '$full',
+        position: 'fixed',
+        top: '0',
+        left: '0',
+        zIndex: '$sticky',
+      }}
+    >
       <BoxFramer
         css={{ h: '$full', w: '$full', overflow: 'hidden', bg: '$violet5' }}
       >
         <BoxFramer
           css={{
-            h: 'inherit',
-            w: 'inherti',
+            height: 'inherit',
+            width: 'inherti',
             bg: '$primary',
             transformOrigin: '0% 100%',
           }}
