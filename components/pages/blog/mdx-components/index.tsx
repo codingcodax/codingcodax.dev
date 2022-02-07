@@ -50,6 +50,7 @@ export const components = {
   ),
   img: (props: any) => <NextImage {...(props as any)} />,
   Img: ({ children, ...props }: { children: ReactNode }) => (
+    // eslint-disable-next-line jsx-a11y/alt-text
     <Image {...(props as any)}>{children}</Image>
   ),
   blockquote: (props: any) => <Blockquote props={props} />,
