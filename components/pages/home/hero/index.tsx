@@ -1,6 +1,7 @@
-import { Box, Grid, Heading, Text } from '@/components/ui';
+import { Box, MotionBox, Grid, Heading, Text } from '@/components/ui';
 
 import useMediaQuery from '@/hooks/useMediaQuery';
+import { inputVariants } from 'animations/pages';
 
 import GetInTouch from './GetInTouch';
 import Icons from './Icons';
@@ -18,13 +19,17 @@ const Hero = () => {
         alignItems: 'center',
       }}
     >
-      <Box
+      <MotionBox
+        // @ts-ignore next-line
         as='main'
         css={{
           height: 'calc(100vh - 3.5rem)',
           display: 'grid',
           alignContent: 'center',
         }}
+        variants={inputVariants}
+        initial='hidden'
+        animate='show'
       >
         <Heading
           as='h1'
@@ -79,7 +84,7 @@ const Hero = () => {
           <SeeMyWork />
           <GetInTouch />
         </Grid>
-      </Box>
+      </MotionBox>
 
       {isLargeSize && <Icons css={{ w: '$104', color: '$highTextColor' }} />}
     </Box>

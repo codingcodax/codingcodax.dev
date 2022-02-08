@@ -95,8 +95,8 @@ const Post = ({ meta, code }: PostType) => {
           letterSpacing: '2px',
         },
         '.toc>ol': { p: '$0' },
-        '.toc>ol>li a': { p: '$0', textDecoration: 'none' },
-        '.toc>ol>li::before': { color: '$lowTextColor' },
+        '.toc>ol>div a': { p: '$0', textDecoration: 'none' },
+        '.toc>ol>div::before': { color: '$lowTextColor' },
       }}
     >
       <Heading

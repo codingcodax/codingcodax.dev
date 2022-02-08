@@ -1,13 +1,18 @@
-import { Box, Heading, Text } from '@/components/ui';
+import { Box, Heading, MotionBox, Text } from '@/components/ui';
+
+import { inputVariants } from 'animations/pages';
 
 import Seo from '@/components/common/Seo';
 import AllProjects from '@/components/common/projects';
 
 const Projects = () => {
   return (
-    <Box
+    <MotionBox
       align='center'
       css={{ w: '$full', maxWidth: '800px', flexDirection: 'column' }}
+      variants={inputVariants}
+      initial='hidden'
+      animate='show'
     >
       <Seo name='Projects 🎲' path='/projects' />
 
@@ -23,7 +28,7 @@ const Projects = () => {
       </Box>
 
       <AllProjects />
-    </Box>
+    </MotionBox>
   );
 };
 

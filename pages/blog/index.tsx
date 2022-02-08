@@ -2,7 +2,9 @@ import { ChangeEvent, FC, useState } from 'react';
 
 import type { PostMeta } from 'types';
 
-import { A, Box, Heading, Text } from '@/components/ui';
+import { A, MotionBox, Heading, Text } from '@/components/ui';
+
+import { inputVariants } from 'animations/pages';
 
 import { getAllPostsMeta } from '@/lib/mdx';
 
@@ -33,9 +35,12 @@ const Blog: FC<BlogProps> = ({ posts }) => {
     );
 
   return (
-    <Box
+    <MotionBox
       align='center'
       css={{ w: '$full', maxWidth: '$container-sm', flexDirection: 'column' }}
+      variants={inputVariants}
+      initial='hidden'
+      animate='show'
     >
       <Seo name='Blog 🖊️' path='/blog' />
 
@@ -69,7 +74,7 @@ const Blog: FC<BlogProps> = ({ posts }) => {
       />
 
       <Posts posts={filteredBlogPosts} />
-    </Box>
+    </MotionBox>
   );
 };
 
