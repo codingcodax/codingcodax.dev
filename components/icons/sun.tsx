@@ -1,9 +1,7 @@
 import { motion } from 'framer-motion';
 
-import { Svg } from '../ui';
+import { MotionSvg } from '../ui';
 import { coreVariants, raysVariants, whileTap } from 'animations/toggleTheme';
-
-const MotionSvg = motion(Svg);
 
 const Sun = ({ ...props }) => {
   return (
