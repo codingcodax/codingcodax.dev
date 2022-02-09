@@ -12,6 +12,7 @@ const Custom404: NextPage = () => {
             fontSize: '600px',
             color: '$subtleBackground',
             lineHeight: '$none',
+            pointerEvents: 'none',
           }}
         >
           404
