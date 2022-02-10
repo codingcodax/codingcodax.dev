@@ -13,10 +13,12 @@ const Hero = () => {
   return (
     <Box
       css={{
+        width: 'calc(100vw - 2rem)',
         display: 'grid',
         gridColumnGap: '$8',
         gridTemplate: 'auto / auto 1fr',
         alignItems: 'center',
+        '@bp1': { w: '$full' },
       }}
     >
       <MotionBox
