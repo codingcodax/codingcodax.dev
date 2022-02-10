@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { styled } from '@/theme/config/';
+import { Box } from '@/components/ui';
 
 import { Logo } from '@/components/icons';
 import MenuButton from './menu-button';
@@ -13,17 +13,17 @@ interface HeaderProps {
   toggleMenu: () => void;
 }
 
-const StyledHeader = styled('header', {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-});
-
 const Header: FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
   const isMobileSize = useMediaQuery('(max-width: 479px)');
 
   return (
-    <StyledHeader>
+    <Box
+      css={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+      }}
+    >
       {isMobileSize && <ToggleTheme />}
       <Logo css={{ h: '$8' }} />
       {!isMobileSize ? (
@@ -31,7 +31,7 @@ const Header: FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
       ) : (
         <MenuButton isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
       )}
-    </StyledHeader>
+    </Box>
   );
 };
 
