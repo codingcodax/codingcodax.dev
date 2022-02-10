@@ -3,7 +3,7 @@ import { FC } from 'react';
 
 const MenuIcon: FC<{ isOpen: boolean }> = ({ isOpen }) => {
   return (
-    <Box css={{ h: '$full', w: '$full', position: 'relative' }}>
+    <Box css={{ h: '$12', w: '$12', position: 'relative' }}>
       <Box
         as='span'
         css={{
@@ -13,6 +13,7 @@ const MenuIcon: FC<{ isOpen: boolean }> = ({ isOpen }) => {
           bg: '$highTextColor',
           borderRadius: '1px',
           transition: 'all 0.3s ease-in-out',
+          transformOrigin: 'center',
 
           top: isOpen ? '22px' : '16px',
           left: isOpen ? '8px' : '4px',
@@ -29,6 +30,7 @@ const MenuIcon: FC<{ isOpen: boolean }> = ({ isOpen }) => {
           bg: '$highTextColor',
           borderRadius: '1px',
           transition: 'all 0.3s ease-in-out',
+          transformOrigin: 'center',
 
           right: isOpen ? '8px' : '4px',
           bottom: isOpen ? '22px' : '16px',
