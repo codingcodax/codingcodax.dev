@@ -1,7 +1,8 @@
 import { FC } from 'react';
 
-import { Box, Divider } from '@/components/ui';
+import { MotionBox, Divider } from '@/components/ui';
 import NavItem from './NavItem';
+import { containerVariants } from 'animations/mobileNav';
 
 interface MobileNavProps {
   toggleMenu: () => void;
@@ -9,8 +10,10 @@ interface MobileNavProps {
 
 const MobileNav: FC<MobileNavProps> = ({ toggleMenu }) => {
   return (
-    <Box as='nav'>
-      <Box
+    // @ts-ignore next-lite
+    <MotionBox as='nav' animate={{ x: 0, opacity: 1 }}>
+      <MotionBox
+        // @ts-ignore next-lite
         as='ul'
         css={{
           p: '$3',
@@ -21,6 +24,9 @@ const MobileNav: FC<MobileNavProps> = ({ toggleMenu }) => {
           gridRowGap: '$8',
           fontSize: '$xl',
         }}
+        variants={containerVariants}
+        initial='hidden'
+        animate='show'
       >
         <NavItem href='/' onClick={toggleMenu}>
           Home
@@ -46,8 +52,8 @@ const MobileNav: FC<MobileNavProps> = ({ toggleMenu }) => {
         <NavItem href='/uses' onClick={toggleMenu}>
           Uses
         </NavItem>
-      </Box>
-    </Box>
+      </MotionBox>
+    </MotionBox>
   );
 };
 
