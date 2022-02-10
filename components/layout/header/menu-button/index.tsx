@@ -10,7 +10,7 @@ interface MenuButtonProps {
 const MenuButton: FC<MenuButtonProps> = ({ isMenuOpen, toggleMenu }) => {
   return (
     <Button
-      variant='extra'
+      variant='unstyled'
       css={{
         p: '$0',
         w: '$12',
