@@ -29,6 +29,7 @@ const Heading: FC<HeadingProps> = ({ as, props }) => (
         opacity: '0',
         position: 'absolute',
         left: '-2rem',
+        transition: 'opacity 0.2s',
       },
       '&>a.anchor:hover::after': {
         opacity: '0.2',
