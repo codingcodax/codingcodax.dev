@@ -4,7 +4,7 @@ import { readdirSync } from 'fs';
 import { getAllPostsMeta } from '@/lib/mdx';
 
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
-  const BASE_URL = 'http://localhost:3000';
+  const BASE_URL = 'https://www.codingcodax.dev';
 
   const staticPaths = readdirSync('pages')
     .filter((staticPage) => {
