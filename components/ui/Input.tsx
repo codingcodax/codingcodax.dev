@@ -18,6 +18,10 @@ const Input = styled('input', {
   '&:hover, &:focus': {
     borderColor: '$hoverBorder',
   },
+
+  '&:focus': {
+    boxShadow: '$focus',
+  },
 });
 
 Input.displayName = 'Input';
