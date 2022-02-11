@@ -9,7 +9,6 @@ const GetInTouch = () => {
         as='a'
         variant='primary'
         size='large'
-        outlined
         css={{ textDecoration: 'none' }}
       >
         Get In Touch

@@ -13,7 +13,7 @@ const ToggleTheme = () => {
 
   return (
     <Button
-      variant='unstyled'
+      variant='extra'
       onClick={toggleTheme}
       css={{
         p: '$0',
@@ -21,12 +21,6 @@ const ToggleTheme = () => {
         w: '$10',
         display: 'grid',
         placeItems: 'center',
-        bg: '$uiElement',
-        borderRadius: '$sm',
-
-        '&:hover': {
-          bg: '$hoverElement',
-        },
       }}
     >
       {theme === 'light' || resolvedTheme === 'light' ? (

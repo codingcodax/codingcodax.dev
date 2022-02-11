@@ -8,6 +8,7 @@ const SeeMyWork = () => {
       <Button
         as='a'
         variant='primary'
+        cta
         size='large'
         css={{ textDecoration: 'none' }}
       >

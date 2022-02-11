@@ -98,8 +98,8 @@ const ProjectCard: FC<ProjectCardProps> = ({
           <Link href={repo}>
             <Button
               as='a'
+              variant='secondary'
               css={{ textDecoration: 'none' }}
-              outlined
               target='_blank'
               rel='noopener noreferrer'
             >
