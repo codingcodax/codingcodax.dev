@@ -19,7 +19,7 @@ const ProgressBar = () => {
       }}
     >
       <BoxFramer
-        css={{ h: '$full', w: '$full', overflow: 'hidden', bg: '$violet5' }}
+        css={{ h: '$full', w: '$full', overflow: 'hidden', bg: '$violet4' }}
       >
         <BoxFramer
           css={{

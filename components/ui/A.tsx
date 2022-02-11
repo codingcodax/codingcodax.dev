@@ -68,7 +68,7 @@ const A = styled('a', {
           h: '$full',
           w: '$full',
           content: '',
-          bg: '$violet3',
+          bg: '$violet4',
           borderRadius: '$sm',
           position: 'absolute',
           left: '12px',
