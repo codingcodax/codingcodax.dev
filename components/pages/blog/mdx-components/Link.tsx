@@ -11,9 +11,9 @@ interface LinkProps {
 const Link: FC<LinkProps> = ({ href, props }) => (
   <CommonLink href={href}>
     {href.startsWith('http') ? (
-      <A type='default' {...props} target='_blank' rel='noopener noreferrer' />
+      <A type='3d' {...props} target='_blank' rel='noopener noreferrer' />
     ) : (
-      <A type='default' {...props} />
+      <A type='3d' {...props} />
     )}
   </CommonLink>
 );
