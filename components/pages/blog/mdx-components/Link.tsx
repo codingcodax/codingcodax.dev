@@ -13,7 +13,7 @@ const Link: FC<LinkProps> = ({ href, props }) => (
     {href.startsWith('http') ? (
       <A type='3d' {...props} target='_blank' rel='noopener noreferrer' />
     ) : (
-      <A type='3d' {...props} />
+      <A type='default' {...props} />
     )}
   </CommonLink>
 );
