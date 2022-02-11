@@ -64,6 +64,7 @@ const A = styled('a', {
         fontWeight: '$bold',
         textDecoration: 'none',
         color: '$primary',
+        borderRadius: '$sm',
         '&::after': {
           h: '$full',
           w: '$full',
@@ -71,16 +72,14 @@ const A = styled('a', {
           bg: '$violet4',
           borderRadius: '$sm',
           position: 'absolute',
-          left: '12px',
-          bottom: '-6px',
+          left: '8px',
+          top: '4px',
           zIndex: '-1',
           transition: '0.35s cubic-bezier(0.25, 0.1, 0, 2.05)',
         },
-        '&:hover:after, &:focus:after': {
-          h: '$full',
-          w: '$full',
+        '&:hover::after, &:focus::after': {
           left: '0',
-          bottom: '-2px',
+          top: '0',
         },
       },
     },
