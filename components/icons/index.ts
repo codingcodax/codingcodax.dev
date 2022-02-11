@@ -1,5 +1,6 @@
 export { default as AlanAIIcon } from './alanai';
 export { default as ArrowRightIcon } from './arrow-right';
+export { default as ArrowUpIcon } from './arrow-up';
 export { default as CalendarIcon } from './calendar';
 export { default as ChakraUIIcon } from './chakraui';
 export { default as CheckIcon } from './check';
