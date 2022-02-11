@@ -81,8 +81,8 @@ const A = styled('a', {
           w: '$full',
           left: '0',
           bottom: '-2px',
-        }
-      }
+        },
+      },
     },
     textDecoration: {
       none: { textDecoration: 'none' },
