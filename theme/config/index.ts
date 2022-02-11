@@ -49,7 +49,7 @@ export const {
       full: '9999px',
     },
     shadows: {
-      focus: '0 0 0 3px var(--colors-primary)',
+      focus: '0 0 0 3px var(--colors-violet3)',
     },
     zIndices: {
       hide: -1,
