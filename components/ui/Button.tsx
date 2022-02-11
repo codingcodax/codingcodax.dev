@@ -6,7 +6,6 @@ const Button = styled('button', {
   display: 'inline-block',
   fontFamily: '$body',
   fontWeight: 'bold',
-  textTransform: 'uppercase',
   backgroundColor: 'transparent',
   border: '0px solid transparent',
   borderRadius: '$sm',
@@ -29,23 +28,40 @@ const Button = styled('button', {
 
     variant: {
       primary: {
-        color: '$backgroundColor',
-        bg: '$primary',
-        borderColor: '$primary',
-
-        '&:hover': {
-          bg: '$primaryDark',
-          borderColor: '$primaryDark',
+        textTransform: 'uppercase',
+        color: '$highTextColor',
+        borderColor: '$highTextColor',
+        position: 'relative',
+        fontWeight: '$bold',
+        '&::after': {
+          h: '$full',
+          w: '$full',
+          content: '',
+          bg: '$uiElement',
+          borderRadius: '$sm',
+          position: 'absolute',
+          left: '10px',
+          top: '10px',
+          zIndex: '$hide',
+          transition: '0.35s cubic-bezier(0.25, 0.1, 0, 2.05)',
+        },
+        '&:hover:after, &:focus:after': {
+          h: '$full',
+          bg: '$hoverElement',
+          w: '$full',
+          left: '0',
+          top: '0',
+        },
+        '&:active::after': {
+          bg: '$activeElement',
         },
       },
       secondary: {
-        color: '$backgroundColor',
-        bg: '$highTextColor',
+        color: '$highTextColor',
         borderColor: '$highTextColor',
-
         '&:hover': {
-          opacity: '0.9',
-          borderColor: '$highTextColor',
+          color: '$backgroundColor',
+          bg: '$highTextColor',
         },
       },
       extra: {
@@ -60,12 +76,7 @@ const Button = styled('button', {
       },
       unstyled: {},
     },
-
-    outlined: {
-      true: {
-        bg: 'transparent',
-      },
-    },
+    cta: { true: {} },
   },
 
   defaultVariants: {
@@ -76,30 +87,17 @@ const Button = styled('button', {
   compoundVariants: [
     {
       variant: 'primary',
-      outlined: true,
+      cta: true,
 
       css: {
-        color: '$primary',
-        bg: 'transparent',
-
-        '&:hover': {
-          color: '$backgroundColor',
+        '&::after': {
           bg: '$primary',
-          borderColor: '$primary',
         },
-      },
-    },
-    {
-      variant: 'secondary',
-      outlined: true,
-
-      css: {
-        color: '$highTextColor',
-        bg: 'transparent',
-
-        '&:hover': {
-          color: '$backgroundColor',
-          bg: '$highTextColor',
+        '&:hover:after, &:focus:after': {
+          bg: '$primary',
+        },
+        '&:active::after': {
+          bg: '$primaryDark',
         },
       },
     },
