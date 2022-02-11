@@ -11,6 +11,12 @@ import { Box, Heading, MotionBox, Text } from '@/components/ui';
 import Details from '@/components/pages/blog/Details';
 import ProgressBar from '@/components/pages/blog/ProgressBar';
 import { inputVariants } from 'animations/pages';
+import dynamic from 'next/dynamic';
+
+const DynamicBackToTop = dynamic(
+  () => import('../../components/pages/blog/BackToTop'),
+  { ssr: false }
+);
 
 export const getStaticPaths = () => {
   const posts = getAllPostsMeta('post');
@@ -137,6 +143,7 @@ const Post = ({ meta, code }: PostType) => {
           {meta.summary}
         </Text>
         <Component components={components} />
+        <DynamicBackToTop />
       </MotionBox>
     </>
   );
