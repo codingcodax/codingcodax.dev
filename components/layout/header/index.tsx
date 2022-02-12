@@ -1,6 +1,8 @@
 import { FC } from 'react';
 
-import { Box } from '@/components/ui';
+import { MotionBox } from '@/components/ui';
+
+import { outputVariants } from 'animations/pages';
 
 import { Logo } from '@/components/icons';
 import MenuButton from './menu-button';
@@ -17,12 +19,16 @@ const Header: FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
   const isMobileSize = useMediaQuery('(max-width: 479px)');
 
   return (
-    <Box
+    <MotionBox
       css={{
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
       }}
+      variants={outputVariants}
+      initial='hidden'
+      animate='show'
+      transition={{ delay: 0.1 }}
     >
       {isMobileSize && <ToggleTheme />}
       <Logo css={{ h: '$8' }} />
@@ -31,7 +37,7 @@ const Header: FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
       ) : (
         <MenuButton isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
       )}
-    </Box>
+    </MotionBox>
   );
 };
 
