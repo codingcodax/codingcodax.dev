@@ -24,6 +24,7 @@ const Nav = () => {
       }}
     >
       <Box
+        as='ul'
         css={{
           mr: '$8',
           display: 'grid',
@@ -33,7 +34,7 @@ const Nav = () => {
         }}
       >
         {links.map(({ title, path }) => (
-          <NavItem key={path} href={path} isActive={router.pathname === path}>
+          <NavItem key={title} href={path} isActive={router.pathname === path}>
             {title}
           </NavItem>
         ))}
