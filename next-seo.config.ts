@@ -16,7 +16,7 @@ const SEO = {
     sit_name: 'title',
     images: [
       {
-        url: `${domain}/og.jpg`,
+        url: `${domain}/og.png`,
         alt: title,
         width: 1280,
         height: 720,
