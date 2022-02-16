@@ -10,7 +10,7 @@ const links = [
   { title: 'About', path: '/about' },
   { title: 'Projects', path: '/projects' },
   { title: 'Blog', path: '/blog' },
-]
+];
 
 const Nav = () => {
   const router = useRouter();
@@ -33,7 +33,11 @@ const Nav = () => {
           gridColumnGap: '$6',
         }}
       >
-        {links.map(({title, path}) => <NavItem key={title} href={path} isActive={router.pathname === path}>{title}</NavItem>)}
+        {links.map(({ title, path }) => (
+          <NavItem key={title} href={path} isActive={router.pathname === path}>
+            {title}
+          </NavItem>
+        ))}
       </Box>
 
       <ToggleTheme />

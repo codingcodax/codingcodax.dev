@@ -20,7 +20,10 @@ const MotionLi = motion(styled('li'));
 const NavItem: FC<NavItemProps> = ({ href, isActive, children, onClick }) => {
   return (
     <MotionLi
-      css={{ listStyleType: 'none', color: isActive ? '$primary' : '$lowTextColor' }}
+      css={{
+        listStyleType: 'none',
+        color: isActive ? '$primary' : '$lowTextColor',
+      }}
       onClick={onClick}
       variants={childrenVariants}
     >
