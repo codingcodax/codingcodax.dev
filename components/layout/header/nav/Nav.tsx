@@ -1,13 +1,20 @@
-import { styled } from '@/theme/config/';
+import { useRouter } from 'next/router';
 
 import { Box } from '@/components/ui';
 
 import NavItem from './NavItem';
 import ToggleTheme from '../ToggleTheme';
 
-const Ul = styled('ul');
+const links = [
+  { title: 'Home', path: '/' },
+  { title: 'About', path: '/about' },
+  { title: 'Projects', path: '/projects' },
+  { title: 'Blog', path: '/blog' },
+];
 
 const Nav = () => {
+  const router = useRouter();
+
   return (
     <Box
       as='nav'
@@ -16,7 +23,7 @@ const Nav = () => {
         gridAutoFlow: 'column',
       }}
     >
-      <Ul
+      <Box
         css={{
           mr: '$8',
           display: 'grid',
@@ -25,11 +32,12 @@ const Nav = () => {
           gridColumnGap: '$6',
         }}
       >
-        <NavItem href='/'>Home</NavItem>
-        <NavItem href='/about'>About</NavItem>
-        <NavItem href='/projects'>Projects</NavItem>
-        <NavItem href='/blog'>Blog</NavItem>
-      </Ul>
+        {links.map(({ title, path }) => (
+          <NavItem key={path} href={path} isActive={router.pathname === path}>
+            {title}
+          </NavItem>
+        ))}
+      </Box>
 
       <ToggleTheme />
     </Box>
