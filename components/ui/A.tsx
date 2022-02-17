@@ -76,6 +76,7 @@ const A = styled('a', {
           top: '4px',
           zIndex: '-1',
           transition: '0.35s cubic-bezier(0.25, 0.1, 0, 2.05)',
+          transitionProperty: 'top, right, bottom, left',
         },
         '&:hover::after, &:focus::after': {
           left: '0',

@@ -44,6 +44,7 @@ const Button = styled('button', {
           top: '10px',
           zIndex: '$hide',
           transition: '0.35s cubic-bezier(0.25, 0.1, 0, 2.05)',
+          transitionProperty: 'top, right, bottom, left, background',
         },
         '&:hover:after, &:focus:after': {
           h: '$full',
