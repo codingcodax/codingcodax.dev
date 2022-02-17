@@ -44,11 +44,10 @@ const Button = styled('button', {
           top: '10px',
           zIndex: '$hide',
           transition: '0.35s cubic-bezier(0.25, 0.1, 0, 2.05)',
-          transitionProperty: 'top, right, bottom, left, background',
+          transitionProperty: 'top, right, bottom, left',
         },
         '&:hover:after, &:focus:after': {
           h: '$full',
-          bg: '$hoverElement',
           w: '$full',
           left: '0',
           top: '0',
@@ -96,9 +95,6 @@ const Button = styled('button', {
         },
         '&:hover:after, &:focus:after': {
           bg: '$primary',
-        },
-        '&:active::after': {
-          bg: '$primaryDark',
         },
       },
     },
