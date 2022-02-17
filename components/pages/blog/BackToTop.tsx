@@ -16,7 +16,7 @@ const scrollToTop = () => {
   }
 };
 
-const SCROLL_OFFSET = 350;
+const SCROLL_OFFSET = 200;
 
 const MotionButton = motion(Button);
 
