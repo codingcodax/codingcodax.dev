@@ -12,7 +12,7 @@ import globalStyles from '@/theme/globalStyles';
 import Layout from '@/components/layout';
 
 const progress = new ProgressBar({
-  size: 2,
+  size: 5,
   color: 'var(--colors-primary)',
   className: 'bar-of-progress',
   delay: 100,

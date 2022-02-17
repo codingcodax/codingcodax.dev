@@ -10,7 +10,7 @@ const ProgressBar = () => {
   return (
     <Box
       css={{
-        h: '$1',
+        height: '5px',
         w: '$full',
         position: 'fixed',
         top: '0',
