@@ -84,7 +84,12 @@ const Form = () => {
           placeholder='type your message...'
           required
           {...register('message')}
-          css={{ h: '$32', minHeight: '$16', resize: 'vertical' }}
+          css={{
+            h: '$32',
+            maxHeight: '300px',
+            minHeight: '$20',
+            resize: 'vertical',
+          }}
         />
       </Grid>
 
