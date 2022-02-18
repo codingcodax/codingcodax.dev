@@ -1,5 +1,5 @@
 const title = 'Alexis Guzman – Front-end developer';
-const description =
+export const description =
   'Freelance front-end web developer focused on building scalable, maintainable and accessible solutions on the web.';
 export const domain = 'https://codingcodax.dev';
 
