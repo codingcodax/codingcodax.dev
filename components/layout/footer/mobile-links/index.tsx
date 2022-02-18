@@ -1,6 +1,6 @@
 import { Grid } from '@/components/ui';
 
-import SocialLinks from '@/data/socials';
+import socials from '@/data/socials';
 
 import LinkItem from './LinkItem';
 
@@ -15,7 +15,7 @@ const MobileLinks = () => {
         listStyleType: 'none',
       }}
     >
-      {SocialLinks.map(({ name, href, icon }) => (
+      {socials.map(({ name, href, icon }) => (
         <LinkItem key={name} href={href}>
           {icon}
         </LinkItem>
