@@ -1,11 +1,14 @@
+import { Socials } from '@/types/';
+
 import {
   GitHubIcon,
   LinkedInIcon,
+  PolyworkIcon,
   TwitterIcon,
   YouTubeIcon,
 } from '@/components/icons';
 
-const Socials = [
+const socials: Socials[] = [
   {
     name: 'GitHub',
     href: 'https://github.com/codingcodax/',
@@ -26,6 +29,11 @@ const Socials = [
     href: 'https://www.youtube.com/channel/UCMY0GhV1HuX4XdbgalC77VQ',
     icon: <YouTubeIcon css={{ h: '$6' }} />,
   },
+  {
+    name: 'Polywork',
+    href: 'https://www.polywork.com/codingcodax',
+    icon: <PolyworkIcon css={{ h: '$6' }} />,
+  }
 ];
 
-export default Socials;
+export default socials;
