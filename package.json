@@ -4,12 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
     "start": "next start",
+    "prebuild": "npm run lint:fix",
+    "build": "next build",
     "lint": "next lint",
-    "prettier": "prettier --check .",
-    "prettier:lint": "prettier --write .",
-    "types:check": "tsc --pretty --noEmit",
+    "lint:fix": "next lint --fix",
+    "format": "prettier --write .",
     "commit": "npx cz"
   },
   "dependencies": {
