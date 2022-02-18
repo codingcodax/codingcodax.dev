@@ -19,6 +19,7 @@ export { default as MoonIcon } from './moon';
 export { default as NewspaperIcon } from './newspaper';
 export { default as NextJSIcon } from './nextjs';
 export { default as NodeJSIcon } from './nodejs';
+export { default as PolyworkIcon } from './polywork';
 export { default as ReactJSIcon } from './reactjs';
 export { default as ReexJSIcon } from './reexjs';
 export { default as SASSIcon } from './sass';
