@@ -1,11 +1,16 @@
 import { FC, ReactNode } from 'react';
+import dynamic from 'next/dynamic';
 
 import useToggleMenu from '@/hooks/useToggleMenu';
 
-import Footer from './footer';
 import Header from './header';
 import useMediaQuery from '@/hooks/useMediaQuery';
-import MobileNav from './header/nav/MobileNav';
+
+const Footer = dynamic(() => import('./footer'), { ssr: false });
+
+const MobileNav = dynamic(() => import('./header/nav/MobileNav'), {
+  ssr: false,
+});
 
 interface LayoutProps {
   children: ReactNode;
