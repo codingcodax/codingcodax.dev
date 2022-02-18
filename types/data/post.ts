@@ -8,7 +8,6 @@ export type PostMeta = {
   slug: string;
   category: 'draft' | 'project' | 'post';
   image: string;
-  imageBlur: string;
   readingTime?: ReadTimeResults;
 };
 
