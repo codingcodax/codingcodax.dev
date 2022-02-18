@@ -1,17 +1,18 @@
 import { useMemo } from 'react';
 import { GetStaticProps } from 'next';
+import dynamic from 'next/dynamic';
 import { getMDXComponent } from 'mdx-bundler/client';
 import { format, parseISO } from 'date-fns';
 
 import type { Post as PostType } from 'types';
-
 import { getAllPostsMeta, getPostBySlug } from '@/lib/mdx';
-import { components } from '@/components/pages/blog/mdx-components';
+
+import { inputVariants } from 'animations/pages';
 import { Box, Heading, MotionBox, Text } from '@/components/ui';
+import Seo from '@/components/common/Seo';
+import { components } from '@/components/pages/blog/mdx-components';
 import Details from '@/components/pages/blog/Details';
 import ProgressBar from '@/components/pages/blog/ProgressBar';
-import { inputVariants } from 'animations/pages';
-import dynamic from 'next/dynamic';
 
 const DynamicBackToTop = dynamic(
   () => import('../../components/pages/blog/BackToTop'),
@@ -51,6 +52,12 @@ const Post = ({ meta, code }: PostType) => {
   return (
     <>
       <ProgressBar />
+      <Seo
+        name={meta.title}
+        path={`/blog/${meta.slug}`}
+        description={meta.summary}
+        ogImage={meta.image}
+      />
       <MotionBox
         align='center'
         css={{
