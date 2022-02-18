@@ -22,13 +22,17 @@ const NavItem: FC<NavItemProps> = ({ href, isActive, children, onClick }) => {
     <MotionLi
       css={{
         listStyleType: 'none',
-        color: isActive ? '$primary' : '$lowTextColor',
       }}
       onClick={onClick}
       variants={childrenVariants}
     >
       <Link href={href}>
-        <A textDecoration='none' type='nav-item'>
+        <A
+          textDecoration='none'
+          type='nav-item'
+          className={isActive ? 'active' : ''}
+          css={{ color: isActive ? '$primary' : '$lowTextColor' }}
+        >
           <span>{children}</span>
         </A>
       </Link>
