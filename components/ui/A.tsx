@@ -28,7 +28,7 @@ const A = styled('a', {
           transition: 'transform 0.3s cubic-bezier(0.2, 1, 0.8, 1) 0s',
         },
 
-        '&:hover': {
+        '&:hover, &.active': {
           '&::before': {
             clipPath:
               'polygon(0% 0%, 0% 100%, 50% 100%, 50% 0, 50% 0, 50% 100%, 50% 100%, 0 100%, 100% 100%, 100% 0%)',
