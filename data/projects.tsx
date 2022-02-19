@@ -74,26 +74,6 @@ const projects: Project[] = [
     repo: 'https://github.com/codingcodax/superchat/',
     featured: false,
   },
-  {
-    logo: <JavaScriptIcon css={{ h: '$12', color: '$backgroundColor' }} />,
-    title: 'Calculator',
-    description:
-      'Simple calculator neumorphism design with pure JavaScript add SASS.',
-    tools: [html, sass, javascript],
-    live: 'https://codingcodax.github.io/neumorphism-calculator/',
-    repo: 'https://github.com/codingcodax/neumorphism-calculator/',
-    featured: false,
-  },
-  {
-    logo: <HtmlIcon css={{ h: '$12', color: '$backgroundColor' }} />,
-    title: 'Fries Page',
-    description:
-      'Simple responsive website 🌐 for an imaginary fries restaurant 🍟 with only HTML and CSS.',
-    tools: [html, css],
-    live: 'https://codingcodax.github.io/fries-page/',
-    repo: 'https://github.com/codingcodax/fries-page/',
-    featured: false,
-  },
 ];
 
 export default projects;
