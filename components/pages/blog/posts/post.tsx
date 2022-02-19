@@ -23,7 +23,7 @@ const Post = ({
           bg: '$subtleBackground',
           border: '1px solid $normalBorder',
           borderRadius: '$sm',
-          transition: 'background ease-in-out $normal',
+          transition: 'border-color ease-in-out $normal',
 
           '&:hover': {
             borderColor: '$hoverBorder',
