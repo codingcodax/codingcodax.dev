@@ -11,12 +11,12 @@ const Item: FC<ItemProps> = ({ icon, name }) => {
     <Grid
       as='li'
       css={{
-        gridRowGap: '$2',
+        gridRowGap: '$3',
         justifyItems: 'center',
         textAlign: 'center',
       }}
     >
-      <Center css={{ h: '$12', w: '$12' }}>{icon}</Center>
+      <Center css={{ h: '$8', w: '$8' }}>{icon}</Center>
       {name}
     </Grid>
   );
