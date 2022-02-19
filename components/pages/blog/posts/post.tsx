@@ -8,8 +8,6 @@ const Post = ({
   title,
   summary,
   slug,
-  image,
-  imageBlur,
   readingTime,
   publishedAtFormatted,
 }: PostMeta) => {
