@@ -1,19 +1,23 @@
-import { Heading, Text } from '@/components/ui';
+import { Heading, MotionBox, Text } from '@/components/ui';
 
 import Seo from '@/components/common/Seo';
-import CurrentlyBuilding from '@/components/common/CurrentlyBuilding';
 
 const Uses = () => {
   return (
-    <CurrentlyBuilding>
+    // @ts-ignore next-line
+    <MotionBox as='main' align='center' css={{ maxWidth: '$container-sm' }}>
       <Seo name='Uses 🔌' path='/uses' />
 
-      <Heading>Uses 🔌</Heading>
+      <Heading as='h1' css={{ mt: '$12' }}>
+        Uses 🔌
+      </Heading>
       <Text>
-        This page will contain information about what software and hardware I
-        currently use day-to-day.
+        Here{"'"}s what tech, software and hardware I currently use day-to-day.
       </Text>
-    </CurrentlyBuilding>
+
+      <Heading as='h2'>📑 Terminal + Editors</Heading>
+      <Text></Text>
+    </MotionBox>
   );
 };
 
