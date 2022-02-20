@@ -6,7 +6,7 @@ export type PostMeta = {
   publishedAtFormatted?: string;
   summary: string;
   slug: string;
-  category: 'draft' | 'project' | 'post';
+  category: 'post';
   image: string;
   readingTime?: ReadTimeResults;
 };

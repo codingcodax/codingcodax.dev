@@ -1,4 +1,4 @@
-import { Heading, MotionBox, Text } from '@/components/ui';
+import { Heading, MotionBox, Text, Grid } from '@/components/ui';
 
 import Seo from '@/components/common/Seo';
 
@@ -16,7 +16,11 @@ const Uses = () => {
       </Text>
 
       <Heading as='h2'>📑 Terminal + Editors</Heading>
-      <Text></Text>
+      <Text>I use the Gnome terminal with Oh My ZSH, framework for ZSH</Text>
+
+      <Grid as='ul' direction='column' css={{ listStyleType: 'disc' }}>
+        <Text as='li'>VS Code</Text>
+      </Grid>
     </MotionBox>
   );
 };

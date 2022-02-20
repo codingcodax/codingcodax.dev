@@ -10,7 +10,7 @@ const SubRoutes = () => {
     >
       <LinkItem href='/snippets'>Snippets</LinkItem>
       <LinkItem href='/community'>Community</LinkItem>
-      <LinkItem href='/uses'>Uses</LinkItem>
+      <LinkItem href='/blog/uses'>Uses</LinkItem>
     </Grid>
   );
 };
