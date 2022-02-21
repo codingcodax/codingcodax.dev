@@ -15,7 +15,7 @@ const links = [
 const subLinks = [
   { title: 'Snippets', path: '/snippets' },
   { title: 'Community', path: '/community' },
-  { title: 'Uses', path: '/uses' },
+  { title: 'Uses', path: '/blog/uses' },
 ];
 
 interface MobileNavProps {
