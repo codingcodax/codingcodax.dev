@@ -61,6 +61,7 @@ const Post = ({ meta, code }: PostType) => {
       <MotionBox
         align='center'
         css={{
+          w: '$full',
           maxWidth: '800px',
           position: 'relative',
 
