@@ -16,7 +16,7 @@ const Hero = () => {
         width: 'calc(100vw - 2rem)',
         display: 'grid',
         gridColumnGap: '$8',
-        gridTemplate: 'auto / auto 1fr',
+        gridTemplate: 'auto / 1.5fr 1fr',
         alignItems: 'center',
         '@bp1': { w: '$full' },
       }}
