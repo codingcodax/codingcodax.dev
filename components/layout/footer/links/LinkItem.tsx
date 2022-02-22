@@ -7,14 +7,10 @@ import Link from '@/components/common/Link';
 interface LinkItemProps {
   href: string;
   children: ReactNode;
-  isExternal?: boolean;
+  isExternal: boolean;
 }
 
-const LinkItem: FC<LinkItemProps> = ({
-  href,
-  children,
-  isExternal = false,
-}) => {
+const LinkItem: FC<LinkItemProps> = ({ href, children, isExternal }) => {
   return (
     <li>
       <Link href={href}>

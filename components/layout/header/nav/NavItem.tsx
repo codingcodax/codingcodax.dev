@@ -11,13 +11,20 @@ import Link from '@/components/common/Link';
 interface NavItemProps {
   href: string;
   isActive: boolean;
+  isExternal: boolean;
   children: ReactNode;
   onClick?: () => void;
 }
 
 const MotionLi = motion(styled('li'));
 
-const NavItem: FC<NavItemProps> = ({ href, isActive, children, onClick }) => {
+const NavItem: FC<NavItemProps> = ({
+  href,
+  isActive,
+  isExternal,
+  children,
+  onClick,
+}) => {
   return (
     <MotionLi
       css={{
@@ -27,14 +34,27 @@ const NavItem: FC<NavItemProps> = ({ href, isActive, children, onClick }) => {
       variants={childrenVariants}
     >
       <Link href={href}>
-        <A
-          textDecoration='none'
-          type='nav-item'
-          className={isActive ? 'active' : ''}
-          css={{ color: isActive ? '$primary' : '$lowTextColor' }}
-        >
-          <span>{children}</span>
-        </A>
+        {isExternal ? (
+          <A
+            target='_blank'
+            rel='noopener noreferrer'
+            textDecoration='none'
+            type='nav-item'
+            className={isActive ? 'active' : ''}
+            css={{ color: isActive ? '$primary' : '$lowTextColor' }}
+          >
+            <span>{children}</span>
+          </A>
+        ) : (
+          <A
+            textDecoration='none'
+            type='nav-item'
+            className={isActive ? 'active' : ''}
+            css={{ color: isActive ? '$primary' : '$lowTextColor' }}
+          >
+            <span>{children}</span>
+          </A>
+        )}
       </Link>
     </MotionLi>
   );
