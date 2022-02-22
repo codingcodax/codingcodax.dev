@@ -10,6 +10,12 @@ const globalStyles = globalCss({
     scrollBehavior: 'smooth',
   },
 
+  'ol, ul': {
+    padding: 0,
+    margin: 0,
+    listStyleType: 'none',
+  },
+
   'a:focus, button:focus': {
     boxShadow: '$focus',
   },
