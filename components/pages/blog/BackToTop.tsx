@@ -50,8 +50,6 @@ const BackToTop = () => {
     return () => window.removeEventListener('scroll', checkScrollTop);
   }, [hasMounted, checkScrollTop]);
 
-  console.log(showButton);
-
   return (
     <AnimatePresence>
       {showButton && (
