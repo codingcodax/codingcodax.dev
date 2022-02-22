@@ -1,16 +1,11 @@
 import { useRouter } from 'next/router';
 
+import { mainRoutes } from '@/data/links';
+
 import { Box } from '@/components/ui';
 
 import NavItem from './NavItem';
 import ToggleTheme from '../ToggleTheme';
-
-const links = [
-  { title: 'Home', path: '/' },
-  { title: 'About', path: '/about' },
-  { title: 'Projects', path: '/projects' },
-  { title: 'Blog', path: '/blog' },
-];
 
 const Nav = () => {
   const router = useRouter();
@@ -33,9 +28,14 @@ const Nav = () => {
           gridColumnGap: '$6',
         }}
       >
-        {links.map(({ title, path }) => (
-          <NavItem key={title} href={path} isActive={router.pathname === path}>
-            {title}
+        {mainRoutes.map(({ name, href, isExternal, isActive }) => (
+          <NavItem
+            key={name}
+            href={href}
+            isActive={isActive(router.asPath, href)}
+            isExternal={isExternal}
+          >
+            {name}
           </NavItem>
         ))}
       </Box>

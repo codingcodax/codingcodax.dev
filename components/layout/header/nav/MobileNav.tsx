@@ -4,19 +4,7 @@ import { useRouter } from 'next/router';
 import { MotionBox, Divider } from '@/components/ui';
 import NavItem from './NavItem';
 import { containerVariants } from 'animations/mobileNav';
-
-const links = [
-  { title: 'Home', path: '/' },
-  { title: 'About', path: '/about' },
-  { title: 'Projects', path: '/projects' },
-  { title: 'Blog', path: '/blog' },
-];
-
-const subLinks = [
-  { title: 'Snippets', path: '/snippets' },
-  { title: 'Community', path: '/community' },
-  { title: 'Uses', path: '/blog/uses' },
-];
+import { mainRoutes, subRoutes } from '@/data/links';
 
 interface MobileNavProps {
   toggleMenu: () => void;
@@ -24,6 +12,8 @@ interface MobileNavProps {
 
 const MobileNav: FC<MobileNavProps> = ({ toggleMenu }) => {
   const router = useRouter();
+
+  console.log(router.asPath);
 
   return (
     // @ts-ignore next-lite
@@ -44,27 +34,29 @@ const MobileNav: FC<MobileNavProps> = ({ toggleMenu }) => {
         initial='hidden'
         animate='show'
       >
-        {links.map(({ title, path }) => (
+        {mainRoutes.map(({ name, href, isExternal, isActive }) => (
           <NavItem
-            key={title}
-            href={path}
-            isActive={router.pathname === path}
+            key={name}
+            href={href}
+            isActive={isActive(router.asPath, href)}
             onClick={toggleMenu}
+            isExternal={isExternal}
           >
-            {title}
+            {name}
           </NavItem>
         ))}
 
         <Divider css={{ width: '50vw' }} />
 
-        {subLinks.map(({ title, path }) => (
+        {subRoutes.map(({ name, href, isExternal, isActive }) => (
           <NavItem
-            key={title}
-            href={path}
-            isActive={router.pathname === path}
+            key={name}
+            href={href}
+            isActive={isActive(router.asPath, href)}
+            isExternal={isExternal}
             onClick={toggleMenu}
           >
-            {title}
+            {name}
           </NavItem>
         ))}
       </MotionBox>

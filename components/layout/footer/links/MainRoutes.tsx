@@ -1,14 +1,17 @@
 import { Grid } from '@/components/ui';
 
+import { mainRoutes } from '@/data/links';
+
 import LinkItem from './LinkItem';
 
 const MainRoutes = () => {
   return (
     <Grid as='ul' css={{ gridRowGap: '$2' }}>
-      <LinkItem href='/'>Home</LinkItem>
-      <LinkItem href='/about'>About</LinkItem>
-      <LinkItem href='/projects'>Projects</LinkItem>
-      <LinkItem href='/blog'>Blog</LinkItem>
+      {mainRoutes.map(({ name, href, isExternal }) => (
+        <LinkItem key={name} href={href} isExternal={isExternal}>
+          {name}
+        </LinkItem>
+      ))}
     </Grid>
   );
 };

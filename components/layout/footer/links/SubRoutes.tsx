@@ -1,4 +1,5 @@
 import { Grid } from '@/components/ui';
+import { subRoutes } from '@/data/links';
 
 import LinkItem from './LinkItem';
 
@@ -8,9 +9,11 @@ const SubRoutes = () => {
       as='ul'
       css={{ textAlign: 'center', gridAutoRows: '21px', gridRowGap: '$2' }}
     >
-      <LinkItem href='/snippets'>Snippets</LinkItem>
-      <LinkItem href='/community'>Community</LinkItem>
-      <LinkItem href='/blog/uses'>Uses</LinkItem>
+      {subRoutes.map(({ name, href, isExternal }) => (
+        <LinkItem key={name} href={href} isExternal={isExternal}>
+          {name}
+        </LinkItem>
+      ))}
     </Grid>
   );
 };
