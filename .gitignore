@@ -38,4 +38,4 @@ package-lock.json
 pnpm-lock.yaml
 tsconfig.tsbuildinfo
 bin
-
+/public/rss/
