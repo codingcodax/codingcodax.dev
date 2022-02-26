@@ -27,6 +27,7 @@ const ProgressBar = () => {
             width: 'inherti',
             bg: '$primary',
             transformOrigin: '0% 100%',
+            transition: 'transform 0.2s ease-in-out',
           }}
           style={{ scaleX: scrollYProgress }}
         />
