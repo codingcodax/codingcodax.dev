@@ -22,6 +22,7 @@ export { default as NodeJSIcon } from './nodejs';
 export { default as PolyworkIcon } from './polywork';
 export { default as ReactJSIcon } from './reactjs';
 export { default as ReexJSIcon } from './reexjs';
+export { default as RSSIcon } from './rss';
 export { default as SASSIcon } from './sass';
 export { default as SearchIcon } from './search';
 export { default as StorybookIcon } from './storybook';
