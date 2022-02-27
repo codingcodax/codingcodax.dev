@@ -28,14 +28,14 @@ const Nav = () => {
           gridColumnGap: '$6',
         }}
       >
-        {mainRoutes.map(({ name, href, isExternal, isActive }) => (
+        {mainRoutes.map(({ name, icon, href, isExternal, isActive }) => (
           <NavItem
             key={name}
             href={href}
             isActive={isActive(router.asPath, href)}
             isExternal={isExternal}
           >
-            {name}
+            {name || icon}
           </NavItem>
         ))}
       </Box>
