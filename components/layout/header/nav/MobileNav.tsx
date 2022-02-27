@@ -5,6 +5,7 @@ import { MotionBox, Divider } from '@/components/ui';
 import NavItem from './NavItem';
 import { containerVariants } from 'animations/mobileNav';
 import { mainRoutes, subRoutes } from '@/data/links';
+import ToggleTheme from '../ToggleTheme';
 
 interface MobileNavProps {
   toggleMenu: () => void;
@@ -24,9 +25,8 @@ const MobileNav: FC<MobileNavProps> = ({ toggleMenu }) => {
         css={{
           p: '$3',
           mt: '$8',
-          textAlign: 'end',
           display: 'grid',
-          justifyContent: 'end',
+          justifyItems: 'end',
           gridRowGap: '$8',
           fontSize: '$xl',
         }}
@@ -34,7 +34,7 @@ const MobileNav: FC<MobileNavProps> = ({ toggleMenu }) => {
         initial='hidden'
         animate='show'
       >
-        {mainRoutes.map(({ name, href, isExternal, isActive }) => (
+        {mainRoutes.map(({ name, icon, href, isExternal, isActive }) => (
           <NavItem
             key={name}
             href={href}
@@ -42,13 +42,13 @@ const MobileNav: FC<MobileNavProps> = ({ toggleMenu }) => {
             onClick={toggleMenu}
             isExternal={isExternal}
           >
-            {name}
+            {name || icon}
           </NavItem>
         ))}
 
         <Divider css={{ width: '50vw' }} />
 
-        {subRoutes.map(({ name, href, isExternal, isActive }) => (
+        {subRoutes.map(({ name, icon, href, isExternal, isActive }) => (
           <NavItem
             key={name}
             href={href}
@@ -56,9 +56,13 @@ const MobileNav: FC<MobileNavProps> = ({ toggleMenu }) => {
             isExternal={isExternal}
             onClick={toggleMenu}
           >
-            {name}
+            {name || icon}
           </NavItem>
         ))}
+
+        <Divider css={{ width: '50vw' }} />
+
+        <ToggleTheme />
       </MotionBox>
     </MotionBox>
   );
