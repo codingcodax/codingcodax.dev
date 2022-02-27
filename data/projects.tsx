@@ -2,10 +2,7 @@ import { Project } from 'types';
 
 import {
   chakraui,
-  css,
   firebase,
-  html,
-  javascript,
   mdx,
   nextjs,
   nodejs,
@@ -13,10 +10,9 @@ import {
   sass,
   storybook,
 } from './tools';
+
 import {
   FirebaseIcon,
-  HtmlIcon,
-  JavaScriptIcon,
   LitreekIcon,
   Logo,
   MDXIcon,
