@@ -24,6 +24,14 @@ const Text = styled('p', {
     lineHeight: {
       relaxed: { lineHeight: '$relaxed' },
     },
+
+    unstyled: {
+      true: {
+        color: 'inherit',
+        fontSize: 'inherit',
+        lineHeight: 'inherit',
+      },
+    },
   },
 });
 
