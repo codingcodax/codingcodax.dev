@@ -24,7 +24,7 @@ const A = styled('a', {
         },
 
         '& span': {
-          display: 'inline-block',
+          display: 'inline-flex',
           transition: 'transform 0.3s cubic-bezier(0.2, 1, 0.8, 1) 0s',
         },
 
