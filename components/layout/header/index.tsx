@@ -15,7 +15,7 @@ interface HeaderProps {
 }
 
 const Header: FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
-  const isMobileSize = useMediaQuery('(max-width: 479px)');
+  const isTabletSize = useMediaQuery('(max-width: 600px)');
 
   return (
     <MotionBox
@@ -30,7 +30,7 @@ const Header: FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
       transition={{ delay: 0.1 }}
     >
       <Logo css={{ h: '$8' }} />
-      {!isMobileSize ? (
+      {!isTabletSize ? (
         <Nav />
       ) : (
         <MenuButton isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
