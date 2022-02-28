@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { Tool } from 'types';
+import { Tool } from '~/@types';
 
 type Project = {
   logo: ReactNode;
