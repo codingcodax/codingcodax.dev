@@ -20,8 +20,8 @@ const Hero = () => {
       }}
     >
       <MotionBox
-        // @ts-ignore next-line
         animate='show'
+        // @ts-ignore next-line
         as='main'
         css={{
           height: 'calc(100vh - 3.5rem)',

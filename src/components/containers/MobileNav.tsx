@@ -19,8 +19,8 @@ const MobileNav: FC<MobileNavProps> = ({ toggleMenu }) => {
     // @ts-ignore next-lite
     <MotionBox animate={{ x: 0, opacity: 1 }} as='nav'>
       <MotionBox
-        // @ts-ignore next-lite
         animate='show'
+        // @ts-ignore next-lite
         as='ul'
         css={{
           p: '$3',
