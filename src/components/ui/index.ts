@@ -11,6 +11,7 @@ export { default as Divider } from './Divider';
 export { default as ListItem } from './ListItem';
 export { default as OrderedList } from './OrderedList';
 export { default as UnorderedList } from './UnorderedList';
+export { default as Label } from './Label';
 
 export { default as MotionBox } from './MotionBox';
 export { default as MotionSvg } from './MotionSvg';
