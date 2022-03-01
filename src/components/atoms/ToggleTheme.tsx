@@ -13,6 +13,7 @@ const ToggleTheme = () => {
 
   return (
     <Button
+      aria-label='toggle a light and dark color scheme'
       css={{
         p: '$0',
         h: '$10',
