@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 
 import { CheckIcon, CloseIcon } from '~/components/icons';
-import { Box, Button, Center, Grid, Input, Text } from '~/components/ui';
+import { Box, Button, Center, Grid, Input, Label, Text } from '~/components/ui';
 
 type Inputs = {
   name: string;
@@ -53,7 +53,7 @@ const Form = () => {
       onSubmit={handleSubmit(onSubmit)}
     >
       <Grid css={{ gridRowGap: '$2' }}>
-        <label htmlFor='name'>Name</label>
+        <Label htmlFor='name'>Name</Label>
         <Input
           required
           autoComplete='name'
@@ -64,7 +64,7 @@ const Form = () => {
         />
       </Grid>
       <Grid css={{ gridRowGap: '$2' }}>
-        <label htmlFor='email'>E-mail</label>
+        <Label htmlFor='email'>E-mail</Label>
         <Input
           required
           autoComplete='email'
@@ -75,7 +75,7 @@ const Form = () => {
         />
       </Grid>
       <Grid css={{ gridRowGap: '$2' }}>
-        <label htmlFor='message'>Message</label>
+        <Label htmlFor='message'>Message</Label>
         <Input
           required
           as='textarea'
