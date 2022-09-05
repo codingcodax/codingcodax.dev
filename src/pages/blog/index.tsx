@@ -43,7 +43,7 @@ const Blog: FC<BlogProps> = ({ posts }) => {
       </Heading>
       <Text>
         This page contains a list of posts I&apos;ve written on{' '}
-        <Link href='https://codax.hashnode.dev'>
+        <Link href='https://coding.hashnode.dev'>
           <A rel='noopener noreferrer' target='_blank' type='3d'>
             Hashnode
           </A>
