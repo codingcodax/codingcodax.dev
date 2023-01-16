@@ -17,6 +17,7 @@ import {
   TailwindCSS,
   HeadlessUI,
   Stitches,
+  RadixUI,
 } from '~/components/icons';
 
 export const html: Tool = {
@@ -62,6 +63,11 @@ export const nodejs: Tool = {
 export const stitches: Tool = {
   name: 'Stitches',
   icon: <Stitches css={{ h: '$full', color: '$highTextColor' }} />,
+};
+
+export const radixui: Tool = {
+  name: 'Radix UI',
+  icon: <RadixUI css={{ h: '$full', color: '$highTextColor' }} />,
 };
 
 export const tailwindcss: Tool = {
