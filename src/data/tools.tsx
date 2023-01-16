@@ -77,7 +77,7 @@ export const mdx: Tool = {
 };
 
 export const alanai: Tool = {
-  name: 'MDX',
+  name: 'Alan AI',
   icon: <AlanAIIcon css={{ h: '$full', color: '$highTextColor' }} />,
 };
 
