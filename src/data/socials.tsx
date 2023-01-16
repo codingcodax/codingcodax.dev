@@ -15,7 +15,7 @@ const socials: Socials[] = [
   },
   {
     name: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/codax/',
+    href: 'https://www.linkedin.com/in/codingcodax/',
     icon: <LinkedInIcon css={{ h: '$6' }} />,
   },
   {
