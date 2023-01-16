@@ -16,6 +16,7 @@ import {
   FigmaIcon,
   TailwindCSS,
   HeadlessUI,
+  Stitches,
 } from '~/components/icons';
 
 export const html: Tool = {
@@ -56,6 +57,11 @@ export const nextjs: Tool = {
 export const nodejs: Tool = {
   name: 'Node JS',
   icon: <NodeJSIcon css={{ h: '$full', color: '$highTextColor' }} />,
+};
+
+export const stitches: Tool = {
+  name: 'Stitches',
+  icon: <Stitches css={{ h: '$full', color: '$highTextColor' }} />,
 };
 
 export const tailwindcss: Tool = {
