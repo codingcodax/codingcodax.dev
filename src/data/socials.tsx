@@ -25,7 +25,7 @@ const socials: Socials[] = [
   },
   {
     name: 'YouTube',
-    href: 'https://www.youtube.com/channel/UCMY0GhV1HuX4XdbgalC77VQ',
+    href: 'https://www.youtube.com/@codingcodax/',
     icon: <YouTubeIcon css={{ h: '$6' }} />,
   },
   {
