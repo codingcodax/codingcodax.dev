@@ -21,12 +21,12 @@ import {
 } from '~/components/icons';
 
 export const html: Tool = {
-  name: 'HTML5',
+  name: 'HTML 5',
   icon: <HtmlIcon css={{ h: '$full', color: '$highTextColor' }} />,
 };
 
 export const css: Tool = {
-  name: 'CSS3',
+  name: 'CSS 3',
   icon: <CSSIcon css={{ h: '$full', color: '$highTextColor' }} />,
 };
 
