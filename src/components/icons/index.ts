@@ -10,6 +10,7 @@ export { default as CSSIcon } from './css';
 export { default as FigmaIcon } from './figma';
 export { default as FirebaseIcon } from './firebase';
 export { default as GitHubIcon } from './github';
+export { default as HeadlessUI } from './headlessui';
 export { default as HtmlIcon } from './html';
 export { default as JavaScriptIcon } from './javascript';
 export { default as LinkedInIcon } from './linkedin';
