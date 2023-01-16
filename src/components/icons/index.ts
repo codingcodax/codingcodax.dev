@@ -28,6 +28,7 @@ export { default as SASSIcon } from './sass';
 export { default as SearchIcon } from './search';
 export { default as StorybookIcon } from './storybook';
 export { default as SunIcon } from './sun';
+export { default as TailwindCSS } from './tailwindcss';
 export { default as TwitterIcon } from './twitter';
 export { default as TypeScriptIcon } from './typescript';
 export { default as YouTubeIcon } from './youtube';
