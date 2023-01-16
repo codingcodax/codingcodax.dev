@@ -27,6 +27,7 @@ export { default as ReexJSIcon } from './reexjs';
 export { default as RSSIcon } from './rss';
 export { default as SASSIcon } from './sass';
 export { default as SearchIcon } from './search';
+export { default as Stitches } from './stitches';
 export { default as StorybookIcon } from './storybook';
 export { default as SunIcon } from './sun';
 export { default as TailwindCSS } from './tailwindcss';
