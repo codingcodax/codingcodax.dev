@@ -14,6 +14,7 @@ import {
   MDXIcon,
   AlanAIIcon,
   FigmaIcon,
+  TailwindCSS,
 } from '~/components/icons';
 
 export const html: Tool = {
@@ -54,6 +55,11 @@ export const nextjs: Tool = {
 export const nodejs: Tool = {
   name: 'Node JS',
   icon: <NodeJSIcon css={{ h: '$full', color: '$highTextColor' }} />,
+};
+
+export const tailwindcss: Tool = {
+  name: 'Tailwind CSS',
+  icon: <TailwindCSS css={{ h: '$full', color: '$highTextColor' }} />,
 };
 
 export const chakraui: Tool = {
