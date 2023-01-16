@@ -15,6 +15,7 @@ import {
   AlanAIIcon,
   FigmaIcon,
   TailwindCSS,
+  HeadlessUI,
 } from '~/components/icons';
 
 export const html: Tool = {
@@ -60,6 +61,11 @@ export const nodejs: Tool = {
 export const tailwindcss: Tool = {
   name: 'Tailwind CSS',
   icon: <TailwindCSS css={{ h: '$full', color: '$highTextColor' }} />,
+};
+
+export const headlessui: Tool = {
+  name: 'Headless UI',
+  icon: <HeadlessUI css={{ h: '$full', color: '$highTextColor' }} />,
 };
 
 export const chakraui: Tool = {
