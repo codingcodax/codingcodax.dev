@@ -1,6 +1,6 @@
 import { Svg } from '~/components/ui';
 
-const TailwindCSS = ({ ...props }) => {
+const HeadlessUI = ({ ...props }) => {
   return (
     <Svg
       preserveAspectRatio='xMidYMid'
@@ -30,4 +30,4 @@ const TailwindCSS = ({ ...props }) => {
   );
 };
 
-export default TailwindCSS;
+export default HeadlessUI;
