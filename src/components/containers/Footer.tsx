@@ -14,7 +14,7 @@ const Footer = () => {
       {isMobileSize ? <MobileLinks /> : <FooterLinks />}
 
       <Text css={{ textAlign: 'center' }}>
-        © 2021 — Handcrafted with 💜 by Codax ^_^
+        © 2023 — Handcrafted with 💜 by Codax ^_^
       </Text>
     </Box>
   );
