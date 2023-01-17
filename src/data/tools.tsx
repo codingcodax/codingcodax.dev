@@ -19,6 +19,7 @@ import {
   StitchesIcon,
   RadixUI,
   TRPCIcon,
+  PrismaIcon,
 } from '~/components/icons';
 
 export const html: Tool = {
@@ -94,6 +95,11 @@ export const firebase: Tool = {
 export const trpc: Tool = {
   name: 'tRPC',
   icon: <TRPCIcon css={{ h: '$full', color: '$highTextColor' }} />,
+};
+
+export const prisma: Tool = {
+  name: 'Prisma',
+  icon: <PrismaIcon css={{ h: '$full', color: '$highTextColor' }} />,
 };
 
 export const storybook: Tool = {
