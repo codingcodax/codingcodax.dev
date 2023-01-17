@@ -35,6 +35,7 @@ export { default as SunIcon } from './sun';
 export { default as TailwindCSS } from './tailwindcss';
 export { default as TwitterIcon } from './twitter';
 export { default as TypeScriptIcon } from './typescript';
+export { default as WeebnIcon } from './weebn';
 export { default as YouTubeIcon } from './youtube';
 
 export { default as Logo } from './logo';
