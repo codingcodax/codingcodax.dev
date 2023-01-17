@@ -18,6 +18,7 @@ import {
   HeadlessUIIcon,
   StitchesIcon,
   RadixUI,
+  TRPCIcon,
 } from '~/components/icons';
 
 export const html: Tool = {
@@ -88,6 +89,11 @@ export const chakraui: Tool = {
 export const firebase: Tool = {
   name: 'Firebase',
   icon: <FirebaseIcon css={{ h: '$full', color: '$highTextColor' }} />,
+};
+
+export const trpc: Tool = {
+  name: 'tRPC',
+  icon: <TRPCIcon css={{ h: '$full', color: '$highTextColor' }} />,
 };
 
 export const storybook: Tool = {
