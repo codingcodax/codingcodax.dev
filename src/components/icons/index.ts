@@ -35,6 +35,7 @@ export { default as StitchesIcon } from './stitches';
 export { default as StorybookIcon } from './storybook';
 export { default as SunIcon } from './sun';
 export { default as TailwindCSSIcon } from './tailwindcss';
+export { default as TRPCIcon } from './trpc';
 export { default as TwitterIcon } from './twitter';
 export { default as TypeScriptIcon } from './typescript';
 export { default as WeebnIcon } from './weebn';
