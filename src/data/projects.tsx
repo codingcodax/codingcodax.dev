@@ -27,7 +27,7 @@ const projects: Project[] = [
     logo: <MiniIcon css={{ h: '$12', color: '$backgroundColor' }} />,
     title: 'mini',
     description:
-      'An awesome collection of buttons, loaders, inputs and more built with tailwindcss, you can copy the source and open in tailwindcss playgroud.',
+      'An awesome collection of buttons, loaders, inputs and more built with tailwindcss.',
     tools: [nextjs, tailwindcss],
     live: 'https://mini.codingcodax.dev/',
     repo: 'https://github.com/codingcodax/mini/',
