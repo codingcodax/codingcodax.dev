@@ -2,7 +2,15 @@ import { Project } from '~/@types';
 import { MiniIcon, SlugIcon, WeebnIcon } from '~/components/icons';
 import DuckDuckGo from '~/components/icons/ddg';
 
-import { headlessui, nextjs, radixui, tailwindcss, typescript } from './tools';
+import {
+  headlessui,
+  nextjs,
+  prisma,
+  radixui,
+  tailwindcss,
+  trpc,
+  typescript,
+} from './tools';
 
 const projects: Project[] = [
   {
@@ -20,7 +28,7 @@ const projects: Project[] = [
     title: 'Slug',
     description:
       'slug is an open source link managment platform to short your links made for devs.',
-    tools: [nextjs, tailwindcss, typescript],
+    tools: [nextjs, tailwindcss, typescript, trpc, prisma],
     live: 'https://slug.codingcodax.dev/',
     repo: 'https://github.com/codingcodax/slug/',
     featured: false,
