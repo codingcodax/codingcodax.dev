@@ -7,6 +7,7 @@ export { default as CheckIcon } from './check';
 export { default as ClockIcon } from './clock';
 export { default as CloseIcon } from './close';
 export { default as CSSIcon } from './css';
+export { default as DuckDuckGoIcon } from './ddg';
 export { default as FigmaIcon } from './figma';
 export { default as FirebaseIcon } from './firebase';
 export { default as GitHubIcon } from './github';
