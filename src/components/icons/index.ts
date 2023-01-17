@@ -24,6 +24,7 @@ export { default as NewspaperIcon } from './newspaper';
 export { default as NextJSIcon } from './nextjs';
 export { default as NodeJSIcon } from './nodejs';
 export { default as PolyworkIcon } from './polywork';
+export { default as PrismaIcon } from './prisma';
 export { default as RadixUI } from './radixui';
 export { default as ReactJSIcon } from './reactjs';
 export { default as ReexJSIcon } from './reexjs';
