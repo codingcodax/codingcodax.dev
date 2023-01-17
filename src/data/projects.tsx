@@ -1,73 +1,49 @@
 import { Project } from '~/@types';
-import {
-  FirebaseIcon,
-  LitreekIcon,
-  Logo,
-  MDXIcon,
-  ReexJSIcon,
-} from '~/components/icons';
+import { MiniIcon, SlugIcon, WeebnIcon } from '~/components/icons';
+import DuckDuckGo from '~/components/icons/ddg';
 
-import {
-  chakraui,
-  firebase,
-  mdx,
-  nextjs,
-  nodejs,
-  reactjs,
-  sass,
-  storybook,
-} from './tools';
+import { headlessui, nextjs, radixui, tailwindcss, typescript } from './tools';
 
 const projects: Project[] = [
   {
-    logo: <LitreekIcon css={{ h: '$12', color: '$backgroundColor' }} />,
-    title: 'Litreek',
+    logo: <WeebnIcon css={{ h: '$12', color: '$backgroundColor' }} />,
+    title: 'weebn',
     description:
-      'Tree links app free 🤯, fast 😎, open-source 💪 and easy to customize 👌.',
-    tools: [nextjs, sass],
-    live: 'https://litreek.vercel.app/',
-    repo: 'https://github.com/codingcodax/litreek/',
+      'Level up your Notion with light weight weeb widgets fully cuztomizable and ready to use.',
+    tools: [nextjs, tailwindcss, headlessui],
+    live: 'https://weebn.codingcodax.dev/',
+    repo: 'https://github.com/codingcodax/weebn/',
     featured: false,
   },
   {
-    logo: <MDXIcon css={{ h: '$12', color: '$backgroundColor' }} />,
-    title: 'MDX Blog Kit',
+    logo: <SlugIcon css={{ h: '$12', color: '$backgroundColor' }} />,
+    title: 'Slug',
     description:
-      'Blog kit for developers 👨‍💻 built with Next JS, SEO optimized, light 🪶, and easy to customize 👌.',
-    tools: [nextjs, chakraui, mdx],
-    live: 'https://nextjs-mdx-blog-kit-nu.vercel.app/',
-    repo: 'https://github.com/codingcodax/nextjs-mdx-blog-kit/',
+      'slug is an open source link managment platform to short your links made for devs.',
+    tools: [nextjs, tailwindcss, typescript],
+    live: 'https://slug.codingcodax.dev/',
+    repo: 'https://github.com/codingcodax/slug/',
     featured: false,
   },
   {
-    logo: <ReexJSIcon css={{ h: '$12', color: '$backgroundColor' }} />,
-    title: 'ReexJs CLI',
+    logo: <MiniIcon css={{ h: '$12', color: '$backgroundColor' }} />,
+    title: 'mini',
     description:
-      'An interactive CLI automation tool 🛠️ for creating react.js and next.js projects most fast and efficiently. ⚛️',
-    tools: [nodejs],
-    site: 'https://codingcodax.github.io/reexjs-cli/',
-    repo: 'https://github.com/codingcodax/reexjs-cli/',
+      'An awesome collection of buttons, loaders, inputs and more built with tailwindcss, you can copy the source and open in tailwindcss playgroud.',
+    tools: [nextjs, tailwindcss],
+    live: 'https://mini.codingcodax.dev/',
+    repo: 'https://github.com/codingcodax/mini/',
     featured: true,
   },
   {
-    logo: <Logo css={{ h: '$12', color: '$backgroundColor' }} />,
-    title: 'Portfolio V1',
+    logo: <DuckDuckGo css={{ h: '$12', color: '$backgroundColor' }} />,
+    title: 'DDG Themes',
     description:
-      'Personal website 🌐 built with Next JS and Chakra UI with my own blog 🖊️ and newsletter 📰.',
-    tools: [nextjs, storybook, chakraui],
-    live: 'https://codaxx.ml/',
-    repo: 'https://github.com/codingcodax/portfolio-v1/',
+      'Customize DuckDuckGo with your favorite theme, choose from a number of themes and install it.',
+    tools: [nextjs, tailwindcss, radixui],
+    live: 'https://ddg.codingcodax.dev/',
+    repo: 'https://github.com/codingcodax/ddg-themes/',
     featured: true,
-  },
-  {
-    logo: <FirebaseIcon css={{ h: '$12', color: '$backgroundColor' }} />,
-    title: 'Superchat',
-    description:
-      'Simple real-time chat app built with React JS ⚛️ and Firebase 🔥.',
-    tools: [reactjs, firebase, sass],
-    live: 'https://fosion-demos.web.app/',
-    repo: 'https://github.com/codingcodax/superchat/',
-    featured: false,
   },
 ];
 
