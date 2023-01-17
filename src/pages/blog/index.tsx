@@ -43,13 +43,13 @@ const Blog: FC<BlogProps> = ({ posts }) => {
       </Heading>
       <Text>
         This page contains a list of posts I&apos;ve written on{' '}
-        <Link href='https://coding.hashnode.dev'>
+        <Link href='https://codingcodax.hashnode.dev'>
           <A rel='noopener noreferrer' target='_blank' type='3d'>
             Hashnode
           </A>
         </Link>{' '}
         and{' '}
-        <Link href='https://dev.to/_codax_'>
+        <Link href='https://dev.to/codingcodax'>
           <A rel='noopener noreferrer' target='_blank' type='3d'>
             Dev.to
           </A>
