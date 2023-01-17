@@ -14,9 +14,9 @@ import {
   MDXIcon,
   AlanAIIcon,
   FigmaIcon,
-  TailwindCSS,
-  HeadlessUI,
-  Stitches,
+  TailwindCSSIcon,
+  HeadlessUIIcon,
+  StitchesIcon,
   RadixUI,
 } from '~/components/icons';
 
@@ -62,7 +62,7 @@ export const nodejs: Tool = {
 
 export const stitches: Tool = {
   name: 'Stitches',
-  icon: <Stitches css={{ h: '$full', color: '$highTextColor' }} />,
+  icon: <StitchesIcon css={{ h: '$full', color: '$highTextColor' }} />,
 };
 
 export const radixui: Tool = {
@@ -72,12 +72,12 @@ export const radixui: Tool = {
 
 export const tailwindcss: Tool = {
   name: 'Tailwind CSS',
-  icon: <TailwindCSS css={{ h: '$full', color: '$highTextColor' }} />,
+  icon: <TailwindCSSIcon css={{ h: '$full', color: '$highTextColor' }} />,
 };
 
 export const headlessui: Tool = {
   name: 'Headless UI',
-  icon: <HeadlessUI css={{ h: '$full', color: '$highTextColor' }} />,
+  icon: <HeadlessUIIcon css={{ h: '$full', color: '$highTextColor' }} />,
 };
 
 export const chakraui: Tool = {
