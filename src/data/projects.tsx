@@ -31,7 +31,7 @@ const projects: Project[] = [
     tools: [nextjs, tailwindcss, typescript, trpc, prisma],
     live: 'https://slug.codingcodax.dev/',
     repo: 'https://github.com/codingcodax/slug/',
-    featured: false,
+    featured: true,
   },
   {
     logo: <MiniIcon css={{ h: '$12', color: '$backgroundColor' }} />,
@@ -51,7 +51,7 @@ const projects: Project[] = [
     tools: [nextjs, tailwindcss, radixui],
     live: 'https://ddg.codingcodax.dev/',
     repo: 'https://github.com/codingcodax/ddg-themes/',
-    featured: true,
+    featured: false,
   },
 ];
 
