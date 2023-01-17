@@ -17,6 +17,7 @@ export { default as LinkedInIcon } from './linkedin';
 export { default as LitreekIcon } from './litreek';
 export { default as MDXIcon } from './mdx';
 export { default as MenuIcon } from './menu';
+export { default as MiniIcon } from './mini';
 export { default as MoonIcon } from './moon';
 export { default as NewspaperIcon } from './newspaper';
 export { default as NextJSIcon } from './nextjs';
