@@ -25,9 +25,9 @@ const Nav = () => {
           gridColumnGap: '$6',
         }}
       >
-        {mainRoutes.map(({ name, icon, href, isExternal, isActive }) => (
+        {mainRoutes.map(({ name, icon, href, isExternal, isActive }, index) => (
           <NavItem
-            key={name}
+            key={`${name}-${index}`}
             href={href}
             isActive={isActive(router.asPath, href)}
             isExternal={isExternal}
