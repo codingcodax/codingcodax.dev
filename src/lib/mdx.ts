@@ -106,7 +106,7 @@ export const getPostBySlug = async (slug: string) => {
 
   const { code, frontmatter } = await bundleMDX({
     source,
-    xdmOptions(options) {
+    mdxOptions(options) {
       options.remarkPlugins = [...(options?.remarkPlugins ?? []), gfmPlugin];
 
       options.rehypePlugins = [
