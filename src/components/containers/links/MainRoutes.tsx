@@ -5,9 +5,9 @@ import { FooterLinkItem as LinkItem } from '~/components/atoms';
 const MainRoutes = () => {
   return (
     <Grid as='ul' css={{ gridRowGap: '$2' }}>
-      {mainRoutes.map(({ name, href, isExternal }) => (
+      {mainRoutes.map(({ name, href, isExternal }, index) => (
         <LinkItem
-          key={name}
+          key={`${name}-${index}`}
           href={href}
           isExternal={isExternal}
           type='footer-link'
