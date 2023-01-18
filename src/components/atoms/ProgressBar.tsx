@@ -1,11 +1,11 @@
-import { motion, useViewportScroll } from 'framer-motion';
+import { motion, useScroll } from 'framer-motion';
 
 import { Box } from '~/components/ui';
 
 const BoxFramer = motion(Box);
 
 const ProgressBar = () => {
-  const { scrollYProgress } = useViewportScroll();
+  const { scrollYProgress } = useScroll();
 
   return (
     <Box
