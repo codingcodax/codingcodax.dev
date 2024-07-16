@@ -15,21 +15,23 @@ import { env } from "~/env";
 export const metadata: Metadata = {
   metadataBase: new URL(
     env.VERCEL_ENV === "production"
-      ? "https://turbo.t3.gg"
+      ? "https://www.codingcodax.dev"
       : "http://localhost:3000",
   ),
-  title: "Create T3 Turbo",
-  description: "Simple monorepo with shared backend for web & mobile apps",
+  title: "Alexis Guzman",
+  description:
+    "Front-end web wizard who enjoys creating a variety of tools and a continuous dedication to learning and self-development.",
   openGraph: {
-    title: "Create T3 Turbo",
-    description: "Simple monorepo with shared backend for web & mobile apps",
-    url: "https://create-t3-turbo.vercel.app",
-    siteName: "Create T3 Turbo",
+    title: "Alexis Guzman",
+    description:
+      "Front-end web wizard who enjoys creating a variety of tools and a continuous dedication to learning and self-development.",
+    url: "https://www.codingcodax.dev",
+    siteName: "Alexis Guzman",
   },
   twitter: {
     card: "summary_large_image",
-    site: "@jullerino",
-    creator: "@jullerino",
+    site: "@codingcodax",
+    creator: "@codingcodax",
   },
 };
 
