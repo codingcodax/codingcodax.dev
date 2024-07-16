@@ -1,4 +1,4 @@
-import { ThemeProvider } from '@acme/ui/theme';
+import { ThemeProvider } from 'next-themes';
 
 import { TRPCReactProvider } from '~/trpc/react';
 
