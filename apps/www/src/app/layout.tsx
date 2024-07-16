@@ -45,15 +45,17 @@ export default function RootLayout(props: { children: React.ReactNode }) {
     <html suppressHydrationWarning lang='en'>
       <body
         className={cn(
-          'min-h-screen bg-background font-sans text-foreground antialiased',
+          'min-h-screen bg-white p-6 font-sans antialiased dark:bg-black',
           GeistSans.variable,
           GeistMono.variable,
         )}
       >
-        <Providers>
-          <Header />
-          {props.children}
-        </Providers>
+        <div className='bg-grey-base flex flex-col rounded-3xl'>
+          <Providers>
+            <Header />
+            {props.children}
+          </Providers>
+        </div>
       </body>
     </html>
   );
