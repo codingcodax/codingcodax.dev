@@ -2,21 +2,21 @@ import type {
   DefaultSession,
   NextAuthConfig,
   Session as NextAuthSession,
-} from "next-auth";
-import { skipCSRFCheck } from "@auth/core";
-import { DrizzleAdapter } from "@auth/drizzle-adapter";
-import Discord from "next-auth/providers/discord";
+} from 'next-auth';
+import { skipCSRFCheck } from '@auth/core';
+import { DrizzleAdapter } from '@auth/drizzle-adapter';
+import Discord from 'next-auth/providers/discord';
 
-import { db } from "@acme/db/client";
-import { Account, Session, User } from "@acme/db/schema";
+import { db } from '@acme/db/client';
+import { Account, Session, User } from '@acme/db/schema';
 
-import { env } from "../env";
+import { env } from '../env';
 
-declare module "next-auth" {
+declare module 'next-auth' {
   interface Session {
     user: {
       id: string;
-    } & DefaultSession["user"];
+    } & DefaultSession['user'];
   }
 }
 
@@ -26,7 +26,7 @@ const adapter = DrizzleAdapter(db, {
   sessionsTable: Session,
 });
 
-export const isSecureContext = env.NODE_ENV !== "development";
+export const isSecureContext = env.NODE_ENV !== 'development';
 
 export const authConfig = {
   adapter,
@@ -41,8 +41,8 @@ export const authConfig = {
   providers: [Discord],
   callbacks: {
     session: (opts) => {
-      if (!("user" in opts))
-        throw new Error("unreachable with session strategy");
+      if (!('user' in opts))
+        throw new Error('unreachable with session strategy');
 
       return {
         ...opts.session,
@@ -58,7 +58,7 @@ export const authConfig = {
 export const validateToken = async (
   token: string,
 ): Promise<NextAuthSession | null> => {
-  const sessionToken = token.slice("Bearer ".length);
+  const sessionToken = token.slice('Bearer '.length);
   const session = await adapter.getSessionAndUser?.(sessionToken);
   return session
     ? {

@@ -1,11 +1,11 @@
-import { cookies } from "next/headers";
-import { NextRequest, NextResponse } from "next/server";
+import { cookies } from 'next/headers';
+import { NextRequest, NextResponse } from 'next/server';
 
-import { handlers, isSecureContext } from "@acme/auth";
+import { handlers, isSecureContext } from '@acme/auth';
 
-export const runtime = "edge";
+export const runtime = 'edge';
 
-const EXPO_COOKIE_NAME = "__acme-expo-redirect-state";
+const EXPO_COOKIE_NAME = '__acme-expo-redirect-state';
 const AUTH_COOKIE_PATTERN = /authjs\.session-token=([^;]+)/;
 
 /**
@@ -19,7 +19,7 @@ const AUTH_COOKIE_PATTERN = /authjs\.session-token=([^;]+)/;
 function rewriteRequestUrlInDevelopment(req: NextRequest) {
   if (isSecureContext) return req;
 
-  const host = req.headers.get("host");
+  const host = req.headers.get('host');
   const newURL = new URL(req.url);
   newURL.host = host ?? req.nextUrl.host;
   return new NextRequest(newURL, req);
@@ -39,21 +39,21 @@ export const GET = async (
   const req = rewriteRequestUrlInDevelopment(_req);
 
   const nextauthAction = props.params.nextauth[0];
-  const isExpoSignIn = req.nextUrl.searchParams.get("expo-redirect");
+  const isExpoSignIn = req.nextUrl.searchParams.get('expo-redirect');
   const isExpoCallback = cookies().get(EXPO_COOKIE_NAME);
 
-  if (nextauthAction === "signin" && !!isExpoSignIn) {
+  if (nextauthAction === 'signin' && !!isExpoSignIn) {
     // set a cookie we can read in the callback
     // to know to send the user back to expo
     cookies().set({
       name: EXPO_COOKIE_NAME,
       value: isExpoSignIn,
       maxAge: 60 * 10, // 10 min
-      path: "/",
+      path: '/',
     });
   }
 
-  if (nextauthAction === "callback" && !!isExpoCallback) {
+  if (nextauthAction === 'callback' && !!isExpoCallback) {
     cookies().delete(EXPO_COOKIE_NAME);
 
     // Run original handler, then extract the session token from the response
@@ -67,12 +67,12 @@ export const GET = async (
 
     if (!match)
       throw new Error(
-        "Unable to find session cookie: " +
+        'Unable to find session cookie: ' +
           JSON.stringify(authResponse.headers.getSetCookie()),
       );
 
     const url = new URL(isExpoCallback.value);
-    url.searchParams.set("session_token", match);
+    url.searchParams.set('session_token', match);
     return NextResponse.redirect(url);
   }
 

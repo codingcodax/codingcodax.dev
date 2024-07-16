@@ -1,5 +1,5 @@
-import { auth, signIn, signOut } from "@acme/auth";
-import { Button } from "@acme/ui/button";
+import { auth, signIn, signOut } from '@acme/auth';
+import { Button } from '@acme/ui/button';
 
 export async function AuthShowcase() {
   const session = await auth();
@@ -8,10 +8,10 @@ export async function AuthShowcase() {
     return (
       <form>
         <Button
-          size="lg"
+          size='lg'
           formAction={async () => {
-            "use server";
-            await signIn("discord");
+            'use server';
+            await signIn('discord');
           }}
         >
           Sign in with Discord
@@ -21,16 +21,16 @@ export async function AuthShowcase() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center gap-4">
-      <p className="text-center text-2xl">
+    <div className='flex flex-col items-center justify-center gap-4'>
+      <p className='text-center text-2xl'>
         <span>Logged in as {session.user.name}</span>
       </p>
 
       <form>
         <Button
-          size="lg"
+          size='lg'
           formAction={async () => {
-            "use server";
+            'use server';
             await signOut();
           }}
         >
