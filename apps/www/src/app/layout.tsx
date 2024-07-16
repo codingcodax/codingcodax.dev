@@ -7,6 +7,7 @@ import { cn } from '@acme/ui';
 import '~/app/globals.css';
 
 import { env } from '~/env';
+import { Header } from './_components/Header';
 import { Providers } from './providers';
 
 export const metadata: Metadata = {
@@ -49,7 +50,10 @@ export default function RootLayout(props: { children: React.ReactNode }) {
           GeistMono.variable,
         )}
       >
-        <Providers>{props.children}</Providers>
+        <Providers>
+          <Header />
+          {props.children}
+        </Providers>
       </body>
     </html>
   );
