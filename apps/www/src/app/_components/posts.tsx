@@ -130,8 +130,8 @@ export function PostCard(props: {
       </div>
       <div>
         <Button
-          variant='ghost'
           className='cursor-pointer text-sm font-bold uppercase text-primary hover:bg-transparent hover:text-white'
+          variant='ghost'
           onClick={() => deletePost.mutate(props.post.id)}
         >
           Delete
