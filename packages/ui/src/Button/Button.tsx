@@ -8,7 +8,7 @@ import { cn } from '@acme/ui';
 export const buttonStyles = tv({
   base: cn(
     'flex h-fit w-fit items-center justify-center font-semibold outline-none transition-colors duration-200',
-    'focus-visible:ring-4',
+    'focus-visible:ring-2',
     'disabled:cursor-not-allowed',
   ),
   variants: {
@@ -45,10 +45,10 @@ export const buttonStyles = tv({
       intent: 'default',
       variant: 'solid',
       class: cn(
-        'bg-primary-solid text-grey-base',
-        'hover:bg-primary-solid-hover',
-        'focus-visible:ring-primary-focus-ring',
-        'disabled:bg-primary-border',
+        'bg-grey-text-contrast text-grey-base',
+        'hover:bg-grey-text-contrast/90',
+        'focus-visible:ring-grey-text-contrast',
+        'disabled:bg-grey-text-contrast',
       ),
     },
     {
@@ -69,7 +69,7 @@ export const buttonStyles = tv({
         'border-grey-border bg-grey-base text-grey-text-contrast border',
         'hover:border-grey-border-hover hover:bg-grey-bg-subtle',
         'active:bg-grey-bg',
-        'focus-visible:ring-grey-focus-ring',
+        'focus-visible:ring-grey-text-contrast',
         'disabled:border-grey-line disabled:bg-grey-base disabled:text-grey-solid',
       ),
     },
@@ -80,7 +80,7 @@ export const buttonStyles = tv({
         'text-grey-text-contrast',
         'hover:bg-grey-bg-hover',
         'active:bg-grey-bg-active',
-        'focus-visible:ring-grey-focus-ring',
+        'focus-visible:ring-grey-text-contrast',
         'disabled:text-grey-solid disabled:bg-transparent',
       ),
     },
