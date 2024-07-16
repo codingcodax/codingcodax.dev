@@ -50,10 +50,18 @@ export default function RootLayout(props: { children: React.ReactNode }) {
           GeistMono.variable,
         )}
       >
-        <div className='bg-grey-base flex flex-col rounded-3xl'>
+        <div className='bg-grey-base border-grey-line relative flex flex-col rounded-3xl border'>
           <Providers>
+            <div className='bg-grey-line absolute left-0 top-[68px] h-px w-full' />
+
             <Header />
-            {props.children}
+            <div className='relative mx-auto w-full max-w-screen-lg'>
+              <div className='bg-grey-line absolute -left-px top-0 h-full w-px' />
+              {props.children}
+              <div className='bg-grey-line absolute -right-px top-0 h-full w-px' />
+            </div>
+
+            <div className='bg-grey-line absolute bottom-[68px] left-0 h-px w-full' />
           </Providers>
         </div>
       </body>
