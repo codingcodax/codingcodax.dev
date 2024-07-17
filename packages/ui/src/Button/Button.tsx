@@ -66,7 +66,7 @@ export const buttonStyles = tv({
       intent: 'default',
       variant: 'outline',
       class: cn(
-        'border-grey-border bg-grey-base text-grey-text-contrast border',
+        'border border-grey-border bg-grey-base text-grey-text-contrast',
         'hover:border-grey-border-hover hover:bg-grey-bg-subtle',
         'active:bg-grey-bg',
         'focus-visible:ring-grey-text-contrast',
@@ -81,7 +81,7 @@ export const buttonStyles = tv({
         'hover:bg-grey-bg-hover',
         'active:bg-grey-bg-active',
         'focus-visible:ring-grey-text-contrast',
-        'disabled:text-grey-solid disabled:bg-transparent',
+        'disabled:bg-transparent disabled:text-grey-solid',
       ),
     },
     {
