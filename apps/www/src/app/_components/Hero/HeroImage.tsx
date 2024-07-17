@@ -13,8 +13,8 @@ export const HeroImage = () => {
         />
       </figure>
 
-      <div className='absolute -left-[100%] top-1/2 h-px w-[100px] bg-grey-border-hover' />
-      <div className='absolute -right-[100%] top-1/2 h-px w-[100px] bg-grey-border-hover' />
+      <div className='absolute -left-[calc(100%+4px)] top-1/2 h-px w-[100px] bg-grey-border-hover' />
+      <div className='absolute -right-[calc(100%+4px)] top-1/2 h-px w-[100px] bg-grey-border-hover' />
 
       <div className='absolute -left-[4px] -top-[4px] h-[108px] w-[108px] rounded-full border border-grey-border-hover' />
       <div className='absolute -left-[8px] -top-[8px] h-[116px] w-[116px] rounded-full border border-grey-border' />
