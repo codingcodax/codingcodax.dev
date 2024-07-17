@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 
 import { Button } from '@acme/ui/Button';
 
-interface Props {
+type Props = {
   className?: string;
   href: string;
   children: React.ReactNode;

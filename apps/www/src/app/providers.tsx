@@ -2,9 +2,7 @@ import { ThemeProvider } from 'next-themes';
 
 import { TRPCReactProvider } from '~/trpc/react';
 
-interface Props {
-  children: React.ReactNode;
-}
+type Props = { children: React.ReactNode };
 
 export const Providers = ({ children }: Props) => {
   return (
