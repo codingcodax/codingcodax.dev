@@ -1,3 +1,4 @@
 export * from './Project';
-export * from './ProjectTitle';
+export * from './ProjectContent';
 export * from './ProjectDescription';
+export * from './ProjectTitle';
