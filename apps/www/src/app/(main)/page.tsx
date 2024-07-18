@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 
-import { projects } from '~/app/_config/projects';
+import { projects } from '~/config/projects';
 import { Hero } from './_components/Hero';
 import {
   Project,
