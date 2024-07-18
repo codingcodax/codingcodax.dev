@@ -1,4 +1,7 @@
 import type { NextPage } from 'next';
+import Link from 'next/link';
+
+import { Button } from '@acme/ui/Button';
 
 import { projects } from '~/config/projects';
 import { Hero } from './_components/Hero';
@@ -38,11 +41,17 @@ const Home: NextPage = () => {
         </Project>
       ))}
 
+      <div className='grid grid-cols-3 py-6'>
+        <div className='col-start-2 flex items-center justify-center'>
+          <Button asChild>
+            <Link href='/work'>See all projects</Link>
+          </Button>
+        </div>
+      </div>
+
       <Section>
-        <SectionTitle>
-          <SectionTitle>About me</SectionTitle>
-          <SectionDescription>A sneak peek of who I am</SectionDescription>
-        </SectionTitle>
+        <SectionTitle>About me</SectionTitle>
+        <SectionDescription>A sneak peek of who I am</SectionDescription>
       </Section>
     </div>
   );
