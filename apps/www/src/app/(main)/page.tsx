@@ -17,6 +17,7 @@ import {
   SectionDescription,
   SectionTitle,
 } from './_components/Section';
+import { TechStack } from './_components/TechStack';
 
 const Home: NextPage = () => {
   return (
@@ -53,6 +54,10 @@ const Home: NextPage = () => {
         <SectionTitle>About me</SectionTitle>
         <SectionDescription>A sneak peek of who I am</SectionDescription>
       </Section>
+
+      <div className='grid grid-cols-3 py-6'>
+        <TechStack />
+      </div>
     </div>
   );
 };
