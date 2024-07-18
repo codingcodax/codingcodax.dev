@@ -16,6 +16,7 @@ export const env = createEnv({
    */
   server: {
     POSTGRES_URL: z.string().url(),
+    WAKATIME_API_KEY: z.string(),
   },
 
   /**
