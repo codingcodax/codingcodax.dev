@@ -55,7 +55,7 @@ export default function RootLayout(props: { children: React.ReactNode }) {
             <div className='absolute left-0 top-[68px] h-px w-full bg-grey-line' />
 
             <Header />
-            <div className='relative mx-auto w-full max-w-screen-lg'>
+            <div className='relative mx-auto w-full max-w-screen-lg pb-[68px]'>
               <div className='absolute -left-px top-0 h-full w-px bg-grey-line' />
               <div className='absolute left-1/3 top-0 h-full w-px border border-dashed border-grey-bg-hover' />
               {props.children}
