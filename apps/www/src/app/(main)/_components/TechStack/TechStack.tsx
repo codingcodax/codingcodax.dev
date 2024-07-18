@@ -1,7 +1,62 @@
+import { technologies } from '~/config/technologies';
+
 export const TechStack = () => {
   return (
-    <div>
-      <p>tech stack</p>
-    </div>
+    <article className='px-4'>
+      <h4 className='px-4 font-serif text-lg text-grey-text'>Tech stack</h4>
+
+      {/* TODO: Create marquee ui component */}
+      <div className='w-full'>
+        <div className='mx-auto w-full'>
+          <div
+            className='group relative mt-6 flex gap-6 overflow-hidden'
+            style={{
+              maskImage:
+                'linear-gradient(to left, transparent 0%, black 20%, black 80%, transparent 95%)',
+            }}
+          >
+            {Array(5)
+              .fill(null)
+              .map((index) => (
+                <div
+                  key={index}
+                  className='animate-logo-cloud duration-[1400] flex shrink-0 flex-row justify-around gap-6 group-hover:[animation-play-state:paused]'
+                >
+                  {technologies.slice(0, 9).map(({ name, icon: Icon }) => (
+                    <Icon key={name} className='size-6' />
+                  ))}
+                </div>
+              ))}
+          </div>
+        </div>
+      </div>
+
+      <div className='w-full'>
+        <div className='mx-auto w-full'>
+          <div
+            className='group relative mt-6 flex gap-6 overflow-hidden p-2'
+            style={{
+              maskImage:
+                'linear-gradient(to left, transparent 0%, black 20%, black 80%, transparent 95%)',
+            }}
+          >
+            {Array(5)
+              .fill(null)
+              .map((index) => (
+                <div
+                  key={index}
+                  className='animate-logo-cloud-reverse duration-[1200] flex shrink-0 flex-row justify-around gap-6 group-hover:[animation-play-state:paused]'
+                >
+                  {technologies
+                    .slice(10, technologies.length)
+                    .map(({ name, icon: Icon }) => (
+                      <Icon key={name} className='size-6' />
+                    ))}
+                </div>
+              ))}
+          </div>
+        </div>
+      </div>
+    </article>
   );
 };
