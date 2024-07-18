@@ -2,7 +2,7 @@ import { HeroImage } from './HeroImage';
 
 export const Hero = () => {
   return (
-    <div className='relative flex min-h-[50vh] flex-col items-center justify-center bg-grey-base px-2 pb-4 pt-8'>
+    <div className='relative z-[1] flex min-h-[50vh] flex-col items-center justify-center bg-grey-base px-2 pb-4 pt-8'>
       <HeroImage />
 
       <div className='mt-6 flex flex-col items-center justify-center text-center'>
