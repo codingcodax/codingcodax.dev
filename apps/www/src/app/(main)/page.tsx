@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Button } from '@acme/ui/Button';
 
 import { projects } from '~/config/projects';
+import { CodingHours } from './_components/CodingHours';
 import { Hero } from './_components/Hero';
 import {
   Project,
@@ -55,8 +56,9 @@ const Home: NextPage = () => {
         <SectionDescription>A sneak peek of who I am</SectionDescription>
       </Section>
 
-      <div className='grid grid-cols-3 py-6'>
+      <div className='grid grid-cols-3 py-8'>
         <TechStack />
+        <CodingHours />
       </div>
     </div>
   );
