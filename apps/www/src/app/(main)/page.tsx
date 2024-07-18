@@ -37,6 +37,13 @@ const Home: NextPage = () => {
           <ProjectImage />
         </Project>
       ))}
+
+      <Section>
+        <SectionTitle>
+          <SectionTitle>About me</SectionTitle>
+          <SectionDescription>A sneak peek of who I am</SectionDescription>
+        </SectionTitle>
+      </Section>
     </div>
   );
 };
