@@ -1,9 +1,13 @@
+import { Header } from './_components/Header';
+
 type Props = { children: React.ReactNode };
 
 const Layout = ({ children }: Props) => {
   return (
     <div className='relative flex flex-col rounded-3xl border border-grey-line bg-grey-base'>
       <div className='absolute left-0 top-[68px] h-px w-full bg-grey-line' />
+
+      <Header />
 
       <div className='relative mx-auto w-full max-w-screen-lg pb-[68px]'>
         <div className='absolute -left-px top-0 h-full w-px bg-grey-line' />
