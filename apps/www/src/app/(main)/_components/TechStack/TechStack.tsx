@@ -17,7 +17,7 @@ export const TechStack = () => {
           >
             {Array(5)
               .fill(null)
-              .map((index) => (
+              .map((_, index) => (
                 <div
                   key={index}
                   className='duration-[1400] flex shrink-0 animate-logo-cloud flex-row justify-around gap-6 group-hover:[animation-play-state:paused]'
@@ -42,7 +42,7 @@ export const TechStack = () => {
           >
             {Array(5)
               .fill(null)
-              .map((index) => (
+              .map((_, index) => (
                 <div
                   key={index}
                   className='duration-[1200] flex shrink-0 animate-logo-cloud-reverse flex-row justify-around gap-6 group-hover:[animation-play-state:paused]'
