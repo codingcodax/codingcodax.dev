@@ -35,3 +35,9 @@
     --mauve-12: 240 6.2% 93.7%;
   }
 }
+
+@layer base {
+  ::selection {
+    @apply bg-grey-text-contrast text-grey-base;
+  }
+}
