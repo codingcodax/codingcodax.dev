@@ -2,7 +2,7 @@ import { technologies } from '~/config/technologies';
 
 export const TechStack = () => {
   return (
-    <article className='px-4'>
+    <article className='px-4 py-8'>
       <h4 className='px-4 font-serif text-lg text-grey-text'>Tech stack</h4>
 
       {/* TODO: Create marquee ui component */}
@@ -20,7 +20,7 @@ export const TechStack = () => {
               .map((index) => (
                 <div
                   key={index}
-                  className='animate-logo-cloud duration-[1400] flex shrink-0 flex-row justify-around gap-6 group-hover:[animation-play-state:paused]'
+                  className='duration-[1400] flex shrink-0 animate-logo-cloud flex-row justify-around gap-6 group-hover:[animation-play-state:paused]'
                 >
                   {technologies.slice(0, 9).map(({ name, icon: Icon }) => (
                     <Icon key={name} className='size-6' />
@@ -45,7 +45,7 @@ export const TechStack = () => {
               .map((index) => (
                 <div
                   key={index}
-                  className='animate-logo-cloud-reverse duration-[1200] flex shrink-0 flex-row justify-around gap-6 group-hover:[animation-play-state:paused]'
+                  className='duration-[1200] flex shrink-0 animate-logo-cloud-reverse flex-row justify-around gap-6 group-hover:[animation-play-state:paused]'
                 >
                   {technologies
                     .slice(10, technologies.length)
