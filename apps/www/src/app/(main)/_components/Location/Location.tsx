@@ -50,7 +50,9 @@ export const Location = () => {
 
   return (
     <div className='max-h-[204px] w-full overflow-hidden'>
-      <h4 className='pt-8 font-serif text-lg text-grey-text'>CMDX, Mexico</h4>
+      <h4 className='px-8 pt-8 font-serif text-lg text-grey-text'>
+        CMDX, Mexico
+      </h4>
 
       <div className='relative mx-auto aspect-square h-full w-full'>
         <canvas
