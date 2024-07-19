@@ -9,7 +9,7 @@ type Props = {
   className?: string;
   href: string;
   children: React.ReactNode;
-}
+};
 
 export const NavItem = ({ className, href, children }: Props) => {
   const pathname = usePathname();
