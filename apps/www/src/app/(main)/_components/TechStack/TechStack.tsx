@@ -23,7 +23,10 @@ export const TechStack = () => {
                   className='duration-[1400] flex shrink-0 animate-logo-cloud flex-row justify-around gap-6 group-hover:[animation-play-state:paused]'
                 >
                   {technologies.slice(0, 9).map(({ name, icon: Icon }) => (
-                    <Icon key={name} className='size-6' />
+                    <Icon
+                      key={name}
+                      className='size-6 fill-grey-text-contrast'
+                    />
                   ))}
                 </div>
               ))}
@@ -50,7 +53,10 @@ export const TechStack = () => {
                   {technologies
                     .slice(10, technologies.length)
                     .map(({ name, icon: Icon }) => (
-                      <Icon key={name} className='size-6' />
+                      <Icon
+                        key={name}
+                        className='size-6 fill-grey-text-contrast'
+                      />
                     ))}
                 </div>
               ))}
