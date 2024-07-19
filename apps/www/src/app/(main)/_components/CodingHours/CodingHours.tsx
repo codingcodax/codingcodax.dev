@@ -12,7 +12,7 @@ export const CodingHours = async () => {
 
   const {
     data: { total_seconds },
-  } = await res.json();
+  } = (await res.json()) as { data: { total_seconds: number } };
 
   const roundedSeconds = Math.round(total_seconds);
   const hours = Math.floor(roundedSeconds / 3600).toLocaleString();
@@ -20,7 +20,7 @@ export const CodingHours = async () => {
   const minutes = Math.floor(remainingSeconds / 60);
 
   return (
-    <div className='space-y-2 px-8'>
+    <div className='space-y-4 p-8'>
       <h4 className='font-serif text-lg text-grey-text'>Coding hours</h4>
       <p className='text-3xl font-medium'>
         {hours} hrs {minutes} mins
