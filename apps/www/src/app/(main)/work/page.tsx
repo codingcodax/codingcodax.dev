@@ -1,10 +1,12 @@
 import type { NextPage } from 'next';
 
+import { Hero } from '../_components/Hero';
+
 const Work: NextPage = () => {
   return (
-    <div>
-      <p>work page</p>
-    </div>
+    <main>
+      <Hero>Work</Hero>
+    </main>
   );
 };
 
