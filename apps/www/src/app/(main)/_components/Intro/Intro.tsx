@@ -1,9 +1,9 @@
-import { HeroImage } from './HeroImage';
+import { IntroImage } from './IntroImage';
 
-export const Hero = () => {
+export const Intro = () => {
   return (
     <div className='relative flex min-h-[50vh] flex-col items-center justify-center bg-grey-base px-2 pb-4 pt-8'>
-      <HeroImage />
+      <IntroImage />
 
       <div className='mt-6 flex flex-col items-center justify-center text-center'>
         <h1 className='font-serif text-[80px] font-bold'>Hi, I'm Alexis</h1>

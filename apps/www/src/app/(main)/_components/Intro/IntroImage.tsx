@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export const HeroImage = () => {
+export const IntroImage = () => {
   return (
     <div className='relative'>
       <figure>
