@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 
+import { ContactMe } from '~/app/(main)/_components/ContactMe';
 import { Hero } from '~/app/(main)/_components/Hero';
 import {
   Project,
@@ -46,6 +47,8 @@ const Work: NextPage = () => {
           <ProjectImage />
         </Project>
       ))}
+
+      <ContactMe variant='collapsed' />
     </main>
   );
 };
