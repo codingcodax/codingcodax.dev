@@ -13,7 +13,7 @@ import {
   SectionDescription,
   SectionTitle,
 } from '~/app/(main)/_components/Section';
-import { projects } from '~/config/projects';
+import { projects, sideProjects } from '~/config/projects';
 
 const Work: NextPage = () => {
   return (
@@ -35,6 +35,17 @@ const Work: NextPage = () => {
         <SectionTitle>Side projects</SectionTitle>
         <SectionDescription>Creations born from curiosity</SectionDescription>
       </Section>
+
+      {sideProjects.map(({ name, description }) => (
+        <Project key={name}>
+          <ProjectContent>
+            <ProjectTitle>{name}</ProjectTitle>
+            <ProjectDescription>{description}</ProjectDescription>
+          </ProjectContent>
+
+          <ProjectImage />
+        </Project>
+      ))}
     </main>
   );
 };
