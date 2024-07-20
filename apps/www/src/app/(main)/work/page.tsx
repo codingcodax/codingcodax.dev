@@ -8,6 +8,11 @@ import {
   ProjectImage,
   ProjectTitle,
 } from '~/app/(main)/_components/Project';
+import {
+  Section,
+  SectionDescription,
+  SectionTitle,
+} from '~/app/(main)/_components/Section';
 import { projects } from '~/config/projects';
 
 const Work: NextPage = () => {
@@ -25,6 +30,11 @@ const Work: NextPage = () => {
           <ProjectImage />
         </Project>
       ))}
+
+      <Section>
+        <SectionTitle>Side projects</SectionTitle>
+        <SectionDescription>Creations born from curiosity</SectionDescription>
+      </Section>
     </main>
   );
 };
