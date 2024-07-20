@@ -7,8 +7,6 @@ export const ContactMe = ({ variant }: Props) => {
     <section
       className={clsx('relative p-8', variant === 'expanded' ? 'h-[40vh]' : '')}
     >
-      <div className='absolute -top-px left-0 h-px w-full bg-grey-line' />
-
       <div className='gap flex h-full flex-col justify-center border-2 border-dotted border-grey-line bg-grey-base p-8'>
         <h4 className='font-serif text-3xl'>Let’s work together</h4>
         <p className='text-grey-text'>
