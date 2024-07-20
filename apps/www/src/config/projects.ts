@@ -21,3 +21,16 @@ export const projects = [
     alt: '',
   },
 ];
+
+export const sideProjects = [
+  {
+    name: 'mini',
+    description:
+      'A versatile design system offering a curated library of TailwindCSS-built UI components for intuitive interfaces.',
+  },
+  {
+    name: 'DDG Themes',
+    description:
+      'Enhance your DuckDuckGo experience with a diverse collection of customizable themes, effortlessly installable for a personalized search.',
+  },
+];
