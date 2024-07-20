@@ -58,10 +58,12 @@ const Home: NextPage = () => {
         <SectionDescription>A sneak peek of who I am</SectionDescription>
       </Section>
 
-      <div className='grid grid-cols-3'>
+      <div className='relative grid grid-cols-3'>
         <TechStack />
         <CodingHours />
         <Location />
+
+        <div className='absolute -bottom-px left-0 h-px w-full bg-grey-line' />
       </div>
 
       <ContactMe variant='expanded' />
