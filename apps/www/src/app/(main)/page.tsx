@@ -5,6 +5,7 @@ import { Button } from '@acme/ui/Button';
 
 import { projects } from '~/config/projects';
 import { CodingHours } from './_components/CodingHours';
+import { ContactMe } from './_components/ContactMe';
 import { Hero } from './_components/Hero';
 import { Location } from './_components/Location';
 import {
@@ -62,6 +63,8 @@ const Home: NextPage = () => {
         <CodingHours />
         <Location />
       </div>
+
+      <ContactMe variant='expanded' />
     </div>
   );
 };
