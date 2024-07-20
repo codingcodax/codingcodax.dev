@@ -20,7 +20,7 @@ export const TechStack = () => {
               .map((_, index) => (
                 <div
                   key={index}
-                  className='duration-[1400] flex shrink-0 animate-logo-cloud flex-row justify-around gap-6 group-hover:[animation-play-state:paused]'
+                  className='duration-[1400ms] flex shrink-0 animate-logo-cloud flex-row justify-around gap-6 group-hover:[animation-play-state:paused]'
                 >
                   {technologies.slice(0, 9).map(({ name, icon: Icon }) => (
                     <Icon
@@ -48,7 +48,7 @@ export const TechStack = () => {
               .map((_, index) => (
                 <div
                   key={index}
-                  className='duration-[1200] flex shrink-0 animate-logo-cloud-reverse flex-row justify-around gap-6 group-hover:[animation-play-state:paused]'
+                  className='duration-[1200ms] flex shrink-0 animate-logo-cloud-reverse flex-row justify-around gap-6 group-hover:[animation-play-state:paused]'
                 >
                   {technologies
                     .slice(10, technologies.length)
