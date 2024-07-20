@@ -6,7 +6,7 @@ import { Button } from '@acme/ui/Button';
 import { projects } from '~/config/projects';
 import { CodingHours } from './_components/CodingHours';
 import { ContactMe } from './_components/ContactMe';
-import { Hero } from './_components/Hero';
+import { Intro } from './_components/Intro';
 import { Location } from './_components/Location';
 import {
   Project,
@@ -25,7 +25,7 @@ import { TechStack } from './_components/TechStack';
 const Home: NextPage = () => {
   return (
     <div className='min-h-screen'>
-      <Hero />
+      <Intro />
 
       <Section>
         <SectionTitle>Work</SectionTitle>
