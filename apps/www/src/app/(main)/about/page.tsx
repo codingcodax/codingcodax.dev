@@ -1,10 +1,12 @@
 import type { NextPage } from 'next';
 
+import { Hero } from '~/app/(main)/_components/Hero';
+
 const About: NextPage = () => {
   return (
-    <div>
-      <p>about page</p>
-    </div>
+    <main>
+      <Hero>About me</Hero>
+    </main>
   );
 };
 
