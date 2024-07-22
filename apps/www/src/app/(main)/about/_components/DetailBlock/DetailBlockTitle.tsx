@@ -1,7 +1,5 @@
-export const DetailBlockTitle = () => {
-  return (
-    <div>
-      <p>detail block title</p>
-    </div>
-  );
+type Props = { children: React.ReactNode };
+
+export const DetailBlockTitle = ({ children }: Props) => {
+  return <h4 className='font-serif text-3xl'>{children}</h4>;
 };
