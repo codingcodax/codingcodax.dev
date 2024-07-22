@@ -1,7 +1,7 @@
-export const DateLabel = () => {
+type Props = { children: React.ReactNode };
+
+export const DateLabel = ({ children }: Props) => {
   return (
-    <div>
-      <p>date label</p>
-    </div>
+    <span className='p-8 font-mono text-sm text-grey-text'>{children}</span>
   );
 };
