@@ -1,7 +1,5 @@
-export const DetailBlock = () => {
-  return (
-    <div>
-      <p>detail block</p>
-    </div>
-  );
+type Props = { children: React.ReactNode };
+
+export const DetailBlock = ({ children }: Props) => {
+  return <div className='p-8'>{children}</div>;
 };
