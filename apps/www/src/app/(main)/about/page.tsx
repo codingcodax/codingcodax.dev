@@ -87,8 +87,6 @@ const About: NextPage = () => {
             </DetailBlock>
           </div>
 
-          <div className='w-full border border-dashed border-grey-line' />
-
           <div className='grid grid-cols-2'>
             <DateLabel>JUN 2023 - NOW</DateLabel>
             <DetailBlock>
