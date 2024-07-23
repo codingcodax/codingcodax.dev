@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 
 import { Hero } from '~/app/(main)/_components/Hero';
+import { ContactMe } from '../_components/ContactMe';
 import { Block, BlockContent, BlockTitle } from './_components/Block';
 import { DateLabel } from './_components/DateLabel';
 import {
@@ -129,6 +130,8 @@ const About: NextPage = () => {
           </div>
         </BlockContent>
       </Block>
+
+      <ContactMe variant='collapsed' />
     </main>
   );
 };
