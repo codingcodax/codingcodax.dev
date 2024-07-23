@@ -31,7 +31,7 @@ const About: NextPage = () => {
             <p>
               As a co-founder of{' '}
               <a
-                className='text-grey-text-contrast'
+                className='text-grey-text-contrast decoration-grey-text-contrast decoration-dashed decoration-1 underline-offset-2 hover:underline'
                 href='https://www.khutz.com/'
                 rel='noopener noreferrer'
                 target='_blank'
@@ -40,7 +40,7 @@ const About: NextPage = () => {
               </a>
               , alongside{' '}
               <a
-                className='text-grey-text-contrast'
+                className='text-grey-text-contrast decoration-grey-text-contrast decoration-dashed decoration-1 underline-offset-2 hover:underline'
                 href='https://github.com/OscarStrada/'
                 rel='noopener noreferrer'
                 target='_blank'
