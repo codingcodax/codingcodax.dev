@@ -37,12 +37,20 @@ export default {
           from: { transform: 'translateX(calc(-100% - 4rem))' },
           to: { transform: 'translateX(0)' },
         },
+        'fade-up': {
+          from: {
+            opacity: '0',
+            transform: 'translateY(var(--fade-distance, .25rem))',
+          },
+          to: { opacity: '1', transform: 'translateY(0)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'logo-cloud': 'logo-cloud 30s linear infinite',
         'logo-cloud-reverse': 'logo-cloud-reverse 30s linear infinite',
+        'fade-up': 'fade-up 1s ease-out forwards',
       },
     },
   },
