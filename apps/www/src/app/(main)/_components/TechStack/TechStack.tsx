@@ -1,8 +1,11 @@
+import { clsx } from 'clsx/lite';
+
+import { fadeUp } from '~/config/animations';
 import { technologies } from '~/config/technologies';
 
 export const TechStack = () => {
   return (
-    <article className='px-4 py-8'>
+    <article className={clsx('px-4 py-8', fadeUp)}>
       <h4 className='px-4 font-serif text-lg text-grey-text'>Tech stack</h4>
 
       {/* TODO: Create marquee ui component */}

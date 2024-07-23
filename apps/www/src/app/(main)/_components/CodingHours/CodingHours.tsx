@@ -1,3 +1,6 @@
+import { clsx } from 'clsx/lite';
+
+import { fadeUp } from '~/config/animations';
 import { env } from '~/env';
 
 export const CodingHours = async () => {
@@ -20,7 +23,7 @@ export const CodingHours = async () => {
   const minutes = Math.floor(remainingSeconds / 60);
 
   return (
-    <div className='space-y-4 p-8'>
+    <div className={clsx('space-y-4 p-8', fadeUp)}>
       <h4 className='font-serif text-lg text-grey-text'>Coding hours</h4>
       <p className='text-3xl font-medium'>
         {hours} hrs {minutes} mins

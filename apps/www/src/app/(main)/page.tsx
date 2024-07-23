@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 import { Button } from '@acme/ui/Button';
 
+import { fadeUp } from '~/config/animations';
 import { projects } from '~/config/projects';
 import { CodingHours } from './_components/CodingHours';
 import { ContactMe } from './_components/ContactMe';
@@ -45,9 +46,9 @@ const Home: NextPage = () => {
         </Project>
       ))}
 
-      <div className='grid grid-cols-3 py-6'>
+      <div className='grid grid-cols-3 border-b border-grey-line py-6'>
         <div className='col-start-2 flex items-center justify-center'>
-          <Button asChild>
+          <Button asChild className={fadeUp}>
             <Link href='/work'>See all projects</Link>
           </Button>
         </div>

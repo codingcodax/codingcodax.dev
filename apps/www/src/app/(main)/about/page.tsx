@@ -1,6 +1,8 @@
 import type { NextPage } from 'next';
+import { clsx } from 'clsx/lite';
 
 import { Hero } from '~/app/(main)/_components/Hero';
+import { fadeUp } from '~/config/animations';
 import { ContactMe } from '../_components/ContactMe';
 import { Block, BlockContent, BlockTitle } from './_components/Block';
 import { DateLabel } from './_components/DateLabel';
@@ -19,7 +21,12 @@ const About: NextPage = () => {
       <Block>
         <BlockTitle>Who I am</BlockTitle>
         <BlockContent>
-          <div className='relative space-y-4 bg-grey-base p-8 text-grey-text'>
+          <div
+            className={clsx(
+              'relative space-y-4 bg-grey-base p-8 text-grey-text',
+              fadeUp,
+            )}
+          >
             <p>
               Hey there! I’m{' '}
               <span className='text-grey-text-contrast'>Alexis Guzman</span>, a
@@ -69,7 +76,7 @@ const About: NextPage = () => {
         <BlockTitle>Work Experience</BlockTitle>
 
         <BlockContent>
-          <div className='relative grid grid-cols-2'>
+          <div className='grid grid-cols-2'>
             <DateLabel>JUL - NOV 2023</DateLabel>
             <DetailBlock>
               <DetailBlockTitle>Co-Founder</DetailBlockTitle>

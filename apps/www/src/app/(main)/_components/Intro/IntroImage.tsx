@@ -1,8 +1,11 @@
 import Image from 'next/image';
+import { clsx } from 'clsx/lite';
+
+import { fadeUp } from '~/config/animations';
 
 export const IntroImage = () => {
   return (
-    <div className='relative'>
+    <div className={clsx('relative', fadeUp)}>
       <figure>
         <Image
           alt='codingcodax avatar'

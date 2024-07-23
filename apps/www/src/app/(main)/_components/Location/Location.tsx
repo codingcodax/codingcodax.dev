@@ -1,7 +1,10 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { clsx } from 'clsx/lite';
 import createGlobe from 'cobe';
+
+import { fadeUp } from '~/config/animations';
 
 export const Location = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -49,7 +52,7 @@ export const Location = () => {
   }, []);
 
   return (
-    <div className='max-h-[204px] w-full overflow-hidden'>
+    <div className={clsx('max-h-[204px] w-full overflow-hidden', fadeUp)}>
       <h4 className='px-8 pt-8 font-serif text-lg text-grey-text'>
         CMDX, Mexico
       </h4>
