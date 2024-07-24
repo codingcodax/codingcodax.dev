@@ -1,26 +1,10 @@
 import { clsx } from 'clsx/lite';
 
 import { fadeUp } from '~/config/animations';
-import { env } from '~/env';
+import { api } from '~/trpc/server';
 
 export const CodingHours = async () => {
-  const res = await fetch(
-    'https://wakatime.com/api/v1/users/current/all_time_since_today',
-    {
-      headers: {
-        Authorization: `Basic ${Buffer.from(env.WAKATIME_API_KEY ?? '').toString('base64')}`,
-      },
-    },
-  );
-
-  const {
-    data: { total_seconds },
-  } = (await res.json()) as { data: { total_seconds: number } };
-
-  const roundedSeconds = Math.round(total_seconds);
-  const hours = Math.floor(roundedSeconds / 3600).toLocaleString();
-  const remainingSeconds = roundedSeconds % 3600;
-  const minutes = Math.floor(remainingSeconds / 60);
+  const { hours, minutes } = await api.wakatime.getTime();
 
   return (
     <div className={clsx('space-y-4 p-8', fadeUp)}>
