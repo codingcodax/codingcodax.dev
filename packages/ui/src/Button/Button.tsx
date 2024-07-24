@@ -24,17 +24,14 @@ export const buttonStyles = tv({
     },
     size: {
       small: cn(
-        'h-8 gap-x-1.5 rounded-lg px-2.5 text-xs leading-4',
+        'h-8 gap-x-1.5 px-2.5 text-xs leading-4',
         '[&_svg]:h-3.5 [&_svg]:w-3.5',
       ),
       medium: cn(
-        'h-9 gap-x-2 rounded-lg px-3 text-sm',
+        'h-9 gap-x-2 px-3 text-sm',
         '[&_svg]:h-[18px] [&_svg]:w-[18px]',
       ),
-      large: cn(
-        'text-md h-10 gap-x-2.5 rounded-xl px-4',
-        '[&_svg]:h-5 [&_svg]:w-5',
-      ),
+      large: cn('text-md h-10 gap-x-2.5 px-4', '[&_svg]:h-5 [&_svg]:w-5'),
     },
     icon: {
       true: '',
