@@ -6,7 +6,6 @@ export const Navbar = () => {
       <NavItem href='/'>Home</NavItem>
       <NavItem href='/work'>Work</NavItem>
       <NavItem href='/about'>About</NavItem>
-      <NavItem href='/contact'>Contact</NavItem>
     </div>
   );
 };
