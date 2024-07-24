@@ -53,6 +53,7 @@
   },
   "globalEnv": [
     "POSTGRES_URL",
+    "WAKATIME_API_KEY",
     "PORT"
   ],
   "globalPassThroughEnv": [
