@@ -5,7 +5,7 @@ import { IntroImage } from './IntroImage';
 
 export const Intro = () => {
   return (
-    <div className='relative flex min-h-[50vh] flex-col items-center justify-center bg-grey-base px-2 pb-4 pt-8'>
+    <div className='relative flex min-h-[50vh] flex-col items-center justify-center border-b border-grey-line bg-grey-base px-2 pb-4 pt-8'>
       <IntroImage />
 
       <main
@@ -20,8 +20,6 @@ export const Intro = () => {
           continuous dedication to learning and self-development.
         </h2>
       </main>
-
-      <div className='absolute -bottom-px left-0 h-px w-full bg-grey-line' />
     </div>
   );
 };

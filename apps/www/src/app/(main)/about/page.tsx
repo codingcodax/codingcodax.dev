@@ -76,7 +76,7 @@ const About: NextPage = () => {
         <BlockTitle>Work Experience</BlockTitle>
 
         <BlockContent>
-          <div className='grid grid-cols-2'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2'>
             <DateLabel>JUL - NOV 2023</DateLabel>
             <DetailBlock>
               <DetailBlockTitle>Co-Founder</DetailBlockTitle>
@@ -94,7 +94,7 @@ const About: NextPage = () => {
             </DetailBlock>
           </div>
 
-          <div className='grid grid-cols-2'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2'>
             <DateLabel>JUN 2023 - NOW</DateLabel>
             <DetailBlock>
               <DetailBlockTitle>Co-Founder</DetailBlockTitle>
@@ -118,7 +118,7 @@ const About: NextPage = () => {
         <BlockTitle>Education</BlockTitle>
 
         <BlockContent>
-          <div className='grid grid-cols-2'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2'>
             <DateLabel>DEC 2019 - JAN 2021</DateLabel>
             <DetailBlock>
               <DetailBlockTitle>Full Stack Developer</DetailBlockTitle>

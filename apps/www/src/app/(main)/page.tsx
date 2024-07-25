@@ -46,12 +46,10 @@ const Home: NextPage = () => {
         </Project>
       ))}
 
-      <div className='grid grid-cols-3 border-b border-grey-line py-6'>
-        <div className='col-start-2 flex items-center justify-center'>
-          <Button asChild className={fadeUp}>
-            <Link href='/work'>See all projects</Link>
-          </Button>
-        </div>
+      <div className='flex items-center justify-center border-b border-grey-line py-6'>
+        <Button asChild className={fadeUp}>
+          <Link href='/work'>See all projects</Link>
+        </Button>
       </div>
 
       <Section>
@@ -59,7 +57,7 @@ const Home: NextPage = () => {
         <SectionDescription>A sneak peek of who I am</SectionDescription>
       </Section>
 
-      <div className='relative grid grid-cols-3 border-b border-grey-line'>
+      <div className='relative grid grid-cols-1 divide-y divide-dashed divide-grey-line border-b border-grey-line sm:grid-cols-3'>
         <TechStack />
         <CodingHours />
         <Location />
