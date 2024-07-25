@@ -53,7 +53,7 @@ export const Location = () => {
 
   return (
     <div className={clsx('max-h-[204px] w-full overflow-hidden', fadeUp)}>
-      <h4 className='px-8 pt-8 font-serif text-lg text-grey-text'>
+      <h4 className='px-6 pt-6 font-serif text-lg text-grey-text sm:px-8 sm:pt-8'>
         CMDX, Mexico
       </h4>
 

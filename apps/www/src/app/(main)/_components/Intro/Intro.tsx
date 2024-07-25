@@ -14,8 +14,10 @@ export const Intro = () => {
           fadeUp,
         )}
       >
-        <h1 className='font-serif text-6xl font-bold'>Hi, I'm Alexis</h1>
-        <h2 className='max-w-lg text-lg text-grey-text'>
+        <h1 className='font-serif text-4xl font-bold sm:text-5xl md:text-6xl'>
+          Hi, I'm Alexis
+        </h1>
+        <h2 className='text-md max-w-lg text-grey-text sm:text-lg'>
           Front-end web wizard who enjoys creating a variety of tools and a
           continuous dedication to learning and self-development.
         </h2>

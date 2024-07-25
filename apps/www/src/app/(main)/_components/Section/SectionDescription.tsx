@@ -6,7 +6,12 @@ type Props = { children: React.ReactNode };
 
 export const SectionDescription = ({ children }: Props) => {
   return (
-    <h4 className={clsx('font-serif text-2xl text-grey-text', fadeUp)}>
+    <h4
+      className={clsx(
+        'font-serif text-lg text-grey-text sm:text-xl md:text-2xl',
+        fadeUp,
+      )}
+    >
       {children}
     </h4>
   );
