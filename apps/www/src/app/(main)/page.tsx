@@ -35,8 +35,8 @@ const Home: NextPage = () => {
         </SectionDescription>
       </Section>
 
-      {projects.map(({ name, description, image, alt }) => (
-        <Project key={name}>
+      {projects.map(({ name, description, image, alt, url }) => (
+        <Project key={name} href={url}>
           <ProjectContent>
             <ProjectTitle>{name}</ProjectTitle>
             <ProjectDescription>{description}</ProjectDescription>
