@@ -1,9 +1,14 @@
-type Props = { children: React.ReactNode };
+type Props = { href: string; children: React.ReactNode };
 
-export const Project = ({ children }: Props) => {
+export const Project = ({ href, children }: Props) => {
   return (
-    <div className='group relative grid grid-cols-3 border-b border-grey-line'>
+    <a
+      className='group relative grid grid-cols-3 border-b border-grey-line'
+      href={href}
+      rel='noopener noreferrer'
+      target='_blank'
+    >
       {children}
-    </div>
+    </a>
   );
 };
