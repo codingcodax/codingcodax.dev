@@ -5,7 +5,8 @@
   "type": "module",
   "exports": {
     ".": "./src/index.ts",
-    "./Button": "./src/Button/index.ts"
+    "./Button": "./src/Button/index.ts",
+    "./Tooltip": "./src/Tooltip/index.ts"
   },
   "license": "MIT",
   "scripts": {
