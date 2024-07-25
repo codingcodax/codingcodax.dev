@@ -18,6 +18,8 @@
     --mauve-10: 250 4.9% 52.2%;
     --mauve-11: 252 4.8% 40.8%;
     --mauve-12: 257.1 10.1% 13.5%;
+    --cursor-color: #212026;
+    --cursor-color-outer: #21202666;
   }
 
   .dark {
@@ -33,6 +35,8 @@
     --mauve-10: 250.9 4.5% 52.4%;
     --mauve-11: 253.3 6% 70.4%;
     --mauve-12: 240 6.2% 93.7%;
+    --cursor-color: #fdfcfd;
+    --cursor-color-outer: #fdfcfd66;
   }
 }
 
