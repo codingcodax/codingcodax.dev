@@ -64,7 +64,7 @@ export const Location = () => {
             width: '100%',
             height: '100%',
             contain: 'layout paint size',
-            cursor: 'auto',
+            cursor: 'none',
             userSelect: 'none',
           }}
         />
