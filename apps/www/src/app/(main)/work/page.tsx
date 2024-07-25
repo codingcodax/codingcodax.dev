@@ -21,14 +21,14 @@ const Work: NextPage = () => {
     <main>
       <Hero>Work</Hero>
 
-      {projects.map(({ name, description }) => (
+      {projects.map(({ name, description, image, alt }) => (
         <Project key={name}>
           <ProjectContent>
             <ProjectTitle>{name}</ProjectTitle>
             <ProjectDescription>{description}</ProjectDescription>
           </ProjectContent>
 
-          <ProjectImage />
+          <ProjectImage alt={alt} image={image} />
         </Project>
       ))}
 
@@ -37,14 +37,14 @@ const Work: NextPage = () => {
         <SectionDescription>Creations born from curiosity</SectionDescription>
       </Section>
 
-      {sideProjects.map(({ name, description }) => (
+      {sideProjects.map(({ name, description, image, alt }) => (
         <Project key={name}>
           <ProjectContent>
             <ProjectTitle>{name}</ProjectTitle>
             <ProjectDescription>{description}</ProjectDescription>
           </ProjectContent>
 
-          <ProjectImage />
+          <ProjectImage alt={alt} image={image} />
         </Project>
       ))}
 

@@ -35,14 +35,14 @@ const Home: NextPage = () => {
         </SectionDescription>
       </Section>
 
-      {projects.map(({ name, description }) => (
+      {projects.map(({ name, description, image, alt }) => (
         <Project key={name}>
           <ProjectContent>
             <ProjectTitle>{name}</ProjectTitle>
             <ProjectDescription>{description}</ProjectDescription>
           </ProjectContent>
 
-          <ProjectImage />
+          <ProjectImage alt={alt} image={image} />
         </Project>
       ))}
 
