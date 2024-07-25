@@ -6,6 +6,8 @@ import { cn } from '@acme/ui';
 
 import '~/app/globals.css';
 
+import AnimatedCursor from 'react-animated-cursor';
+
 import { env } from '~/env';
 import { Providers } from './providers';
 
@@ -50,6 +52,20 @@ export default function RootLayout(props: { children: React.ReactNode }) {
         )}
       >
         <Providers>{props.children}</Providers>
+        <AnimatedCursor
+          innerScale={1}
+          innerSize={8}
+          innerStyle={{
+            backgroundColor: 'var(--cursor-color)',
+          }}
+          outerAlpha={0.2}
+          outerScale={4}
+          outerSize={12}
+          outerStyle={{
+            backgroundColor: 'var(--cursor-color)',
+            mixBlendMode: 'exclusion',
+          }}
+        />
       </body>
     </html>
   );
