@@ -16,7 +16,10 @@ export const metadata: Metadata = {
       ? 'https://www.codingcodax.dev'
       : 'http://localhost:3000',
   ),
-  title: 'Alexis Guzman',
+  title: {
+    default: 'Alexis Guzman',
+    template: '%s | Alexis Guzman',
+  },
   description:
     'Front-end web wizard who enjoys creating a variety of tools and a continuous dedication to learning and self-development.',
   openGraph: {
@@ -31,6 +34,33 @@ export const metadata: Metadata = {
     site: '@codingcodax',
     creator: '@codingcodax',
   },
+  icons: [
+    { rel: 'icon', url: '/favicons/favicon.ico' },
+    {
+      rel: 'apple-touch-icon',
+      url: '/favicons/apple-touch-icon.png',
+      sizes: '180x180',
+    },
+    {
+      rel: 'icon',
+      url: '/favicons/favicon-32x32.png',
+      sizes: '32x32',
+      type: 'image/png',
+    },
+    {
+      rel: 'icon',
+      url: '/favicons/favicon-16x16.png',
+      sizes: '16x16',
+      type: 'image/png',
+    },
+    { rel: 'manifest', url: '/favicons/site.webmanifest' },
+    {
+      rel: 'mask-icon',
+      url: '/favicons/safari-pinned-tab.svg',
+      color: '#000000',
+    },
+  ],
+  applicationName: 'TIQR',
 };
 
 export const viewport: Viewport = {
