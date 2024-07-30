@@ -1,63 +1,33 @@
 {
-  "name": "codingcodax.dev",
-  "version": "0.1.0",
+  "name": "create-t3-turbo",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "start": "next start",
-    "prebuild": "npm run lint:fix",
-    "build": "next build",
-    "lint": "next lint",
-    "lint:fix": "next lint --fix",
-    "format": "prettier --write .",
-    "commit": "npx cz"
+  "engines": {
+    "node": ">=20.12.0"
   },
-  "dependencies": {
-    "@badrap/bar-of-progress": "^0.2.2",
-    "@radix-ui/colors": "^0.1.8",
-    "@radix-ui/react-label": "^2.0.0",
-    "@radix-ui/react-separator": "^1.0.1",
-    "@stitches/react": "^1.2.8",
-    "date-fns": "^2.29.3",
-    "esbuild": "^0.17.2",
-    "feed": "^4.2.2",
-    "framer-motion": "^8.4.6",
-    "gray-matter": "^4.0.3",
-    "mdx-bundler": "^9.2.1",
-    "next": "^12.0.7",
-    "next-seo": "^4.28.1",
-    "next-themes": "^0.2.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-hook-form": "^7.42.1",
-    "swr": "^2.0.0"
+  "packageManager": "pnpm@9.5.0",
+  "scripts": {
+    "build": "turbo run build",
+    "clean": "git clean -xdf node_modules",
+    "clean:workspaces": "turbo run clean",
+    "db:push": "turbo -F @acme/db push",
+    "db:studio": "turbo -F @acme/db studio",
+    "dev": "turbo watch dev",
+    "dev:next": "turbo watch dev -F @acme/nextjs...",
+    "format": "turbo run format --continue -- --cache --cache-location node_modules/.cache/.prettiercache",
+    "format:fix": "turbo run format --continue -- --write --cache --cache-location node_modules/.cache/.prettiercache",
+    "lint": "turbo run lint --continue -- --cache --cache-location node_modules/.cache/.eslintcache",
+    "lint:fix": "turbo run lint --continue -- --fix --cache --cache-location node_modules/.cache/.eslintcache",
+    "lint:ws": "pnpm dlx sherif@latest",
+    "postinstall": "pnpm lint:ws",
+    "typecheck": "turbo run typecheck",
+    "ui-add": "turbo run ui-add"
   },
   "devDependencies": {
-    "@jsdevtools/rehype-toc": "^3.0.2",
-    "@types/glob": "^8.0.0",
-    "@types/react": "18.0.26",
-    "cz-conventional-changelog": "^3.3.0",
-    "eslint": "8.32.0",
-    "eslint-config-google": "^0.14.0",
-    "eslint-config-next": "13.1.2",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.32.1",
-    "glob": "^8.1.0",
-    "husky": "^7.0.4",
-    "prettier": "^2.8.3",
-    "reading-time": "^1.5.0",
-    "rehype-autolink-headings": "^6.1.1",
-    "rehype-code-titles": "^1.1.0",
-    "rehype-prism-plus": "^1.5.0",
-    "rehype-slug": "^5.1.0",
-    "remark-gfm": "^3.0.1",
-    "typescript": "4.9.4"
+    "@acme/prettier-config": "workspace:*",
+    "@turbo/gen": "^2.0.6",
+    "prettier": "catalog:",
+    "turbo": "^2.0.6",
+    "typescript": "catalog:"
   },
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
-  }
+  "prettier": "@acme/prettier-config"
 }
