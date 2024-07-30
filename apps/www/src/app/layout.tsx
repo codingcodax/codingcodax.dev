@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     siteName: 'Alexis Guzman',
     images: [
       {
-        url: `https://www.codingcodax.dev/og.jpg`,
+        url: `https://www.codingcodax.dev/OG.png`,
         width: 1920,
         height: 1080,
         alt: 'Creeaty',
