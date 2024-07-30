@@ -8,7 +8,7 @@ export const DateLabel = ({ children }: Props) => {
   return (
     <span
       className={clsx(
-        'border-b border-dashed border-grey-line p-8 font-mono text-sm text-grey-text sm:border-b-0',
+        'border-b border-dashed border-grey-line p-8 font-mono text-sm text-grey-text sm:border-b-0 sm:max-md:border-r',
         fadeUp,
       )}
     >
