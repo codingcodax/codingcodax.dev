@@ -41,8 +41,13 @@ export default {
           from: {
             opacity: '0',
             transform: 'translateY(var(--fade-distance, .25rem))',
+            filter: 'blur(3px)',
           },
-          to: { opacity: '1', transform: 'translateY(0)' },
+          to: {
+            opacity: '1',
+            transform: 'translateY(0)',
+            filter: 'blur(0px)',
+          },
         },
       },
       animation: {
