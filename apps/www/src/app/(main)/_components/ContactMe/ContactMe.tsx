@@ -21,7 +21,7 @@ export const ContactMe = ({ variant }: Props) => {
           If you have any questions, opportunities or would just like to say
           hello, then feel free to send me a DM (
           <a
-            className='text-grey-text-contrast decoration-grey-text-contrast decoration-dashed underline-offset-2 hover:underline'
+            className='text-grey-text-contrast decoration-grey-text-contrast decoration-dashed underline-offset-2 outline-none hover:underline focus-visible:ring-2 focus-visible:ring-grey-text-contrast focus-visible:ring-offset-1'
             href='https://dm.new/codingcodax'
             rel='noopener noreferrer'
             target='_blank'
@@ -30,7 +30,7 @@ export const ContactMe = ({ variant }: Props) => {
           </a>{' '}
           or{' '}
           <a
-            className='text-grey-text-contrast decoration-grey-text-contrast decoration-dashed underline-offset-2 hover:underline'
+            className='text-grey-text-contrast decoration-grey-text-contrast decoration-dashed underline-offset-2 outline-none hover:underline focus-visible:ring-2 focus-visible:ring-grey-text-contrast focus-visible:ring-offset-1'
             href='https://www.linkedin.com/in/codingcodax'
             rel='noopener noreferrer'
             target='_blank'
@@ -39,7 +39,7 @@ export const ContactMe = ({ variant }: Props) => {
           </a>
           ) or if you prefer, you can{' '}
           <a
-            className='text-grey-text-contrast decoration-grey-text-contrast decoration-dashed underline-offset-2 hover:underline'
+            className='text-grey-text-contrast decoration-grey-text-contrast decoration-dashed underline-offset-2 outline-none hover:underline focus-visible:ring-2 focus-visible:ring-grey-text-contrast focus-visible:ring-offset-1'
             href='emailto:codingcodax@gmail.com'
           >
             email me

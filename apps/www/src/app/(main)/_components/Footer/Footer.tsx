@@ -12,7 +12,7 @@ export const Footer = () => {
       <ul className='flex gap-2'>
         <li>
           <a
-            className='text-sm text-grey-text decoration-grey-text decoration-dashed decoration-1 underline-offset-2 hover:underline'
+            className='text-sm text-grey-text decoration-grey-text decoration-dashed decoration-1 underline-offset-2 outline-none hover:underline focus-visible:ring-2 focus-visible:ring-grey-text focus-visible:ring-offset-1'
             href='https://github.com/codingcodax'
             rel='noopener noreferrer'
             target='_blank'
@@ -23,7 +23,7 @@ export const Footer = () => {
 
         <li>
           <a
-            className='text-sm text-grey-text decoration-grey-text decoration-dashed decoration-1 underline-offset-2 hover:underline'
+            className='text-sm text-grey-text decoration-grey-text decoration-dashed decoration-1 underline-offset-2 outline-none hover:underline focus-visible:ring-2 focus-visible:ring-grey-text focus-visible:ring-offset-1'
             href='https://www.linkedin.com/in/codingcodax'
             rel='noopener noreferrer'
             target='_blank'
@@ -34,7 +34,7 @@ export const Footer = () => {
 
         <li>
           <a
-            className='text-sm text-grey-text decoration-grey-text decoration-dashed decoration-1 underline-offset-2 hover:underline'
+            className='text-sm text-grey-text decoration-grey-text decoration-dashed decoration-1 underline-offset-2 outline-none hover:underline focus-visible:ring-2 focus-visible:ring-grey-text focus-visible:ring-offset-1'
             href='https://x.com/codingcodax'
             rel='noopener noreferrer'
             target='_blank'

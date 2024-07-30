@@ -43,7 +43,7 @@ const About: NextPage = () => {
             <p>
               As a co-founder of{' '}
               <a
-                className='text-grey-text-contrast decoration-grey-text-contrast decoration-dashed decoration-1 underline-offset-2 hover:underline'
+                className='text-grey-text-contrast decoration-grey-text-contrast decoration-dashed decoration-1 underline-offset-2 outline-none hover:underline focus-visible:ring-2 focus-visible:ring-grey-text focus-visible:ring-offset-1'
                 href='https://www.khutz.com/'
                 rel='noopener noreferrer'
                 target='_blank'
@@ -52,7 +52,7 @@ const About: NextPage = () => {
               </a>
               , alongside{' '}
               <a
-                className='text-grey-text-contrast decoration-grey-text-contrast decoration-dashed decoration-1 underline-offset-2 hover:underline'
+                className='text-grey-text-contrast decoration-grey-text-contrast decoration-dashed decoration-1 underline-offset-2 outline-none hover:underline focus-visible:ring-2 focus-visible:ring-grey-text focus-visible:ring-offset-1'
                 href='https://github.com/OscarStrada/'
                 rel='noopener noreferrer'
                 target='_blank'
