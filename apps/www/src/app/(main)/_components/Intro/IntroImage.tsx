@@ -11,7 +11,6 @@ export const IntroImage = () => {
           alt='codingcodax avatar'
           className='rounded-full grayscale'
           height={100}
-          placeholder='blur'
           src='https://avatars.githubusercontent.com/u/48135533?v=4'
           width={100}
         />
