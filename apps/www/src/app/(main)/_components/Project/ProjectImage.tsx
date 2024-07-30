@@ -13,6 +13,7 @@ export const ProjectImage = ({ image, alt }: Props) => {
         <Image
           alt={alt}
           className='aspect-video h-full w-full bg-grey-bg'
+          placeholder='blur'
           src={image}
         />
       </figure>
