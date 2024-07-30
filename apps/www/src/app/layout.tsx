@@ -23,11 +23,21 @@ export const metadata: Metadata = {
   description:
     'Front-end web wizard who enjoys creating a variety of tools and a continuous dedication to learning and self-development.',
   openGraph: {
+    type: 'website',
+    locale: 'en_US',
     title: 'Alexis Guzman',
     description:
       'Front-end web wizard who enjoys creating a variety of tools and a continuous dedication to learning and self-development.',
     url: 'https://www.codingcodax.dev',
     siteName: 'Alexis Guzman',
+    images: [
+      {
+        url: `https://www.codingcodax.dev/og.jpg`,
+        width: 1920,
+        height: 1080,
+        alt: 'Creeaty',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
