@@ -16,6 +16,11 @@ import {
 } from '~/app/(main)/_components/Section';
 import { projects, sideProjects } from '~/config/projects';
 
+export const metadata = {
+  title: 'Work',
+  description: 'See all the projects I have worked on.',
+};
+
 const Work: NextPage = () => {
   return (
     <main>

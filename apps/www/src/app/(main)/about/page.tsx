@@ -13,6 +13,11 @@ import {
   DetailBlockTitle,
 } from './_components/DetailBlock';
 
+export const metadata = {
+  title: 'About me',
+  description: 'Learn more about me and my journey as a developer.',
+};
+
 const About: NextPage = () => {
   return (
     <main>
