@@ -1,5 +1,7 @@
 import { clsx } from 'clsx/lite';
 
+import { Link } from '@acme/ui/Link';
+
 import { fadeUp } from '~/config/animations';
 
 type Props = { variant: 'expanded' | 'collapsed' };
@@ -20,30 +22,29 @@ export const ContactMe = ({ variant }: Props) => {
         <p className='text-sm text-grey-text sm:text-base'>
           If you have any questions, opportunities or would just like to say
           hello, then feel free to send me a DM (
-          <a
-            className='text-grey-text-contrast decoration-grey-text-contrast decoration-dashed underline-offset-2 outline-none hover:underline focus-visible:ring-2 focus-visible:ring-grey-text-contrast focus-visible:ring-offset-1'
+          <Link
+            isExternal
+            className='text-sm text-grey-text-contrast sm:text-base'
             href='https://dm.new/codingcodax'
-            rel='noopener noreferrer'
-            target='_blank'
           >
             X
-          </a>{' '}
+          </Link>{' '}
           or{' '}
-          <a
-            className='text-grey-text-contrast decoration-grey-text-contrast decoration-dashed underline-offset-2 outline-none hover:underline focus-visible:ring-2 focus-visible:ring-grey-text-contrast focus-visible:ring-offset-1'
+          <Link
+            isExternal
+            className='text-sm text-grey-text-contrast sm:text-base'
             href='https://www.linkedin.com/in/codingcodax'
-            rel='noopener noreferrer'
-            target='_blank'
           >
             LinkedIn
-          </a>
+          </Link>
           ) or if you prefer, you can{' '}
-          <a
-            className='text-grey-text-contrast decoration-grey-text-contrast decoration-dashed underline-offset-2 outline-none hover:underline focus-visible:ring-2 focus-visible:ring-grey-text-contrast focus-visible:ring-offset-1'
+          <Link
+            isExternal
+            className='text-sm text-grey-text-contrast sm:text-base'
             href='emailto:codingcodax@gmail.com'
           >
             email me
-          </a>
+          </Link>
           .
         </p>
       </div>

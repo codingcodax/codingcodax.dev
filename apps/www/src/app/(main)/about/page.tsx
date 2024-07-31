@@ -1,6 +1,8 @@
 import type { NextPage } from 'next';
 import { clsx } from 'clsx/lite';
 
+import { Link } from '@acme/ui/Link';
+
 import { Hero } from '~/app/(main)/_components/Hero';
 import { fadeUp } from '~/config/animations';
 import { ContactMe } from '../_components/ContactMe';
@@ -42,23 +44,21 @@ const About: NextPage = () => {
 
             <p>
               As a co-founder of{' '}
-              <a
-                className='text-grey-text-contrast decoration-grey-text-contrast decoration-dashed decoration-1 underline-offset-2 outline-none hover:underline focus-visible:ring-2 focus-visible:ring-grey-text focus-visible:ring-offset-1'
+              <Link
+                isExternal
+                className='text-grey-text-contrast'
                 href='https://www.khutz.com/'
-                rel='noopener noreferrer'
-                target='_blank'
               >
                 Khutz
-              </a>
+              </Link>
               , alongside{' '}
-              <a
-                className='text-grey-text-contrast decoration-grey-text-contrast decoration-dashed decoration-1 underline-offset-2 outline-none hover:underline focus-visible:ring-2 focus-visible:ring-grey-text focus-visible:ring-offset-1'
+              <Link
+                isExternal
+                className='text-grey-text-contrast'
                 href='https://github.com/OscarStrada/'
-                rel='noopener noreferrer'
-                target='_blank'
               >
                 Oscar Arturo
-              </a>
+              </Link>
               , we led our first big project, Docom, which focused on building a
               healthcare CRM. This experience has fueled my passion for creating
               helpful solutions that enhance experiences.

@@ -1,3 +1,5 @@
+import { Link } from '@acme/ui/Link';
+
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -11,36 +13,33 @@ export const Footer = () => {
 
       <ul className='flex gap-2'>
         <li>
-          <a
-            className='text-sm text-grey-text decoration-grey-text decoration-dashed decoration-1 underline-offset-2 outline-none hover:underline focus-visible:ring-2 focus-visible:ring-grey-text focus-visible:ring-offset-1'
+          <Link
+            isExternal
+            className='text-sm text-grey-text'
             href='https://github.com/codingcodax'
-            rel='noopener noreferrer'
-            target='_blank'
           >
             GitHub
-          </a>
+          </Link>
         </li>
 
         <li>
-          <a
-            className='text-sm text-grey-text decoration-grey-text decoration-dashed decoration-1 underline-offset-2 outline-none hover:underline focus-visible:ring-2 focus-visible:ring-grey-text focus-visible:ring-offset-1'
+          <Link
+            isExternal
+            className='text-sm text-grey-text'
             href='https://www.linkedin.com/in/codingcodax'
-            rel='noopener noreferrer'
-            target='_blank'
           >
             LinkedIn
-          </a>
+          </Link>
         </li>
 
         <li>
-          <a
-            className='text-sm text-grey-text decoration-grey-text decoration-dashed decoration-1 underline-offset-2 outline-none hover:underline focus-visible:ring-2 focus-visible:ring-grey-text focus-visible:ring-offset-1'
+          <Link
+            isExternal
+            className='text-sm text-grey-text'
             href='https://x.com/codingcodax'
-            rel='noopener noreferrer'
-            target='_blank'
           >
             X
-          </a>
+          </Link>
         </li>
       </ul>
     </footer>
