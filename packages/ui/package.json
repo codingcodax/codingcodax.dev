@@ -6,6 +6,7 @@
   "exports": {
     ".": "./src/index.ts",
     "./Button": "./src/Button/index.ts",
+    "./Link": "./src/Link/index.ts",
     "./Tooltip": "./src/Tooltip/index.ts"
   },
   "license": "MIT",
