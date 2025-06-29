@@ -6,6 +6,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "format": "prettier --check . --ignore-path .gitignore",
+    "format:fix": "prettier --write . --ignore-path .gitignore",
     "astro": "astro"
   },
   "dependencies": {
