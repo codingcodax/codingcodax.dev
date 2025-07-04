@@ -1,1 +1,70 @@
 @import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans:
+    var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --color-grey-base: var(--mauve-1);
+  --color-grey-bg-subtle: var(--mauve-2);
+  --color-grey-bg: var(--mauve-3);
+  --color-grey-bg-hover: var(--mauve-4);
+  --color-grey-bg-active: var(--mauve-5);
+  --color-grey-line: var(--mauve-6);
+  --color-grey-border: var(--mauve-7);
+  --color-grey-border-hover: var(--mauve-8);
+  --color-grey-focus-ring: var(--mauve-8);
+  --color-grey-solid: var(--mauve-9);
+  --color-grey-placeholder-text: var(--mauve-9);
+  --color-grey-solid-hover: var(--mauve-10);
+  --color-grey-text: var(--mauve-11);
+  --color-grey-text-contrast: var(--mauve-12);
+}
+
+:root {
+  --radius: 0.5rem;
+
+  --mauve-1: oklch(99.2%, 0.5%, 325.59%);
+  --mauve-2: oklch(98.3%, 0.75%, 308.429%);
+  --mauve-3: oklch(96.1%, 1.5%, 308.395%);
+  --mauve-4: oklch(94%, 1.75%, 304.238%);
+  --mauve-5: oklch(92%, 2.25%, 308.356%);
+  --mauve-6: oklch(89.9%, 2.5%, 305.392%);
+  --mauve-7: oklch(87.1%, 2.75%, 297.599%);
+  --mauve-8: oklch(79.5%, 4.5%, 293.048%);
+  --mauve-9: oklch(64.6%, 4.75%, 292.918%);
+  --mauve-10: oklch(60.2%, 4.5%, 293.5%);
+  --mauve-11: oklch(50.5%, 4%, 294.999%);
+  --mauve-12: oklch(100%, 0%, 89.876%);
+}
+
+.dark {
+  --mauve-1: oklch(20.8%, 1.25%, 325.755%);
+  --mauve-2: oklch(22.4%, 2.5%, 325.897%);
+  --mauve-3: oklch(27.9%, 2.75%, 319.455%);
+  --mauve-4: oklch(31.2%, 3%, 314.641%);
+  --mauve-5: oklch(33.9%, 3%, 314.66%);
+  --mauve-6: oklch(37%, 3.25%, 310.972%);
+  --mauve-7: oklch(41.2%, 3.5%, 308.082%);
+  --mauve-8: oklch(49.2%, 4%, 299.485%);
+  --mauve-9: oklch(54%, 4.25%, 294.164%);
+  --mauve-10: oklch(60.5%, 4.25%, 294.243%);
+  --mauve-11: oklch(75.8%, 3.25%, 296.272%);
+  --mauve-12: oklch(95%, 0.75%, 286.349%);
+}
+
+@layer base {
+  ::selection {
+    @apply bg-grey-text-contrast text-grey-base;
+  }
+}
