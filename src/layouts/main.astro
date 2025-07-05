@@ -1,0 +1,24 @@
+---
+import '~/styles/global.css';
+import '@fontsource/geist-sans';
+import '@fontsource/geist-mono';
+
+const { title, description } = Astro.props;
+---
+
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+    <title>{title}</title>
+    <meta name='description' content={description} />
+  </head>
+
+  <body
+    class='bg-grey-base min-h-screen p-2 font-sans antialiased sm:p-4 md:p-6'
+  >
+    <slot />
+  </body>
+</html>
