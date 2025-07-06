@@ -1,4 +1,19 @@
 ---
+import CodingHours from '~/components/coding-hours.astro';
+import Intro from '~/components/intro/intro.astro';
+import { Location } from '~/components/location';
+import ProjectContent from '~/components/project/project-content.astro';
+import ProjectDescription from '~/components/project/project-description.astro';
+import ProjectImage from '~/components/project/project-image.astro';
+import ProjectTitle from '~/components/project/project-title.astro';
+import Project from '~/components/project/project.astro';
+import SectionDescription from '~/components/section/section-description.astro';
+import SectionTitle from '~/components/section/section-title.astro';
+import Section from '~/components/section/section.astro';
+import TechStack from '~/components/tech-stack.astro';
+import { buttonStyles } from '~/components/ui/button';
+import { fadeUp } from '~/config/animations';
+import { projects } from '~/config/projects';
 import Main from '~/layouts/main.astro';
 ---
 
@@ -6,5 +21,48 @@ import Main from '~/layouts/main.astro';
   title='Alexis Guzman'
   description='Front-end web wizard who enjoys creating a variety of tools and a continuous dedication to learning and self-development.'
 >
-  <p>home page</p>
+  <div>
+    <Intro />
+
+    <Section>
+      <SectionTitle>Work</SectionTitle>
+      <SectionDescription>
+        A look at what's keeping me busy
+      </SectionDescription>
+    </Section>
+
+    {
+      projects.map(({ name, description, image, alt, url }) => (
+        <Project href={url}>
+          <ProjectContent>
+            <ProjectTitle>{name}</ProjectTitle>
+            <ProjectDescription>{description}</ProjectDescription>
+          </ProjectContent>
+
+          <ProjectImage alt={alt} image={image} />
+        </Project>
+      ))
+    }
+
+    <div
+      class='border-grey-line flex items-center justify-center border-b py-6'
+    >
+      <a class={buttonStyles({ class: fadeUp })} href='/work'>
+        See all projects
+      </a>
+    </div>
+
+    <Section>
+      <SectionTitle>About me</SectionTitle>
+      <SectionDescription>A sneak peek of who I am</SectionDescription>
+    </Section>
+
+    <div
+      class='divide-grey-line border-grey-line relative grid grid-cols-1 divide-y divide-dashed border-b sm:grid-cols-3'
+    >
+      <TechStack />
+      <CodingHours />
+      <Location client:visible />
+    </div>
+  </div>
 </Main>
