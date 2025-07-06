@@ -3,6 +3,9 @@ import '~/styles/global.css';
 import '@fontsource/geist-sans';
 import '@fontsource/geist-mono';
 
+import Footer from '~/components/footer.astro';
+import Header from '~/components/header/header.astro';
+
 const { title, description } = Astro.props;
 ---
 
@@ -19,6 +22,37 @@ const { title, description } = Astro.props;
   <body
     class='bg-grey-base min-h-screen p-2 font-sans antialiased sm:p-4 md:p-6'
   >
-    <slot />
+    <div
+      class='border-grey-line bg-grey-base relative flex flex-col rounded-3xl border'
+    >
+      <div class='bg-grey-line absolute top-[68px] left-0 h-px w-full'></div>
+
+      <Header />
+
+      <div class='relative mx-auto w-full max-w-screen-lg'>
+        <div
+          class='bg-grey-line absolute top-0 -left-px hidden h-full w-px lg:inline-block'
+        >
+        </div>
+        <div
+          class='border-grey-bg-hover absolute top-0 left-1/3 h-full w-px border border-dashed'
+        >
+        </div>
+        <div
+          class='border-grey-bg-hover absolute top-0 right-1/3 h-full w-px border border-dashed'
+        >
+        </div>
+        <div
+          class='bg-grey-line absolute top-0 -right-px hidden h-full w-px lg:inline-block'
+        >
+        </div>
+
+        <slot />
+
+        <Footer />
+      </div>
+
+      <div class='bg-grey-line absolute bottom-[68px] left-0 h-px w-full'></div>
+    </div>
   </body>
 </html>
