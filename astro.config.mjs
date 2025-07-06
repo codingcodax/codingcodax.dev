@@ -12,4 +12,14 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+
+  image: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+        pathname: '/u/**',
+      },
+    ],
+  },
 });
