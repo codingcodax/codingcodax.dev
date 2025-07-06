@@ -1,5 +1,6 @@
 ---
 import CodingHours from '~/components/coding-hours.astro';
+import ContactMe from '~/components/contact-me.astro';
 import Intro from '~/components/intro/intro.astro';
 import { Location } from '~/components/location';
 import ProjectContent from '~/components/project/project-content.astro';
@@ -64,5 +65,7 @@ import Main from '~/layouts/main.astro';
       <CodingHours />
       <Location client:visible />
     </div>
+
+    <ContactMe variant='expanded' />
   </div>
 </Main>
