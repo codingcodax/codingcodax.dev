@@ -11,12 +11,57 @@ const { title, description } = Astro.props;
 
 <html lang='en'>
   <head>
-    <meta charset='utf-8' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-    <meta name='viewport' content='width=device-width' />
     <meta name='generator' content={Astro.generator} />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <meta charset='utf-8' />
+    <meta
+      name='theme-color'
+      media='(prefers-color-scheme: light)'
+      content='white'
+    />
+    <meta
+      name='theme-color'
+      media='(prefers-color-scheme: dark)'
+      content='black'
+    />
     <title>{title}</title>
     <meta name='description' content={description} />
+    <meta name='application-name' content='Alexis Guzman' />
+    <meta property='og:title' content={title} />
+    <meta property='og:description' content={description} />
+    <meta property='og:url' content='https://www.codingcodax.dev' />
+    <meta property='og:site_name' content={title} />
+    <meta property='og:locale' content='en_US' />
+    <meta property='og:image' content='https://www.codingcodax.dev/OG.png' />
+    <meta property='og:image:width' content='1920' />
+    <meta property='og:image:height' content='1080' />
+    <meta property='og:image:alt' content='Alexis Guzman Banner' />
+    <meta property='og:type' content='website' />
+    <meta name='twitter:card' content='summary_large_image' />
+    <meta name='twitter:site' content='@codingcodax' />
+    <meta name='twitter:creator' content='@codingcodax' />
+    <meta name='twitter:title' content={title} />
+    <meta name='twitter:description' content={description} />
+    <meta name='twitter:image' content='https://www.codingcodax.dev/OG.png' />
+    <meta name='twitter:image:width' content='1920' />
+    <meta name='twitter:image:height' content='1080' />
+    <meta name='twitter:image:alt' content='Alexis Guzman Banner' />
+    <link
+      rel='icon'
+      type='image/png'
+      href='/favicons/favicon-96x96.png'
+      sizes='96x96'
+    />
+    <link rel='icon' type='image/svg+xml' href='/favicons/favicon.svg' />
+    <link rel='shortcut icon' href='/favicons/favicon.ico' />
+    <link
+      rel='apple-touch-icon'
+      sizes='180x180'
+      href='/favicons/apple-touch-icon.png'
+    />
+    <meta name='apple-mobile-web-app-title' content='Alexis Guzman' />
+    <link rel='manifest' href='/favicons/site.webmanifest' />
+    <link rel='sitemap' href='/sitemap-index.xml' />
   </head>
 
   <body
