@@ -1,0 +1,12 @@
+---
+import { fadeUp } from '~/config/animations';
+---
+
+<span
+  class:list={[
+    'border-grey-line text-grey-text border-b border-dashed p-8 font-mono text-sm sm:border-b-0 sm:max-md:border-r',
+    fadeUp,
+  ]}
+>
+  <slot />
+</span>
