@@ -10,6 +10,41 @@
   --font-mono:
     'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     'Liberation Mono', 'Courier New', monospace;
+
+  --animate-fade-up: fade-up 1s ease-out forwards;
+  --animate-logo-cloud: logo-cloud 30s linear infinite;
+  --animate-logo-cloud-reverse: logo-cloud-reverse 30s linear infinite;
+
+  @keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(var(--fade-distance, 0.25rem));
+      filter: blur(3px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0px);
+    }
+  }
+
+  @keyframes logo-cloud {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100% - 4rem));
+    }
+  }
+
+  @keyframes logo-cloud-reverse {
+    0% {
+      transform: translateX(calc(-100% - 4rem));
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
 }
 
 @theme inline {
@@ -37,36 +72,40 @@
 :root {
   --radius: 0.5rem;
 
-  --mauve-1: oklch(99.2%, 0.5%, 325.59%);
-  --mauve-2: oklch(98.3%, 0.75%, 308.429%);
-  --mauve-3: oklch(96.1%, 1.5%, 308.395%);
-  --mauve-4: oklch(94%, 1.75%, 304.238%);
-  --mauve-5: oklch(92%, 2.25%, 308.356%);
-  --mauve-6: oklch(89.9%, 2.5%, 305.392%);
-  --mauve-7: oklch(87.1%, 2.75%, 297.599%);
-  --mauve-8: oklch(79.5%, 4.5%, 293.048%);
-  --mauve-9: oklch(64.6%, 4.75%, 292.918%);
-  --mauve-10: oklch(60.2%, 4.5%, 293.5%);
-  --mauve-11: oklch(50.5%, 4%, 294.999%);
-  --mauve-12: oklch(100%, 0%, 89.876%);
+  --mauve-1: hsl(300 20% 99%);
+  --mauve-2: hsl(270 20% 98%);
+  --mauve-3: hsl(270 16.7% 95.3%);
+  --mauve-4: hsl(264 13.5% 92.7%);
+  --mauve-5: hsl(270 12% 90.2%);
+  --mauve-6: hsl(265.7 11.1% 87.6%);
+  --mauve-7: hsl(255 10% 84.3%);
+  --mauve-8: hsl(249.2 10.4% 75.5%);
+  --mauve-9: hsl(249.2 6% 57.5%);
+  --mauve-10: hsl(250 4.9% 52.2%);
+  --mauve-11: hsl(252 4.8% 40.8%);
+  --mauve-12: hsl(257.1 10.1% 13.5%);
 }
 
 .dark {
-  --mauve-1: oklch(20.8%, 1.25%, 325.755%);
-  --mauve-2: oklch(22.4%, 2.5%, 325.897%);
-  --mauve-3: oklch(27.9%, 2.75%, 319.455%);
-  --mauve-4: oklch(31.2%, 3%, 314.641%);
-  --mauve-5: oklch(33.9%, 3%, 314.66%);
-  --mauve-6: oklch(37%, 3.25%, 310.972%);
-  --mauve-7: oklch(41.2%, 3.5%, 308.082%);
-  --mauve-8: oklch(49.2%, 4%, 299.485%);
-  --mauve-9: oklch(54%, 4.25%, 294.164%);
-  --mauve-10: oklch(60.5%, 4.25%, 294.243%);
-  --mauve-11: oklch(75.8%, 3.25%, 296.272%);
-  --mauve-12: oklch(95%, 0.75%, 286.349%);
+  --mauve-1: hsl(300 4.2% 9.4%);
+  --mauve-2: hsl(300 7.1% 11%);
+  --mauve-3: hsl(288 6% 16.3%);
+  --mauve-4: hsl(280 6% 19.6%);
+  --mauve-5: hsl(280 5.3% 22.4%);
+  --mauve-6: hsl(274.3 5.3% 25.7%);
+  --mauve-7: hsl(270 5.2% 30.2%);
+  --mauve-8: hsl(258 5% 39.2%);
+  --mauve-9: hsl(250.9 4.8% 44.9%);
+  --mauve-10: hsl(250.9 4.5% 52.4%);
+  --mauve-11: hsl(253.3 6% 70.4%);
+  --mauve-12: hsl(240 6.2% 93.7%);
 }
 
 @layer base {
+  * {
+    @apply border-grey-line;
+  }
+
   ::selection {
     @apply bg-grey-text-contrast text-grey-base;
   }
