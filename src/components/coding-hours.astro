@@ -1,9 +1,11 @@
 ---
 import { fadeUp } from '~/config/animations';
 
-const baseUrl = import.meta.env.SITE || 'http://localhost:4321';
-const response = await fetch(`${baseUrl}/api/wakatime.json`);
-const { hours, minutes } = await response.json();
+// const baseUrl = import.meta.env.SITE || 'http://localhost:4321';
+// const response = await fetch(`${baseUrl}/api/wakatime.json`);
+// const { hours, minutes } = await response.json();
+const hours = '3,898';
+const minutes = '28';
 ---
 
 <div class:list={['space-y-4 p-6 sm:p-8', fadeUp]}>
