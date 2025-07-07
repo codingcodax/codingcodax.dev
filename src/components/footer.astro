@@ -1,4 +1,6 @@
 ---
+import { SOCIALS } from '~/config/consts';
+
 const currentYear = new Date().getFullYear();
 ---
 
@@ -12,37 +14,19 @@ const currentYear = new Date().getFullYear();
   <div></div>
 
   <ul class='flex gap-2'>
-    <li>
-      <a
-        class='text-grey-text text-sm'
-        href='https://github.com/codingcodax'
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        GitHub
-      </a>
-    </li>
-
-    <li>
-      <a
-        class='text-grey-text text-sm'
-        href='https://www.linkedin.com/in/codingcodax'
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        LinkedIn
-      </a>
-    </li>
-
-    <li>
-      <a
-        class='text-grey-text text-sm'
-        href='https://x.com/codingcodax'
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        X
-      </a>
-    </li>
+    {
+      SOCIALS.map(({ NAME, URL }) => (
+        <li>
+          <a
+            class='text-grey-text text-sm'
+            href={URL}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            {NAME}
+          </a>
+        </li>
+      ))
+    }
   </ul>
 </footer>
