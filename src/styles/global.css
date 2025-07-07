@@ -11,22 +11,8 @@
     'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     'Liberation Mono', 'Courier New', monospace;
 
-  --animate-fade-up: fade-up 1s ease-out forwards;
   --animate-logo-cloud: logo-cloud 30s linear infinite;
   --animate-logo-cloud-reverse: logo-cloud-reverse 30s linear infinite;
-
-  @keyframes fade-up {
-    0% {
-      opacity: 0;
-      transform: translateY(var(--fade-distance, 0.25rem));
-      filter: blur(3px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-      filter: blur(0px);
-    }
-  }
 
   @keyframes logo-cloud {
     0% {
@@ -108,5 +94,14 @@
 
   ::selection {
     @apply bg-grey-text-contrast text-grey-base;
+  }
+
+  .animate {
+    @apply translate-y-3 opacity-0 blur-xs;
+    @apply transition-all duration-700 ease-out;
+  }
+
+  .animate.show {
+    @apply translate-y-0 opacity-100 blur-none;
   }
 }
