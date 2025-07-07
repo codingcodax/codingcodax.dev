@@ -1,13 +1,17 @@
 ---
-import { fadeUp } from '~/config/animations';
+
 ---
 
 <div
   class='border-grey-line bg-grey-base relative flex min-h-[50vh] items-center justify-center border-b'
 >
-  <div class:list={['border-grey-line border px-8 py-4', fadeUp]}>
+  <div class='animate border-grey-line border px-8 py-4'>
     <h1
-      class='w-fit text-center font-serif text-4xl font-bold sm:text-5xl md:text-6xl'
+      class:list={[
+        'w-fit text-center font-serif text-4xl font-bold',
+        'sm:text-5xl',
+        'md:text-6xl',
+      ]}
     >
       <slot />
     </h1>

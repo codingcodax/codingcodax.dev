@@ -3,10 +3,18 @@
 ---
 
 <div
-  class='border-grey-line bg-grey-base relative grid grid-cols-3 border-b md:bg-transparent'
+  class:list={[
+    'border-grey-line bg-grey-base relative grid grid-cols-3 border-b',
+    'md:bg-transparent',
+  ]}
 >
   <div
-    class='col-span-3 flex flex-col gap-1 p-6 sm:p-8 md:col-span-2 lg:col-span-1'
+    class:list={[
+      'col-span-3 flex flex-col gap-1 p-6',
+      'sm:p-8',
+      'md:col-span-2',
+      'lg:col-span-1',
+    ]}
   >
     <slot />
   </div>

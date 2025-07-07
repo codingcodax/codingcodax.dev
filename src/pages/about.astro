@@ -9,7 +9,6 @@ import DetailBlockSubtitle from '~/components/detail-block/detail-block-subtitle
 import DetailBlockTitle from '~/components/detail-block/detail-block-title.astro';
 import DetailBlock from '~/components/detail-block/detail-block.astro';
 import Hero from '~/components/hero.astro';
-import { fadeUp } from '~/config/animations';
 import Main from '~/layouts/main.astro';
 ---
 
@@ -23,12 +22,7 @@ import Main from '~/layouts/main.astro';
     <Block>
       <BlockTitle>Who I am</BlockTitle>
       <BlockContent>
-        <div
-          class:list={[
-            'bg-grey-base text-grey-text relative space-y-4 p-8',
-            fadeUp,
-          ]}
-        >
+        <div class='bg-grey-base text-grey-text animate relative space-y-4 p-8'>
           <p>
             Hey there! I’m{' '}
             <span class='text-grey-text-contrast'>Alexis Guzman</span>, a
@@ -77,7 +71,9 @@ import Main from '~/layouts/main.astro';
       <BlockTitle>Work Experience</BlockTitle>
 
       <BlockContent>
-        <div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2'>
+        <div
+          class:list={['grid grid-cols-1', 'sm:grid-cols-2', 'md:grid-cols-2']}
+        >
           <DateLabel>JUL - NOV 2023</DateLabel>
           <DetailBlock>
             <DetailBlockTitle>Co-Founder</DetailBlockTitle>
@@ -94,7 +90,9 @@ import Main from '~/layouts/main.astro';
           </DetailBlock>
         </div>
 
-        <div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2'>
+        <div
+          class:list={['grid grid-cols-1', 'sm:grid-cols-2', 'md:grid-cols-2']}
+        >
           <DateLabel>JUN 2023 - NOW</DateLabel>
           <DetailBlock>
             <DetailBlockTitle>Co-Founder</DetailBlockTitle>
@@ -117,7 +115,9 @@ import Main from '~/layouts/main.astro';
       <BlockTitle>Education</BlockTitle>
 
       <BlockContent>
-        <div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2'>
+        <div
+          class:list={['grid grid-cols-1', 'sm:grid-cols-2', 'md:grid-cols-2']}
+        >
           <DateLabel>DEC 2019 - JAN 2021</DateLabel>
           <DetailBlock>
             <DetailBlockTitle>Full Stack Developer</DetailBlockTitle>

@@ -13,7 +13,6 @@ import SectionTitle from '~/components/section/section-title.astro';
 import Section from '~/components/section/section.astro';
 import TechStack from '~/components/tech-stack.astro';
 import { buttonStyles } from '~/components/ui/button';
-import { fadeUp } from '~/config/animations';
 import { projects } from '~/config/projects';
 import Main from '~/layouts/main.astro';
 ---
@@ -48,7 +47,7 @@ import Main from '~/layouts/main.astro';
     <div
       class='border-grey-line flex items-center justify-center border-b py-6'
     >
-      <a class={buttonStyles({ class: fadeUp })} href='/work'>
+      <a class={buttonStyles({ class: 'animate' })} href='/work'>
         See all projects
       </a>
     </div>
@@ -59,7 +58,10 @@ import Main from '~/layouts/main.astro';
     </Section>
 
     <div
-      class='divide-grey-line border-grey-line relative grid grid-cols-1 divide-y divide-dashed border-b sm:grid-cols-3'
+      class:list={[
+        'divide-grey-line border-grey-line relative grid grid-cols-1 divide-y divide-dashed border-b',
+        'sm:grid-cols-3',
+      ]}
     >
       <TechStack />
       <CodingHours />

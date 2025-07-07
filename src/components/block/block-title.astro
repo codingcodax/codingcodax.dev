@@ -1,11 +1,13 @@
 ---
-import { fadeUp } from '~/config/animations';
+
 ---
 
 <h2
   class:list={[
-    'border-grey-line bg-grey-base border-b border-dashed p-8 font-serif text-4xl md:border-b-0 lg:text-5xl',
-    fadeUp,
+    'animate border-grey-line bg-grey-base border-b border-dashed p-8 font-serif text-4xl',
+    'md:border-b-0',
+    'lg:text-5xl',
   ]}
 >
+  <slot />
 </h2>

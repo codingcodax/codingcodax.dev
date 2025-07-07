@@ -1,15 +1,13 @@
 ---
 import { Image as AstroImage } from 'astro:assets';
-
-import { fadeUp } from '~/config/animations';
 ---
 
-<div class:list={['relative', fadeUp]}>
+<div class:list={['relative', 'animate']}>
   <figure>
     <AstroImage
       priority
-      alt='codingcodax avatar'
-      class='rounded-full grayscale'
+      alt=''
+      class='bg-grey-bg-subtle rounded-full grayscale'
       height={100}
       src='https://avatars.githubusercontent.com/u/48135533?v=4'
       width={100}

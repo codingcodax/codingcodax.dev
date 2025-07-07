@@ -3,7 +3,10 @@
 ---
 
 <div
-  class='divide-grey-line bg-grey-base col-span-2 grid-cols-subgrid divide-y divide-dashed pl-px md:bg-transparent'
+  class:list={[
+    'divide-grey-line bg-grey-base col-span-2 grid-cols-subgrid divide-y divide-dashed pl-px',
+    'md:bg-transparent',
+  ]}
 >
   <slot />
 </div>

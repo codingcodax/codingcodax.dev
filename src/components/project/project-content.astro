@@ -1,11 +1,12 @@
 ---
-import { fadeUp } from '~/config/animations';
+
 ---
 
 <div
   class:list={[
-    'border-grey-line bg-grey-base flex flex-col justify-center gap-2 border-b border-dashed p-6 sm:p-8 md:border-b-0',
-    fadeUp,
+    'animate border-grey-line bg-grey-base flex flex-col justify-center gap-2 border-b border-dashed p-6',
+    'sm:p-8',
+    'md:border-b-0',
   ]}
 >
   <slot />

@@ -2,8 +2,6 @@ import { useEffect, useRef } from 'react';
 import { clsx } from 'clsx/lite';
 import createGlobe from 'cobe';
 
-import { fadeUp } from '~/config/animations';
-
 export const Location = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -50,8 +48,13 @@ export const Location = () => {
   }, []);
 
   return (
-    <div className={clsx('max-h-[204px] w-full overflow-hidden', fadeUp)}>
-      <h4 className='px-6 pt-6 font-serif text-lg text-grey-text sm:px-8 sm:pt-8'>
+    <div className='animate max-h-[204px] w-full overflow-hidden'>
+      <h4
+        className={clsx(
+          'px-6 pt-6 font-serif text-lg text-grey-text',
+          'sm:px-8 sm:pt-8',
+        )}
+      >
         CMDX, Mexico
       </h4>
 
@@ -62,7 +65,7 @@ export const Location = () => {
             width: '100%',
             height: '100%',
             contain: 'layout paint size',
-            cursor: 'none',
+            cursor: 'auto',
             userSelect: 'none',
           }}
         />

@@ -1,27 +1,29 @@
 ---
-import { fadeUp } from '~/config/animations';
-
 const { variant = 'expanded' } = Astro.props;
 ---
 
 <section
   class:list={[
-    'relative p-6 sm:p-8',
-    fadeUp,
+    'animate relative p-6',
+    'sm:p-8',
     variant === 'expanded' ? 'h-[40vh]' : '',
   ]}
 >
   <div
-    class='gap border-grey-line bg-grey-base flex h-full flex-col justify-center border-2 border-dotted p-4 sm:p-6 md:p-8'
+    class:list={[
+      'gap border-grey-line bg-grey-base flex h-full flex-col justify-center border-2 border-dotted p-4',
+      'sm:p-6',
+      'md:p-8',
+    ]}
   >
-    <h4 class='font-serif text-xl sm:text-2xl md:text-3xl'>
+    <h4 class:list={['font-serif text-xl', 'sm:text-2xl', 'md:text-3xl']}>
       Let’s work together
     </h4>
-    <p class='text-grey-text text-sm sm:text-base'>
+    <p class:list={['text-grey-text text-sm', 'sm:text-base']}>
       If you have any questions, opportunities or would just like to say hello,
       then feel free to send me a DM (
       <a
-        class='text-grey-text-contrast text-sm sm:text-base'
+        class:list={['text-grey-text-contrast text-sm', 'sm:text-base']}
         href='https://dm.new/codingcodax'
         rel='noopener noreferrer'
         target='_blank'
@@ -30,7 +32,7 @@ const { variant = 'expanded' } = Astro.props;
       </a>{' '}
       or{' '}
       <a
-        class='text-grey-text-contrast text-sm sm:text-base'
+        class:list={['text-grey-text-contrast text-sm', 'sm:text-base']}
         href='https://www.linkedin.com/in/codingcodax'
         rel='noopener noreferrer'
         target='_blank'
@@ -39,7 +41,7 @@ const { variant = 'expanded' } = Astro.props;
       </a>
       ) or if you prefer, you can{' '}
       <a
-        class='text-grey-text-contrast text-sm sm:text-base'
+        class:list={['text-grey-text-contrast text-sm', 'sm:text-base']}
         href='emailto:codingcodax@gmail.com'
         rel='noopener noreferrer'
         target='_blank'

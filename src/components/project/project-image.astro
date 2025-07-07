@@ -1,14 +1,15 @@
 ---
 import { Image as AstroImage } from 'astro:assets';
 
-import { fadeUp } from '~/config/animations';
-
 const { image, alt } = Astro.props;
 ---
 
-<div class:list={['col-span-2 pl-px', fadeUp]}>
+<div class='col-span-2 pl-px'>
   <figure
-    class='relative z-[1] scale-90 grayscale transition-transform group-hover:scale-100'
+    class:list={[
+      'animate relative z-[1] scale-90 grayscale transition-transform',
+      'group-hover:scale-100',
+    ]}
   >
     <AstroImage
       alt={alt}

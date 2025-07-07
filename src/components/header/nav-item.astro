@@ -15,12 +15,20 @@ const isActive = href === pathname;
 >
   <span class='invisible'><slot /></span>
   <span
-    class='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-transform duration-500 ease-in-out group-hover:-translate-y-[200%] hover:duration-300'
+    class:list={[
+      'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-transform duration-500 ease-in-out',
+      'group-hover:-translate-y-[200%]',
+      'hover:duration-300',
+    ]}
   >
     <slot />
   </span>
   <span
-    class='absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-[200%] transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2 hover:duration-300'
+    class:list={[
+      'absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-[200%] transition-transform duration-500 ease-in-out',
+      'group-hover:-translate-y-1/2',
+      'hover:duration-300',
+    ]}
   >
     <slot />
   </span>
