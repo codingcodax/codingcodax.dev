@@ -9,13 +9,11 @@ import DetailBlockSubtitle from '~/components/detail-block/detail-block-subtitle
 import DetailBlockTitle from '~/components/detail-block/detail-block-title.astro';
 import DetailBlock from '~/components/detail-block/detail-block.astro';
 import Hero from '~/components/hero.astro';
+import { ABOUT } from '~/config/consts';
 import Main from '~/layouts/main.astro';
 ---
 
-<Main
-  title='About me | Alexis Guzman'
-  description='Learn more about me and my journey as a developer.'
->
+<Main title={ABOUT.TITLE} description={ABOUT.DESCRIPTION}>
   <main>
     <Hero>About me</Hero>
 
