@@ -9,14 +9,12 @@ import Project from '~/components/project/project.astro';
 import SectionDescription from '~/components/section/section-description.astro';
 import SectionTitle from '~/components/section/section-title.astro';
 import Section from '~/components/section/section.astro';
+import { WORK } from '~/config/consts';
 import { projects, sideProjects } from '~/config/projects';
 import Main from '~/layouts/main.astro';
 ---
 
-<Main
-  title='Work | Alexis Guzman'
-  description='workSee all the projects I have worked on.'
->
+<Main title={WORK.TITLE} description={WORK.DESCRIPTION}>
   <main>
     <Hero>Work</Hero>
 
