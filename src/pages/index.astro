@@ -13,14 +13,12 @@ import SectionTitle from '~/components/section/section-title.astro';
 import Section from '~/components/section/section.astro';
 import TechStack from '~/components/tech-stack.astro';
 import { buttonStyles } from '~/components/ui/button';
+import { HOME, SITE } from '~/config/consts';
 import { projects } from '~/config/projects';
 import Main from '~/layouts/main.astro';
 ---
 
-<Main
-  title='Alexis Guzman'
-  description='Front-end web wizard who enjoys creating a variety of tools and a continuous dedication to learning and self-development.'
->
+<Main title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <div>
     <Intro />
 
@@ -32,16 +30,18 @@ import Main from '~/layouts/main.astro';
     </Section>
 
     {
-      projects.map(({ name, description, image, alt, url }) => (
-        <Project href={url}>
-          <ProjectContent>
-            <ProjectTitle>{name}</ProjectTitle>
-            <ProjectDescription>{description}</ProjectDescription>
-          </ProjectContent>
+      projects
+        .slice(0, SITE.PROJECTS_ON_HOMEPAGE)
+        .map(({ name, description, image, alt, url }) => (
+          <Project href={url}>
+            <ProjectContent>
+              <ProjectTitle>{name}</ProjectTitle>
+              <ProjectDescription>{description}</ProjectDescription>
+            </ProjectContent>
 
-          <ProjectImage alt={alt} image={image} />
-        </Project>
-      ))
+            <ProjectImage alt={alt} image={image} />
+          </Project>
+        ))
     }
 
     <div
