@@ -1,0 +1,25 @@
+---
+import Image from './image.astro';
+---
+
+<div
+  class='border-grey-line bg-grey-base relative flex min-h-[50vh] flex-col items-center justify-center border-b px-2 pt-8 pb-4'
+>
+  <Image />
+
+  <main class='mt-6 flex flex-col items-center justify-center text-center'>
+    <h1
+      class:list={[
+        'animate font-serif text-4xl font-bold',
+        'sm:text-5xl',
+        'md:text-6xl',
+      ]}
+    >
+      Hi, I'm Alexis
+    </h1>
+    <h2 class:list={['text-md text-grey-text animate max-w-lg', 'sm:text-lg']}>
+      Front-end web wizard who enjoys creating a variety of tools and a
+      continuous dedication to learning and self-development.
+    </h2>
+  </main>
+</div>

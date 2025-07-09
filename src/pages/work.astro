@@ -1,0 +1,54 @@
+---
+import ContactMe from '~/components/contact-me.astro';
+import Hero from '~/components/hero.astro';
+import ProjectContent from '~/components/project/project-content.astro';
+import ProjectDescription from '~/components/project/project-description.astro';
+import ProjectImage from '~/components/project/project-image.astro';
+import ProjectTitle from '~/components/project/project-title.astro';
+import Project from '~/components/project/project.astro';
+import SectionDescription from '~/components/section/section-description.astro';
+import SectionTitle from '~/components/section/section-title.astro';
+import Section from '~/components/section/section.astro';
+import { WORK } from '~/config/consts';
+import { projects, sideProjects } from '~/config/projects';
+import Main from '~/layouts/main.astro';
+---
+
+<Main title={WORK.TITLE} description={WORK.DESCRIPTION}>
+  <main>
+    <Hero>Work</Hero>
+
+    {
+      projects.map(({ name, description, image, alt, url }) => (
+        <Project href={url}>
+          <ProjectContent>
+            <ProjectTitle>{name}</ProjectTitle>
+            <ProjectDescription>{description}</ProjectDescription>
+          </ProjectContent>
+
+          <ProjectImage alt={alt} image={image} />
+        </Project>
+      ))
+    }
+
+    <Section>
+      <SectionTitle>Side projects</SectionTitle>
+      <SectionDescription>Creations born from curiosity</SectionDescription>
+    </Section>
+
+    {
+      sideProjects.map(({ name, description, image, alt, url }) => (
+        <Project href={url}>
+          <ProjectContent>
+            <ProjectTitle>{name}</ProjectTitle>
+            <ProjectDescription>{description}</ProjectDescription>
+          </ProjectContent>
+
+          <ProjectImage alt={alt} image={image} />
+        </Project>
+      ))
+    }
+
+    <ContactMe variant='collapsed' />
+  </main>
+</Main>

@@ -1,0 +1,14 @@
+---
+// const baseUrl = import.meta.env.SITE || 'http://localhost:4321';
+// const response = await fetch(`${baseUrl}/api/wakatime.json`);
+// const { hours, minutes } = await response.json();
+const hours = '3,898';
+const minutes = '28';
+---
+
+<div class:list={['animate space-y-4 p-6', 'sm:p-8']}>
+  <h4 class='text-grey-text font-serif text-lg'>Coding hours</h4>
+  <p class:list={['text-xl font-medium', 'sm:text-2xl', 'md:text-3xl']}>
+    {hours} hrs {minutes} mins
+  </p>
+</div>

@@ -1,0 +1,38 @@
+---
+import { Image as AstroImage } from 'astro:assets';
+---
+
+<div class:list={['relative', 'animate']}>
+  <figure>
+    <AstroImage
+      priority
+      alt=''
+      class='bg-grey-bg-subtle rounded-full grayscale'
+      height={100}
+      src='https://avatars.githubusercontent.com/u/48135533?v=4'
+      width={100}
+    />
+  </figure>
+
+  <div
+    class='bg-grey-border-hover absolute top-1/2 -left-[calc(100%+4px)] h-px w-[100px]'
+  >
+  </div>
+  <div
+    class='bg-grey-border-hover absolute top-1/2 -right-[calc(100%+4px)] h-px w-[100px]'
+  >
+  </div>
+
+  <div
+    class='border-grey-border-hover absolute -top-[4px] -left-[4px] h-[108px] w-[108px] rounded-full border'
+  >
+  </div>
+  <div
+    class='border-grey-border absolute -top-[8px] -left-[8px] h-[116px] w-[116px] rounded-full border'
+  >
+  </div>
+  <div
+    class='border-grey-line absolute -top-[12px] -left-[12px] h-[124px] w-[124px] rounded-full border'
+  >
+  </div>
+</div>

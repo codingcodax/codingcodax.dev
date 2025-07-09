@@ -1,0 +1,32 @@
+---
+import { SOCIALS } from '~/config/consts';
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer
+  class='mx-auto flex h-[68px] w-full max-w-screen-lg items-center justify-between px-8'
+>
+  <p class='text-grey-text text-sm'>
+    &copy;{currentYear} &mdash; Alexis Guzman
+  </p>
+
+  <div></div>
+
+  <ul class='flex gap-2'>
+    {
+      SOCIALS.map(({ NAME, URL }) => (
+        <li>
+          <a
+            class='text-grey-text text-sm'
+            href={URL}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            {NAME}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</footer>

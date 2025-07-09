@@ -1,0 +1,16 @@
+---
+const { href } = Astro.props;
+---
+
+<a
+  class:list={[
+    'group border-grey-line animate relative grid grid-cols-1 border-b p-[2px] outline-none',
+    'focus-visible:ring-grey-text-contrast focus-visible:ring-2 focus-visible:ring-offset-0',
+    'md:grid-cols-3',
+  ]}
+  href={href}
+  rel='noopener noreferrer'
+  target='_blank'
+>
+  <slot />
+</a>

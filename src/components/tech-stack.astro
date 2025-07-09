@@ -1,0 +1,66 @@
+---
+import { technologies } from '~/config/technologies';
+---
+
+<article class:list={['animate px-2 py-6', 'sm:px-4 sm:py-8']}>
+  <h4 class='text-grey-text px-4 font-serif text-lg'>Tech stack</h4>
+  <div class='w-full'>
+    <div class='mx-auto w-full'>
+      <div
+        class='group flex gap-6 overflow-hidden px-2 pt-6'
+        style={{
+          maskImage:
+            'linear-gradient(to left, transparent 0%, black 20%, black 80%, transparent 95%)',
+        }}
+      >
+        {
+          Array(5)
+            .fill(null)
+            .map((_) => (
+              <div
+                class:list={[
+                  'animate-logo-cloud flex shrink-0 flex-row justify-around gap-6 duration-[1400ms] will-change-transform',
+                  'group-hover:[animation-play-state:paused]',
+                ]}
+              >
+                {technologies.slice(0, 9).map(({ icon: Icon }) => (
+                  <Icon className='fill-grey-text-contrast size-6' />
+                ))}
+              </div>
+            ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <div class='w-full'>
+    <div class='mx-auto w-full'>
+      <div
+        class='group flex gap-6 overflow-x-hidden px-2 pt-10'
+        style={{
+          maskImage:
+            'linear-gradient(to left, transparent 0%, black 20%, black 80%, transparent 95%)',
+        }}
+      >
+        {
+          Array(5)
+            .fill(null)
+            .map((_) => (
+              <div
+                class:list={[
+                  'animate-logo-cloud-reverse flex shrink-0 flex-row justify-around gap-6 duration-[1200ms] will-change-transform',
+                  'group-hover:[animation-play-state:paused]',
+                ]}
+              >
+                {technologies
+                  .slice(10, technologies.length)
+                  .map(({ icon: Icon }) => (
+                    <Icon className='fill-grey-text-contrast size-6' />
+                  ))}
+              </div>
+            ))
+        }
+      </div>
+    </div>
+  </div>
+</article>

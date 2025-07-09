@@ -1,0 +1,54 @@
+---
+import Navbar from './navbar.astro';
+---
+
+<div
+  class:list={[
+    'sticky top-0 z-10 -mt-[9px] bg-white pt-[8px]',
+    'dark:bg-black',
+    'sm:-mt-[17px] sm:pt-[16px]',
+    'md:-mt-[25px] md:pt-[24px]',
+  ]}
+>
+  <div
+    class='border-grey-line bg-grey-base -ml-[0.9px] w-[calc(100%+2px)] rounded-t-3xl border'
+  >
+    <header
+      class='relative mx-auto flex w-full max-w-screen-lg items-center justify-center py-4'
+    >
+      <div
+        class:list={[
+          'before:pointer-events-none before:absolute before:top-3.5 before:right-px before:-bottom-1/3 before:left-px before:[mask-image:linear-gradient(to_bottom,#000_4rem,transparent)] before:backdrop-blur-md before:select-none',
+          'lg:before:top-px lg:before:[mask-image:linear-gradient(to_bottom,#000_4.5rem,transparent)]',
+        ]}
+      >
+      </div>
+
+      <div class='bg-grey-line absolute -bottom-px left-0 h-px w-full'></div>
+
+      <Navbar />
+
+      <div class='bg-grey-line absolute top-0 -left-px h-full w-px'></div>
+      <div class='bg-grey-line absolute top-0 -right-px h-full w-px'></div>
+    </header>
+  </div>
+
+  <div
+    class:list={[
+      'absolute top-0 -left-px h-[27px] w-px bg-white',
+      'dark:bg-black',
+      'sm:h-[35px]',
+      'md:h-[43px]',
+    ]}
+  >
+  </div>
+  <div
+    class:list={[
+      'absolute top-0 -right-px h-[27px] w-px bg-white',
+      'dark:bg-black',
+      'sm:h-[35px]',
+      'md:h-[43px]',
+    ]}
+  >
+  </div>
+</div>

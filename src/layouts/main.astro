@@ -1,0 +1,61 @@
+---
+import '~/styles/global.css';
+import '@fontsource/geist-sans';
+import '@fontsource/geist-mono';
+
+import Footer from '~/components/footer.astro';
+import Head from '~/components/head.astro';
+import Header from '~/components/header/header.astro';
+import { SITE } from '~/config/consts';
+
+type Props = {
+  title: string;
+  description: string;
+};
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <Head title={`${title} | ${SITE.NAME}`} description={description} />
+  </head>
+
+  <body
+    class='text-grey-text-contrast min-h-screen bg-white p-2 font-sans antialiased sm:p-4 md:p-6 dark:bg-black'
+  >
+    <div
+      class='border-grey-line bg-grey-base relative flex flex-col rounded-3xl border'
+    >
+      <div class='bg-grey-line absolute top-[68px] left-0 h-px w-full'></div>
+
+      <Header />
+
+      <div class='relative mx-auto w-full max-w-screen-lg'>
+        <div
+          class='bg-grey-line absolute top-0 -left-px hidden h-full w-px lg:inline-block'
+        >
+        </div>
+        <div
+          class='border-grey-bg-hover absolute top-0 left-1/3 h-full w-px border border-dashed'
+        >
+        </div>
+        <div
+          class='border-grey-bg-hover absolute top-0 right-1/3 h-full w-px border border-dashed'
+        >
+        </div>
+        <div
+          class='bg-grey-line absolute top-0 -right-px hidden h-full w-px lg:inline-block'
+        >
+        </div>
+
+        <slot />
+
+        <Footer />
+      </div>
+
+      <div class='bg-grey-line absolute bottom-[68px] left-0 h-px w-full'></div>
+    </div>
+  </body>
+</html>
