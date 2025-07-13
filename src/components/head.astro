@@ -8,6 +8,7 @@ import geistSans600 from '@fontsource/geist-sans/files/geist-sans-latin-600-norm
 import { ClientRouter } from 'astro:transitions';
 
 import { SITE } from '~/config/consts';
+import { DEFAULT_LOCALE, getLocalePaths, LOCALES } from '~/i18n';
 
 type Props = {
   title: string;
@@ -17,6 +18,9 @@ type Props = {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
+const langs = Object.keys(LOCALES);
+const baseUrl = import.meta.env.SITE || 'http://localhost:4321';
+const defaultLocale = DEFAULT_LOCALE;
 const { title, description, image = '/OG.png' } = Astro.props;
 ---
 
@@ -40,6 +44,17 @@ const { title, description, image = '/OG.png' } = Astro.props;
 <meta name='apple-mobile-web-app-title' content='Alexis Guzman' />
 <link rel='manifest' href='/favicons/site.webmanifest' />
 <link rel='sitemap' href='/sitemap-index.xml' />
+
+<!-- i18n -->
+{
+  getLocalePaths(Astro.url).map((props) => (
+    <link
+      rel='alternate'
+      hreflang={LOCALES[props.lang].lang || props.lang}
+      href={Astro.site?.origin + props.path}
+    />
+  ))
+}
 
 <!-- Font preloads -->
 <link
@@ -86,7 +101,7 @@ const { title, description, image = '/OG.png' } = Astro.props;
 <meta property='og:type' content='website' />
 <meta property='og:url' content={Astro.url} />
 <meta property='og:site_name' content={title} />
-<meta property='og:locale' content='en_US' />
+<meta property='og:locale' content={DEFAULT_LOCALE} />
 <meta property='og:title' content={title} />
 <meta property='og:description' content={description} />
 <meta property='og:image' content={new URL(image, Astro.url)} />
@@ -128,7 +143,26 @@ const { title, description, image = '/OG.png' } = Astro.props;
   );
 </script>
 
-<script is:inline>
+<script is:inline define:vars={{ langs, baseUrl, defaultLocale }}>
+  if (window.location.pathname === '/' || window.location.pathname === '') {
+    if (
+      localStorage.selectedLang &&
+      langs.includes(localStorage.selectedLang)
+    ) {
+      location.href = `${baseUrl + localStorage.selectedLang}/`;
+    } else {
+      const browserLang = navigator.language.toLowerCase();
+
+      if (langs.includes(browserLang)) {
+        location.href = `${baseUrl + browserLang}/`;
+      } else if (langs.includes(browserLang.split('-')[0])) {
+        location.href = `${baseUrl + browserLang.split('-')[0]}/`;
+      } else {
+        location.href = `${baseUrl + defaultLocale}/`;
+      }
+    }
+  }
+
   const init = () => {
     document.documentElement.classList.toggle(
       'dark',
@@ -153,3 +187,7 @@ const { title, description, image = '/OG.png' } = Astro.props;
   document.addEventListener('DOMContentLoaded', () => init());
   document.addEventListener('astro:after-swap', () => init());
 </script>
+
+<noscript>
+  <meta http-equiv='refresh' content={`0;url=${baseUrl + DEFAULT_LOCALE}/`} />
+</noscript>

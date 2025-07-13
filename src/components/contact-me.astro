@@ -1,4 +1,9 @@
 ---
+import type { Lang } from '~/i18n';
+import Link from '~/components/ui/link.astro';
+import { useTranslations } from '~/i18n';
+
+const t = useTranslations(Astro.currentLocale as Lang);
 const { variant = 'expanded' } = Astro.props;
 ---
 
@@ -17,37 +22,49 @@ const { variant = 'expanded' } = Astro.props;
     ]}
   >
     <h4 class:list={['font-serif text-xl', 'sm:text-2xl', 'md:text-3xl']}>
-      Let’s work together
+      {t({ en: 'Let’s work together', es: 'Trabajemos juntos' })}
     </h4>
     <p class:list={['text-grey-text text-sm', 'sm:text-base']}>
-      If you have any questions, opportunities or would just like to say hello,
-      then feel free to send me a DM (
-      <a
-        class:list={['text-grey-text-contrast text-sm', 'sm:text-base']}
+      {
+        t({
+          en: 'If you have any questions, opportunities or would just like to say hello, then feel free to send me a DM',
+          es: 'Si tienes alguna pregunta, oportunidades o simplemente quieres saludarme, no dudes en enviarme un DM.',
+        })
+      }
+      (<Link
+        isExternal
+        class:list={[
+          'text-grey-text-contrast inline-block text-sm',
+          'sm:text-base',
+        ]}
         href='https://dm.new/codingcodax'
-        rel='noopener noreferrer'
-        target='_blank'
       >
         X
-      </a>{' '}
-      or{' '}
-      <a
-        class:list={['text-grey-text-contrast text-sm', 'sm:text-base']}
+      </Link>{' '}
+      {t({ en: 'or', es: 'o' })}
+      <Link
+        isExternal
+        class:list={[
+          'text-grey-text-contrast inline-block text-sm',
+          'sm:text-base',
+        ]}
         href='https://www.linkedin.com/in/codingcodax'
-        rel='noopener noreferrer'
-        target='_blank'
       >
         LinkedIn
-      </a>
-      ) or if you prefer, you can{' '}
-      <a
+      </Link>)
+      {
+        t({
+          en: 'or if you prefer, you can',
+          es: 'o, si prefieres, puedes enviarme un',
+        })
+      }
+      <Link
+        isExternal
         class:list={['text-grey-text-contrast text-sm', 'sm:text-base']}
         href='mailto:codingcodax@gmail.com'
-        rel='noopener noreferrer'
-        target='_blank'
       >
-        email me
-      </a>
+        {t({ en: 'email me', es: 'email' })}
+      </Link>
       .
     </p>
   </div>

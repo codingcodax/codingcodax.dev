@@ -1,0 +1,38 @@
+---
+type Props = { href: string; class?: string; isExternal?: boolean };
+
+const { href, class: className, isExternal = false } = Astro.props;
+
+const linkProps = isExternal
+  ? { target: '_blank', rel: 'noopener noreferrer', href }
+  : { href };
+---
+
+<span class='inline-flex overflow-hidden'>
+  <a
+    class:list={[
+      'group relative outline-none',
+      'focus-visible:ring-grey-text-contrast focus-visible:ring-2 focus-visible:ring-offset-1',
+      className,
+    ]}
+    {...linkProps}
+  >
+    <span class='invisible'><slot /></span>
+    <span
+      class:list={[
+        'absolute top-0 left-0 transition-transform duration-500 ease-in-out',
+        'group-hover:-translate-y-[120%] group-hover:duration-300',
+      ]}
+    >
+      <slot />
+    </span>
+    <span
+      class:list={[
+        'absolute top-0 left-0 translate-y-[150%] decoration-current decoration-dashed decoration-1 underline-offset-2 transition-transform duration-500 ease-in-out',
+        'group-hover:-translate-y-0 group-hover:underline group-hover:duration-300',
+      ]}
+    >
+      <slot />
+    </span>
+  </a>
+</span>

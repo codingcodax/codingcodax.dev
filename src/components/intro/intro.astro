@@ -1,5 +1,10 @@
 ---
+import type { Lang } from '~/i18n';
+import { HOME_DESCRIPTION } from '~/config/consts';
+import { useTranslations } from '~/i18n';
 import Image from './image.astro';
+
+const t = useTranslations(Astro.currentLocale as Lang);
 ---
 
 <div
@@ -15,11 +20,10 @@ import Image from './image.astro';
         'md:text-6xl',
       ]}
     >
-      Hi, I'm Alexis
+      {t({ en: "Hi, I'm Alexis", es: 'Hola, soy Alexis' })}
     </h1>
     <h2 class:list={['text-md text-grey-text animate max-w-lg', 'sm:text-lg']}>
-      Front-end web wizard who enjoys creating a variety of tools and a
-      continuous dedication to learning and self-development.
+      {t(HOME_DESCRIPTION)}
     </h2>
   </main>
 </div>
