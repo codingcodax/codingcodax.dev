@@ -1,0 +1,98 @@
+---
+import type { Lang } from '~/i18n';
+import CodingHours from '~/components/coding-hours.astro';
+import ContactMe from '~/components/contact-me.astro';
+import Intro from '~/components/intro/intro.astro';
+import { Location } from '~/components/location';
+import ProjectContent from '~/components/project/project-content.astro';
+import ProjectDescription from '~/components/project/project-description.astro';
+import ProjectImage from '~/components/project/project-image.astro';
+import ProjectTitle from '~/components/project/project-title.astro';
+import Project from '~/components/project/project.astro';
+import SectionDescription from '~/components/section/section-description.astro';
+import SectionTitle from '~/components/section/section-title.astro';
+import Section from '~/components/section/section.astro';
+import TechStack from '~/components/tech-stack.astro';
+import { buttonStyles } from '~/components/ui/button';
+import {
+  ABOUT_TITLE,
+  HOME_DESCRIPTION,
+  HOME_TITLE,
+  SITE,
+  WORK_TITLE,
+} from '~/config/consts';
+import { projects } from '~/config/projects';
+import { LOCALES, useTranslations } from '~/i18n';
+import Main from '~/layouts/main.astro';
+
+const t = useTranslations(Astro.currentLocale as Lang);
+const locale = Astro.currentLocale as Lang;
+
+export const getStaticPaths = () =>
+  Object.keys(LOCALES).map((lang) => ({
+    params: { lang },
+  }));
+---
+
+<Main title={t(HOME_TITLE)} description={t(HOME_DESCRIPTION)}>
+  <div>
+    <Intro />
+
+    <Section>
+      <SectionTitle>{t(WORK_TITLE)}</SectionTitle>
+      <SectionDescription>
+        {
+          t({
+            en: "A look at what's keeping me busy",
+            es: 'Un vistazo a lo que me ha mantenido ocupado',
+          })
+        }
+      </SectionDescription>
+    </Section>
+
+    {
+      projects
+        .slice(0, SITE.PROJECTS_ON_HOMEPAGE)
+        .map(({ name, description, image, alt, url }) => (
+          <Project href={url}>
+            <ProjectContent>
+              <ProjectTitle>{name}</ProjectTitle>
+              <ProjectDescription>{t(description)}</ProjectDescription>
+            </ProjectContent>
+
+            <ProjectImage alt={alt} image={image} />
+          </Project>
+        ))
+    }
+
+    <div
+      class='border-grey-line flex items-center justify-center border-b py-6'
+    >
+      <a class={buttonStyles({ class: 'animate' })} href={`/${locale}/work`}>
+        {t({ en: 'See all projects', es: 'Todos mis proyectos' })}
+      </a>
+    </div>
+
+    <Section>
+      <SectionTitle>{t(ABOUT_TITLE)}</SectionTitle>
+      <SectionDescription
+        >{
+          t({ en: 'A sneak peek of who I am', es: 'Un vistazo de quién soy' })
+        }</SectionDescription
+      >
+    </Section>
+
+    <div
+      class:list={[
+        'divide-grey-line border-grey-line relative grid grid-cols-1 divide-y divide-dashed border-b',
+        'sm:grid-cols-3',
+      ]}
+    >
+      <TechStack />
+      <CodingHours />
+      <Location client:visible />
+    </div>
+
+    <ContactMe variant='expanded' />
+  </div>
+</Main>

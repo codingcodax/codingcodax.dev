@@ -1,4 +1,5 @@
 ---
+import type { Lang } from '~/i18n';
 import ContactMe from '~/components/contact-me.astro';
 import Hero from '~/components/hero.astro';
 import ProjectContent from '~/components/project/project-content.astro';
@@ -9,21 +10,29 @@ import Project from '~/components/project/project.astro';
 import SectionDescription from '~/components/section/section-description.astro';
 import SectionTitle from '~/components/section/section-title.astro';
 import Section from '~/components/section/section.astro';
-import { WORK } from '~/config/consts';
+import { WORK_DESCRIPTION, WORK_TITLE } from '~/config/consts';
 import { projects, sideProjects } from '~/config/projects';
+import { LOCALES, useTranslations } from '~/i18n';
 import Main from '~/layouts/main.astro';
+
+const t = useTranslations(Astro.currentLocale as Lang);
+
+export const getStaticPaths = () =>
+  Object.keys(LOCALES).map((lang) => ({
+    params: { lang },
+  }));
 ---
 
-<Main title={WORK.TITLE} description={WORK.DESCRIPTION}>
+<Main title={t(WORK_TITLE)} description={t(WORK_DESCRIPTION)}>
   <main>
-    <Hero>Work</Hero>
+    <Hero>{t(WORK_TITLE)}</Hero>
 
     {
       projects.map(({ name, description, image, alt, url }) => (
         <Project href={url}>
           <ProjectContent>
             <ProjectTitle>{name}</ProjectTitle>
-            <ProjectDescription>{description}</ProjectDescription>
+            <ProjectDescription>{t(description)}</ProjectDescription>
           </ProjectContent>
 
           <ProjectImage alt={alt} image={image} />
@@ -33,7 +42,14 @@ import Main from '~/layouts/main.astro';
 
     <Section>
       <SectionTitle>Side projects</SectionTitle>
-      <SectionDescription>Creations born from curiosity</SectionDescription>
+      <SectionDescription
+        >{
+          t({
+            en: 'Creations born from curiosity',
+            es: 'Creaciones nacidas de la curiosidad',
+          })
+        }</SectionDescription
+      >
     </Section>
 
     {
@@ -41,7 +57,7 @@ import Main from '~/layouts/main.astro';
         <Project href={url}>
           <ProjectContent>
             <ProjectTitle>{name}</ProjectTitle>
-            <ProjectDescription>{description}</ProjectDescription>
+            <ProjectDescription>{t(description)}</ProjectDescription>
           </ProjectContent>
 
           <ProjectImage alt={alt} image={image} />

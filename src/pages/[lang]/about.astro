@@ -1,0 +1,216 @@
+---
+import type { Lang } from '~/i18n';
+import BlockContent from '~/components/block/block-content.astro';
+import BlockTitle from '~/components/block/block-title.astro';
+import Block from '~/components/block/block.astro';
+import ContactMe from '~/components/contact-me.astro';
+import DateLabel from '~/components/date-label.astro';
+import DetailBlockContent from '~/components/detail-block/detail-block-content.astro';
+import DetailBlockSubtitle from '~/components/detail-block/detail-block-subtitle.astro';
+import DetailBlockTitle from '~/components/detail-block/detail-block-title.astro';
+import DetailBlock from '~/components/detail-block/detail-block.astro';
+import Hero from '~/components/hero.astro';
+import Link from '~/components/ui/link.astro';
+import { ABOUT_DESCRIPTION, ABOUT_TITLE } from '~/config/consts';
+import { LOCALES, useTranslations } from '~/i18n';
+import Main from '~/layouts/main.astro';
+
+const t = useTranslations(Astro.currentLocale as Lang);
+
+export const getStaticPaths = () =>
+  Object.keys(LOCALES).map((lang) => ({
+    params: { lang },
+  }));
+---
+
+<Main title={t(ABOUT_TITLE)} description={t(ABOUT_DESCRIPTION)}>
+  <main>
+    <Hero>{t(ABOUT_TITLE)}</Hero>
+
+    <Block>
+      <BlockTitle
+        >{
+          t({
+            en: 'Who I am',
+            es: 'Quién soy',
+          })
+        }</BlockTitle
+      >
+      <BlockContent>
+        <div class='bg-grey-base text-grey-text animate relative space-y-4 p-8'>
+          <p>
+            {t({ en: 'Hey there! I’m', es: '¡Hola! Soy' })}
+            <span class='text-grey-text-contrast'>Alexis Guzman</span>,
+            {
+              t({
+                en: 'a passionate developer and entrepreneur based in Mexico. My journey began with a curiosity for technology and a drive to create impactful digital experiences.',
+                es: 'un desarrollador y emprendedor apasionado de México. Mi viaje comenzó con una curiosidad por la tecnología y un impulso para crear experiencias digitales impactantes.',
+              })
+            }
+          </p>
+
+          <p>
+            {
+              t({
+                en: 'As a co-founder of',
+                es: 'Como cofundador de',
+              })
+            }
+            <Link
+              isExternal
+              class='text-grey-text-contrast'
+              href='https://www.khutz.com/'
+            >
+              Khutz
+            </Link>
+            {
+              t({
+                en: ', alongside',
+                es: ', junto a',
+              })
+            }
+            <Link
+              isExternal
+              class='text-grey-text-contrast'
+              href='https://github.com/OscarStrada/'
+            >
+              Oscar Arturo
+            </Link>,
+            {
+              t({
+                en: 'we led our first big project, Docom, which focused on building a healthcare CRM. This experience has fueled my passion for creating helpful solutions that enhance experiences.',
+                es: 'dirigimos nuestro primer gran proyecto, Docom, centrado en la creación de un CRM de salud. Este experiencia impulsó mi pasión por crear soluciones útiles que mejoren las experiencias.',
+              })
+            }
+          </p>
+
+          <p>
+            {
+              t({
+                en: 'I thrive on exploring new technologies and design trends, constantly seeking inspiration to push the boundaries of what’s possible. Whether it’s diving into the latest frameworks or experimenting with innovative design concepts, I believe that creativity and technology go hand in hand. I’m always eager to learn from others and collaborate on exciting projects that make a difference.',
+                es: 'Me encanta explorar nuevas tecnologías y tendencias de diseño, busco constantemente inspiración para ampliar los límites de lo posible. Ya sea explorando los últimos frameworks o experimentando con conceptos de diseño innovadores, creo que la creatividad y la tecnología van de la mano. Siempre estoy deseando aprender de los demás y colaborar en proyectos emocionantes que marquen la diferencia.',
+              })
+            }
+          </p>
+        </div>
+      </BlockContent>
+    </Block>
+
+    <Block>
+      <BlockTitle
+        >{
+          t({
+            en: 'Work Experience',
+            es: 'Experiencia laboral',
+          })
+        }</BlockTitle
+      >
+
+      <BlockContent>
+        <div
+          class:list={['grid grid-cols-1', 'sm:grid-cols-2', 'md:grid-cols-2']}
+        >
+          <DateLabel>JUL - NOV 2023</DateLabel>
+          <DetailBlock>
+            <DetailBlockTitle
+              >{
+                t({
+                  en: 'Co-Founder',
+                  es: 'Co-Fundador',
+                })
+              }</DetailBlockTitle
+            >
+            <DetailBlockSubtitle
+              >Docom - {
+                t({ en: 'Healthcare CRM', es: 'CRM de salud' })
+              }</DetailBlockSubtitle
+            >
+
+            <DetailBlockContent>
+              <p class='text-grey-text text-sm'>
+                {
+                  t({
+                    en: 'Led a talented team in developing a healthcare CRM aimed at enhancing patient management and communication. Although the project didn’t reach completion, it provided invaluable insights into product development and the healthcare landscape.',
+                    es: 'Lideré un equipo talentoso en el desarrollo de un CRM de salud enfocado en mejorar la gestión y la comunicación con los pacientes. Aunque el proyecto no llegó a completarse, aportó valiosas ideas sobre el desarrollo de productos y el sector de la salud.',
+                  })
+                }
+              </p>
+            </DetailBlockContent>
+          </DetailBlock>
+        </div>
+
+        <div
+          class:list={['grid grid-cols-1', 'sm:grid-cols-2', 'md:grid-cols-2']}
+        >
+          <DateLabel>JUN 2023 - {t({ en: 'NOW', es: 'AHORA' })}</DateLabel>
+          <DetailBlock>
+            <DetailBlockTitle
+              >{
+                t({
+                  en: 'Co-Founder',
+                  es: 'Co-Fundador',
+                })
+              }</DetailBlockTitle
+            >
+            <DetailBlockSubtitle
+              >Khutz - {
+                t({ en: 'Digital Agency', es: 'Agencia digital' })
+              }</DetailBlockSubtitle
+            >
+
+            <DetailBlockContent>
+              <p class='text-grey-text text-sm'>
+                {
+                  t({
+                    en: 'I collaborate closely with clients to create tailored solutions that not only meet their needs but also elevate their brand presence online. My focus is on blending functionality with creativity to deliver standout digital experiences.',
+                    es: 'Colaboré estrechamente con los clientes para crear soluciones a medida que no sólo satisficieran sus necesidades, sino que también elevaran la presencia de su marca en Internet. Me centré en combinar funcionalidad y creatividad para ofrecer experiencias digitales sobresalientes.',
+                  })
+                }
+              </p>
+            </DetailBlockContent>
+          </DetailBlock>
+        </div>
+      </BlockContent>
+    </Block>
+
+    <Block>
+      <BlockTitle>{t({ en: 'Education', es: 'Educación' })}</BlockTitle>
+
+      <BlockContent>
+        <div
+          class:list={['grid grid-cols-1', 'sm:grid-cols-2', 'md:grid-cols-2']}
+        >
+          <DateLabel
+            >{
+              t({ en: 'DEC 2019 - JAN 2021', es: 'DIC 2019 - ENE 2021' })
+            }</DateLabel
+          >
+          <DetailBlock>
+            <DetailBlockTitle
+              >{
+                t({
+                  en: 'Full Stack Developer',
+                  es: 'Desarrollador Full Stack',
+                })
+              }</DetailBlockTitle
+            >
+            <DetailBlockSubtitle>Bottega - Bootcamp</DetailBlockSubtitle>
+
+            <DetailBlockContent>
+              <p class='text-grey-text text-sm'>
+                {
+                  t({
+                    en: 'I developed a strong foundation in web technologies, including HTML, CSS, JavaScript, Python, and React. I acquired the tools to craft innovative solutions and bring ideas to life.',
+                    es: 'Desarrollé una sólida base en tecnologías web, como HTML, CSS, JavaScript, Python y React. Adquirí las herramientas para crear soluciones innovadoras y dar vida a las ideas.',
+                  })
+                }
+              </p>
+            </DetailBlockContent>
+          </DetailBlock>
+        </div>
+      </BlockContent>
+    </Block>
+
+    <ContactMe variant='collapsed' />
+  </main>
+</Main>
