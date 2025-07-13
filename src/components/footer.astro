@@ -1,4 +1,5 @@
 ---
+import Link from '~/components/ui/link.astro';
 import { SOCIALS } from '~/config/consts';
 
 const currentYear = new Date().getFullYear();
@@ -17,14 +18,9 @@ const currentYear = new Date().getFullYear();
     {
       SOCIALS.map(({ NAME, URL }) => (
         <li>
-          <a
-            class='text-grey-text text-sm'
-            href={URL}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
+          <Link isExternal class='text-grey-text text-sm' href={URL}>
             {NAME}
-          </a>
+          </Link>
         </li>
       ))
     }
