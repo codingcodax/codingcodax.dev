@@ -8,7 +8,7 @@ import { DEFAULT_LOCALE_SETTING, LOCALES_SETTING } from './src/config/locales';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.codingcodax.dev',
+  site: 'https://www.codingcodax.dev/',
   base: '/',
   integrations: [react(), sitemap()],
 
