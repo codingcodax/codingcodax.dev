@@ -7,17 +7,15 @@ import Footer from '~/components/footer.astro';
 import Head from '~/components/head.astro';
 import Header from '~/components/header/header.astro';
 import { SITE } from '~/config/consts';
+import { DEFAULT_LOCALE } from '~/i18n';
 
-type Props = {
-  title: string;
-  description: string;
-};
+type Props = { title: string; description: string };
 
 const { title, description } = Astro.props;
 ---
 
 <!doctype html>
-<html lang='en'>
+<html lang={DEFAULT_LOCALE}>
   <head>
     <Head title={`${title} | ${SITE.NAME}`} description={description} />
   </head>
