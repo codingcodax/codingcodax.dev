@@ -144,25 +144,6 @@ const { title, description, image = '/OG.png' } = Astro.props;
 </script>
 
 <script is:inline define:vars={{ langs, baseUrl, defaultLocale }}>
-  if (window.location.pathname === '/' || window.location.pathname === '') {
-    if (
-      localStorage.selectedLang &&
-      langs.includes(localStorage.selectedLang)
-    ) {
-      location.href = `${baseUrl + localStorage.selectedLang}/`;
-    } else {
-      const browserLang = navigator.language.toLowerCase();
-
-      if (langs.includes(browserLang)) {
-        location.href = `${baseUrl + browserLang}/`;
-      } else if (langs.includes(browserLang.split('-')[0])) {
-        location.href = `${baseUrl + browserLang.split('-')[0]}/`;
-      } else {
-        location.href = `${baseUrl + defaultLocale}/`;
-      }
-    }
-  }
-
   const init = () => {
     document.documentElement.classList.toggle(
       'dark',
@@ -186,6 +167,25 @@ const { title, description, image = '/OG.png' } = Astro.props;
 
   document.addEventListener('DOMContentLoaded', () => init());
   document.addEventListener('astro:after-swap', () => init());
+
+  if (window.location.pathname === '/' || window.location.pathname === '') {
+    if (
+      localStorage.selectedLang &&
+      langs.includes(localStorage.selectedLang)
+    ) {
+      location.href = `${baseUrl + localStorage.selectedLang}/`;
+    } else {
+      const browserLang = navigator.language.toLowerCase();
+
+      if (langs.includes(browserLang)) {
+        location.href = `${baseUrl + browserLang}/`;
+      } else if (langs.includes(browserLang.split('-')[0])) {
+        location.href = `${baseUrl + browserLang.split('-')[0]}/`;
+      } else {
+        location.href = `${baseUrl + defaultLocale}/`;
+      }
+    }
+  }
 </script>
 
 <noscript>
